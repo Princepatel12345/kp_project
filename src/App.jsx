@@ -261,7 +261,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-      <section></section>
     </>
   );
 }
