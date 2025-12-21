@@ -1,0 +1,331 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
+import { SectionHeading } from "../components/SectionHeading";
+import { ContactForm } from "../components/ContactForm";
+import { Award, Users, Target, CheckCircle } from "lucide-react";
+
+const milestones = [
+  { year: "1989", title: "Foundation", description: "Ashitech was founded by Mr. Manibhai Patel under the brand Ashirvad." },
+  { year: "2000", title: "Expansion", description: "Expanded manufacturing capacity and product line." },
+  { year: "2010", title: "Global Reach", description: "Started exporting to international markets across 15+ countries." },
+  { year: "2020", title: "ISO Certified", description: "Achieved ISO 9001:2015 certification for quality management." },
+];
+
+const values = [
+  { icon: Award, title: "Excellence", description: "We strive for excellence in every machine we manufacture." },
+  { icon: Users, title: "Customer Focus", description: "Our customers' success is our primary motivation." },
+  { icon: Target, title: "Innovation", description: "Continuous innovation drives our product development." },
+  { icon: CheckCircle, title: "Reliability", description: "Building machinery that stands the test of time." },
+];
+
+export const Route = createFileRoute("/about")({
+  component: About,
+});
+
+function About() {
+  return (
+    <>
+      <SEO
+        title="About Us"
+        description="Learn about Ashitech Equipment - 35+ years of excellence in manufacturing road construction machinery. ISO certified, trusted by clients in 15+ countries."
+        keywords="about ashitech, road construction company, manufacturing history, ISO certified manufacturer"
+      />
+
+      {/* ================= HERO ================= */}
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#0d0d0d] to-[#1a1a2e]" />
+        <div className="absolute inset-0 bg-pattern opacity-10" />
+        
+        <motion.div
+          className="relative z-10 text-center px-6"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2 }}
+            className="inline-flex items-center gap-2 bg-[#db8c0a]/10 border border-[#db8c0a]/20 rounded-full px-4 py-2 mb-6"
+          >
+            <span className="w-2 h-2 bg-[#db8c0a] rounded-full animate-pulse" />
+            <span className="text-[#db8c0a] text-sm uppercase tracking-widest">Since 1989</span>
+          </motion.div>
+
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-4">
+            About <span className="text-gradient">Ashitech</span>
+          </h1>
+          
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Three decades of engineering excellence in road construction machinery
+          </p>
+        </motion.div>
+      </section>
+
+      {/* ================= COMPANY PROFILE ================= */}
+      <section className="section bg-[#0d0d0d]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <SectionHeading
+                title="Company Profile"
+                subtitle="With over three decades of experience and expertise in manufacturing road construction equipment, Ashitech has established itself as a trusted name synonymous with quality and reliability."
+              />
+
+              <div className="space-y-6 mt-8">
+                <p className="text-gray-400 leading-relaxed">
+                  Founded by Mr. Manibhai Patel more than 35 years ago under the brand 
+                  Ashirvad, the company has grown to unparalleled heights. Today, Ashitech 
+                  Equipment Pvt. Ltd. stands as a leading manufacturer and exporter of 
+                  road construction machinery.
+                </p>
+
+                <p className="text-gray-400 leading-relaxed">
+                  Our commitment to quality, innovation, and customer satisfaction has 
+                  earned us the trust of clients in over 15 countries worldwide. Every 
+                  machine we produce reflects our dedication to engineering excellence.
+                </p>
+              </div>
+
+              <Link to="/contact" className="btn btn-primary mt-8">
+                Get In Touch
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative rounded-2xl overflow-hidden">
+                <img
+                  src="https://www.ashitech.com/wp-content/uploads/2020/05/about_right.jpg"
+                  alt="Ashitech manufacturing facility"
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              </div>
+              
+              {/* Stats Overlay */}
+              <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-4">
+                <div className="bg-black/80 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+                  <div className="font-display text-3xl text-[#db8c0a]">35+</div>
+                  <div className="text-gray-400 text-sm">Years of Excellence</div>
+                </div>
+                <div className="bg-black/80 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+                  <div className="font-display text-3xl text-[#db8c0a]">15+</div>
+                  <div className="text-gray-400 text-sm">Countries Served</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= MILESTONES ================= */}
+      <section className="section bg-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeading
+            title="Our Journey"
+            subtitle="Key milestones in our path to becoming an industry leader."
+            centered
+          />
+
+          <div className="relative mt-16">
+            {/* Timeline Line */}
+            <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-[#db8c0a] via-[#db8c0a]/50 to-transparent hidden md:block" />
+
+            <div className="space-y-12">
+              {milestones.map((milestone, i) => (
+                <motion.div
+                  key={milestone.year}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`flex flex-col md:flex-row items-center gap-8 ${
+                    i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  }`}
+                >
+                  <div className={`flex-1 ${i % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
+                    <div className="card-industrial max-w-md mx-auto md:mx-0">
+                      <span className="font-display text-4xl text-[#db8c0a]">{milestone.year}</span>
+                      <h3 className="font-display text-2xl text-white mt-2">{milestone.title}</h3>
+                      <p className="text-gray-400 mt-2">{milestone.description}</p>
+                    </div>
+                  </div>
+
+                  <div className="w-4 h-4 bg-[#db8c0a] rounded-full border-4 border-[#0a0a0a] z-10 hidden md:block" />
+
+                  <div className="flex-1" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= VALUES ================= */}
+      <section className="section bg-[#0d0d0d]">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeading
+            title="Our Core Values"
+            subtitle="The principles that guide everything we do."
+            centered
+          />
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            {values.map((value, i) => (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="text-center p-8 bg-[#141414] rounded-lg border border-white/5 hover:border-[#db8c0a]/30 transition group"
+              >
+                <div className="w-16 h-16 bg-[#db8c0a]/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#db8c0a]/20 transition">
+                  <value.icon className="w-8 h-8 text-[#db8c0a]" />
+                </div>
+                <h3 className="font-display text-xl text-white mb-3">{value.title}</h3>
+                <p className="text-gray-400 text-sm">{value.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= INFRASTRUCTURE ================= */}
+      <section className="section bg-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src="https://www.ashitech.com/wp-content/uploads/2020/05/about2.jpg"
+                alt="Ashitech infrastructure and manufacturing"
+                className="rounded-2xl w-full"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <SectionHeading
+                title="Infrastructure"
+                subtitle="Our state-of-the-art manufacturing facility is equipped with the latest technology and machinery."
+              />
+
+              <div className="space-y-6 mt-8">
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-[#db8c0a] flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-400">
+                    Advanced CNC machining centers for precision manufacturing
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-[#db8c0a] flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-400">
+                    Dedicated quality testing laboratories
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-[#db8c0a] flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-400">
+                    Spacious assembly and dispatch bays
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-[#db8c0a] flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-400">
+                    Modern R&D center for product innovation
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= QUALITY POLICY ================= */}
+      <section className="section bg-[#0d0d0d]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <SectionHeading
+                title="Quality Policy"
+                subtitle="At Ashitech, quality is not just a standard—it's our commitment to every customer."
+              />
+
+              <div className="space-y-6 mt-8">
+                <p className="text-gray-400 leading-relaxed">
+                  Our objective is to deliver optimum quality products meeting international 
+                  standards of performance, reliability, and customer satisfaction. Every 
+                  machine undergoes rigorous testing before delivery.
+                </p>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="p-4 bg-[#db8c0a]/10 rounded-lg border border-[#db8c0a]/20">
+                    <div className="font-display text-2xl text-[#db8c0a]">ISO</div>
+                    <div className="text-gray-400 text-sm">9001:2015 Certified</div>
+                  </div>
+                  <div className="p-4 bg-[#db8c0a]/10 rounded-lg border border-[#db8c0a]/20">
+                    <div className="font-display text-2xl text-[#db8c0a]">100%</div>
+                    <div className="text-gray-400 text-sm">Quality Tested</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800"
+                alt="Quality assurance and testing"
+                className="rounded-2xl w-full"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= CTA ================= */}
+      <section className="section bg-gradient-to-br from-[#1a1a2e] to-[#0d0d0d]">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <SectionHeading
+            title="Let's Build Together"
+            subtitle="Ready to discuss your project requirements? Our team is here to help."
+            centered
+          />
+          
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <Link to="/contact" className="btn btn-primary">
+              Contact Us
+            </Link>
+            <Link to="/product/hot-mix" className="btn btn-outline">
+              View Products
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

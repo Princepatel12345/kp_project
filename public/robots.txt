@@ -1,0 +1,16 @@
+# Robots.txt for Ashitech Equipment
+# https://www.ashitech.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.ashitech.com/sitemap.xml
+
+# Disallow admin/private areas (if any)
+Disallow: /api/
+Disallow: /_/
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
