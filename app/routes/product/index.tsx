@@ -56,8 +56,7 @@ function ProductIndex() {
       />
 
       {/* ================= HERO ================= */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#0d0d0d] to-[#1a1a2e]" />
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white">
         <div className="absolute inset-0 bg-pattern opacity-10" />
 
         <motion.div
@@ -66,17 +65,17 @@ function ProductIndex() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-4">
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-4">
             Our <span className="text-gradient">Products</span>
           </h1>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto">
             Complete range of road construction machinery engineered for performance
           </p>
         </motion.div>
       </section>
 
       {/* ================= PRODUCTS GRID ================= */}
-      <section className="section bg-[#0d0d0d]">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, i) => (
@@ -93,7 +92,7 @@ function ProductIndex() {
                 >
                   <div className="card overflow-hidden">
                     {/* Image */}
-                    <div className="aspect-[4/3] bg-gradient-to-br from-[#1a1a2e] to-[#0d0d0d] p-6 flex items-center justify-center">
+                    <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-white p-6 flex items-center justify-center border-b border-gray-200">
                       <img
                         src={product.image}
                         alt={product.title}
@@ -104,18 +103,18 @@ function ProductIndex() {
                     {/* Content */}
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-[#db8c0a] text-sm font-medium">
+                        <span className="text-[#7B1C2B] text-sm font-medium">
                           {product.capacity}
                         </span>
                         <ArrowRight
                           size={18}
-                          className="text-gray-500 group-hover:text-[#db8c0a] group-hover:translate-x-1 transition-all"
+                          className="text-gray-500 group-hover:text-[#7B1C2B] group-hover:translate-x-1 transition-all"
                         />
                       </div>
-                      <h3 className="font-display text-xl text-white mb-2">
+                      <h3 className="font-display text-xl text-gray-900 mb-2">
                         {product.title}
                       </h3>
-                      <p className="text-gray-400 text-sm">
+                      <p className="text-gray-600 text-sm">
                         {product.description}
                       </p>
                     </div>
@@ -128,15 +127,15 @@ function ProductIndex() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="py-20 bg-gradient-to-r from-[#c47d09] to-[#db8c0a]">
+      <section className="py-20 bg-gradient-to-r from-[#7B1C2B] to-[#9d2a3f]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
             Can't Find What You Need?
           </h2>
-          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             We also manufacture custom machinery. Contact us to discuss your specific requirements.
           </p>
-          <Link to="/contact" className="btn bg-white text-[#c47d09] hover:bg-gray-100">
+          <Link to="/contact" className="btn bg-white text-[#7B1C2B] hover:bg-gray-100">
             Contact Us
             <ArrowRight size={18} />
           </Link>

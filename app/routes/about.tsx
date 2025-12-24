@@ -6,7 +6,7 @@ import { ContactForm } from "../components/ContactForm";
 import { Award, Users, Target, CheckCircle } from "lucide-react";
 
 const milestones = [
-  { year: "1989", title: "Foundation", description: "Ashitech was founded by Mr. Manibhai Patel under the brand Ashirvad." },
+  { year: "1989", title: "Foundation", description: "Kaushik Road Technologies was founded, beginning our journey in road construction machinery." },
   { year: "2000", title: "Expansion", description: "Expanded manufacturing capacity and product line." },
   { year: "2010", title: "Global Reach", description: "Started exporting to international markets across 15+ countries." },
   { year: "2020", title: "ISO Certified", description: "Achieved ISO 9001:2015 certification for quality management." },
@@ -28,13 +28,12 @@ function About() {
     <>
       <SEO
         title="About Us"
-        description="Learn about Ashitech Equipment - 35+ years of excellence in manufacturing road construction machinery. ISO certified, trusted by clients in 15+ countries."
-        keywords="about ashitech, road construction company, manufacturing history, ISO certified manufacturer"
+        description="Learn about Kaushik Road Technologies - 35+ years of excellence in manufacturing road construction machinery. ISO certified, trusted by clients in 15+ countries."
+        keywords="about KRT, Kaushik Road Technologies, road construction company, manufacturing history, ISO certified manufacturer"
       />
 
       {/* ================= HERO ================= */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#0d0d0d] to-[#1a1a2e]" />
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white">
         <div className="absolute inset-0 bg-pattern opacity-10" />
         
         <motion.div
@@ -47,24 +46,24 @@ function About() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-[#db8c0a]/10 border border-[#db8c0a]/20 rounded-full px-4 py-2 mb-6"
+            className="inline-flex items-center gap-2 bg-[#7B1C2B]/10 border border-[#7B1C2B]/20 rounded-full px-4 py-2 mb-6"
           >
-            <span className="w-2 h-2 bg-[#db8c0a] rounded-full animate-pulse" />
-            <span className="text-[#db8c0a] text-sm uppercase tracking-widest">Since 1989</span>
+            <span className="w-2 h-2 bg-[#7B1C2B] rounded-full animate-pulse" />
+            <span className="text-[#7B1C2B] text-sm uppercase tracking-widest">Since 1989</span>
           </motion.div>
 
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-4">
-            About <span className="text-gradient">Ashitech</span>
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-4">
+            About <span className="text-gradient">KRT</span>
           </h1>
           
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto">
             Three decades of engineering excellence in road construction machinery
           </p>
         </motion.div>
       </section>
 
       {/* ================= COMPANY PROFILE ================= */}
-      <section className="section bg-[#0d0d0d]">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -74,18 +73,17 @@ function About() {
             >
               <SectionHeading
                 title="Company Profile"
-                subtitle="With over three decades of experience and expertise in manufacturing road construction equipment, Ashitech has established itself as a trusted name synonymous with quality and reliability."
+                subtitle="With over three decades of experience and expertise in manufacturing road construction equipment, Kaushik Road Technologies has established itself as a trusted name synonymous with quality and reliability."
               />
 
               <div className="space-y-6 mt-8">
-                <p className="text-gray-400 leading-relaxed">
-                  Founded by Mr. Manibhai Patel more than 35 years ago under the brand 
-                  Ashirvad, the company has grown to unparalleled heights. Today, Ashitech 
-                  Equipment Pvt. Ltd. stands as a leading manufacturer and exporter of 
+                <p className="text-gray-700 leading-relaxed">
+                  Founded more than 35 years ago, the company has grown to unparalleled heights. 
+                  Today, Kaushik Road Technologies stands as a leading manufacturer and exporter of 
                   road construction machinery.
                 </p>
 
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   Our commitment to quality, innovation, and customer satisfaction has 
                   earned us the trust of clients in over 15 countries worldwide. Every 
                   machine we produce reflects our dedication to engineering excellence.
@@ -114,13 +112,13 @@ function About() {
               
               {/* Stats Overlay */}
               <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-4">
-                <div className="bg-black/80 backdrop-blur-sm rounded-lg p-4 border border-white/10">
-                  <div className="font-display text-3xl text-[#db8c0a]">35+</div>
-                  <div className="text-gray-400 text-sm">Years of Excellence</div>
+                <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 border border-gray-200 shadow-lg">
+                  <div className="font-display text-3xl text-[#7B1C2B]">35+</div>
+                  <div className="text-gray-600 text-sm">Years of Excellence</div>
                 </div>
-                <div className="bg-black/80 backdrop-blur-sm rounded-lg p-4 border border-white/10">
-                  <div className="font-display text-3xl text-[#db8c0a]">15+</div>
-                  <div className="text-gray-400 text-sm">Countries Served</div>
+                <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 border border-gray-200 shadow-lg">
+                  <div className="font-display text-3xl text-[#7B1C2B]">15+</div>
+                  <div className="text-gray-600 text-sm">Countries Served</div>
                 </div>
               </div>
             </motion.div>
@@ -129,7 +127,7 @@ function About() {
       </section>
 
       {/* ================= MILESTONES ================= */}
-      <section className="section bg-[#0a0a0a]">
+      <section className="section bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             title="Our Journey"
@@ -139,7 +137,7 @@ function About() {
 
           <div className="relative mt-16">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-[#db8c0a] via-[#db8c0a]/50 to-transparent hidden md:block" />
+            <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-[#7B1C2B] via-[#7B1C2B]/50 to-transparent hidden md:block" />
 
             <div className="space-y-12">
               {milestones.map((milestone, i) => (
@@ -155,13 +153,13 @@ function About() {
                 >
                   <div className={`flex-1 ${i % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
                     <div className="card-industrial max-w-md mx-auto md:mx-0">
-                      <span className="font-display text-4xl text-[#db8c0a]">{milestone.year}</span>
-                      <h3 className="font-display text-2xl text-white mt-2">{milestone.title}</h3>
-                      <p className="text-gray-400 mt-2">{milestone.description}</p>
+                      <span className="font-display text-4xl text-[#7B1C2B]">{milestone.year}</span>
+                      <h3 className="font-display text-2xl text-gray-900 mt-2">{milestone.title}</h3>
+                      <p className="text-gray-700 mt-2">{milestone.description}</p>
                     </div>
                   </div>
 
-                  <div className="w-4 h-4 bg-[#db8c0a] rounded-full border-4 border-[#0a0a0a] z-10 hidden md:block" />
+                  <div className="w-4 h-4 bg-[#7B1C2B] rounded-full border-4 border-gray-50 z-10 hidden md:block" />
 
                   <div className="flex-1" />
                 </motion.div>
@@ -172,7 +170,7 @@ function About() {
       </section>
 
       {/* ================= VALUES ================= */}
-      <section className="section bg-[#0d0d0d]">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             title="Our Core Values"
@@ -188,13 +186,13 @@ function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="text-center p-8 bg-[#141414] rounded-lg border border-white/5 hover:border-[#db8c0a]/30 transition group"
+                className="text-center p-8 bg-gray-50 rounded-lg border border-gray-200 hover:border-[#7B1C2B]/30 transition group"
               >
-                <div className="w-16 h-16 bg-[#db8c0a]/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#db8c0a]/20 transition">
-                  <value.icon className="w-8 h-8 text-[#db8c0a]" />
+                <div className="w-16 h-16 bg-[#7B1C2B]/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#7B1C2B]/20 transition">
+                  <value.icon className="w-8 h-8 text-[#7B1C2B]" />
                 </div>
-                <h3 className="font-display text-xl text-white mb-3">{value.title}</h3>
-                <p className="text-gray-400 text-sm">{value.description}</p>
+                <h3 className="font-display text-xl text-gray-900 mb-3">{value.title}</h3>
+                <p className="text-gray-600 text-sm">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -202,7 +200,7 @@ function About() {
       </section>
 
       {/* ================= INFRASTRUCTURE ================= */}
-      <section className="section bg-[#0a0a0a]">
+      <section className="section bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -229,26 +227,26 @@ function About() {
 
               <div className="space-y-6 mt-8">
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-[#db8c0a] flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-400">
+                  <CheckCircle className="w-6 h-6 text-[#7B1C2B] flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">
                     Advanced CNC machining centers for precision manufacturing
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-[#db8c0a] flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-400">
+                  <CheckCircle className="w-6 h-6 text-[#7B1C2B] flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">
                     Dedicated quality testing laboratories
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-[#db8c0a] flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-400">
+                  <CheckCircle className="w-6 h-6 text-[#7B1C2B] flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">
                     Spacious assembly and dispatch bays
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-[#db8c0a] flex-shrink-0 mt-0.5" />
-                  <p className="text-gray-400">
+                  <CheckCircle className="w-6 h-6 text-[#7B1C2B] flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-700">
                     Modern R&D center for product innovation
                   </p>
                 </div>
@@ -259,7 +257,7 @@ function About() {
       </section>
 
       {/* ================= QUALITY POLICY ================= */}
-      <section className="section bg-[#0d0d0d]">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -269,24 +267,24 @@ function About() {
             >
               <SectionHeading
                 title="Quality Policy"
-                subtitle="At Ashitech, quality is not just a standard—it's our commitment to every customer."
+                subtitle="At Kaushik Road Technologies, quality is not just a standard—it's our commitment to every customer."
               />
 
               <div className="space-y-6 mt-8">
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   Our objective is to deliver optimum quality products meeting international 
                   standards of performance, reliability, and customer satisfaction. Every 
                   machine undergoes rigorous testing before delivery.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="p-4 bg-[#db8c0a]/10 rounded-lg border border-[#db8c0a]/20">
-                    <div className="font-display text-2xl text-[#db8c0a]">ISO</div>
-                    <div className="text-gray-400 text-sm">9001:2015 Certified</div>
+                  <div className="p-4 bg-[#7B1C2B]/10 rounded-lg border border-[#7B1C2B]/20">
+                    <div className="font-display text-2xl text-[#7B1C2B]">ISO</div>
+                    <div className="text-gray-600 text-sm">9001:2015 Certified</div>
                   </div>
-                  <div className="p-4 bg-[#db8c0a]/10 rounded-lg border border-[#db8c0a]/20">
-                    <div className="font-display text-2xl text-[#db8c0a]">100%</div>
-                    <div className="text-gray-400 text-sm">Quality Tested</div>
+                  <div className="p-4 bg-[#7B1C2B]/10 rounded-lg border border-[#7B1C2B]/20">
+                    <div className="font-display text-2xl text-[#7B1C2B]">100%</div>
+                    <div className="text-gray-600 text-sm">Quality Tested</div>
                   </div>
                 </div>
               </div>
@@ -308,7 +306,7 @@ function About() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="section bg-gradient-to-br from-[#1a1a2e] to-[#0d0d0d]">
+      <section className="section bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <SectionHeading
             title="Let's Build Together"

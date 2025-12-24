@@ -23,20 +23,20 @@ export function SectionHeading({
     >
       <h2
         className={`font-display text-4xl md:text-5xl lg:text-6xl tracking-wide ${
-          light ? "text-white" : "text-white"
+          light ? "text-white" : "text-gray-900"
         }`}
       >
         {title}
       </h2>
       <div
-        className={`w-16 h-1 bg-gradient-to-r from-[#db8c0a] to-[#408986] mt-4 ${
+        className={`w-16 h-1 bg-gradient-to-r from-[#7B1C2B] to-[#D4A12A] mt-4 ${
           centered ? "mx-auto" : ""
         }`}
       />
       {subtitle && (
         <p
           className={`mt-6 text-lg max-w-2xl ${
-            light ? "text-gray-300" : "text-gray-400"
+            light ? "text-gray-300" : "text-gray-600"
           } ${centered ? "mx-auto" : ""}`}
         >
           {subtitle}

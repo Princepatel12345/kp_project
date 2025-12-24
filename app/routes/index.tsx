@@ -91,16 +91,16 @@ function Counter({ value, suffix, label }: { value: number; suffix: string; labe
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
     >
-      <div className="font-display text-5xl md:text-6xl lg:text-7xl text-white">
+      <div className="font-display text-5xl md:text-6xl lg:text-7xl text-gray-900">
         {isInView ? (
           <CountUp end={value} duration={2.5} />
         ) : (
           "0"
         )}
-        <span className="text-[#db8c0a]">{suffix}</span>
+        <span className="text-[#7B1C2B]">{suffix}</span>
       </div>
-      <div className="w-12 h-0.5 bg-[#db8c0a]/50 mx-auto my-4" />
-      <p className="text-gray-400 text-sm uppercase tracking-widest">{label}</p>
+      <div className="w-12 h-0.5 bg-[#D4A12A]/50 mx-auto my-4" />
+      <p className="text-gray-600 text-sm uppercase tracking-widest">{label}</p>
     </motion.div>
   );
 }
@@ -119,21 +119,21 @@ function Home() {
     <>
       <SEO
         title="Road Construction Machinery Manufacturer"
-        description="Ashitech Equipment - Leading manufacturer of road construction machinery including asphalt plants, drum mix plants, wet mix macadam plants. 35+ years of excellence in over 15 countries."
-        keywords="asphalt plant, drum mix plant, wet mix macadam, road construction machinery, bitumen distributor, India"
+        description="Kaushik Road Technologies - Leading manufacturer of road construction machinery including asphalt plants, drum mix plants, wet mix macadam plants. 35+ years of excellence in over 15 countries."
+        keywords="asphalt plant, drum mix plant, wet mix macadam, road construction machinery, bitumen distributor, India, KRT, Kaushik Road Technologies"
       />
 
       {/* ================= HERO ================= */}
-      <section className="relative min-h-screen flex items-end pb-24 overflow-hidden">
+      <section className="relative min-h-screen flex items-end pb-24 overflow-hidden bg-white">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
             src="https://www.ashitech.com/wp-content/uploads/2020/06/slider-1.jpg"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center opacity-15"
             alt="Road construction machinery in action"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0f0f]/95 via-[#0a0f0f]/70 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f0f] via-transparent to-[#0a0f0f]/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/98 via-white/90 to-white/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-100 via-transparent to-white/80" />
         </div>
 
         {/* Content */}
@@ -150,8 +150,8 @@ function Home() {
               transition={{ delay: 0.2 }}
               className="flex items-center gap-4 mb-8"
             >
-              <div className="w-16 h-[2px] bg-[#db8c0a]" />
-              <span className="text-[#db8c0a] text-sm uppercase tracking-[0.3em] font-semibold">
+              <div className="w-16 h-[2px] bg-[#D4A12A]" />
+              <span className="text-[#7B1C2B] text-sm uppercase tracking-[0.3em] font-semibold">
                 Since 1989
               </span>
             </motion.div>
@@ -160,20 +160,20 @@ function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[0.9] mb-8"
+              className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-gray-900 leading-[0.9] mb-8"
             >
               Building Roads,
               <br />
-              <span className="text-[#db8c0a]">Connecting</span>
+              <span className="text-[#7B1C2B]">Connecting</span>
               <br />
-              <span className="text-[#408986]">Futures</span>
+              <span className="text-[#D4A12A]">Futures</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-gray-300 text-lg md:text-xl max-w-xl mb-10 leading-relaxed"
+              className="text-gray-700 text-lg md:text-xl max-w-xl mb-10 leading-relaxed"
             >
               India's premier manufacturer of road construction machinery.
               Engineering excellence with 35+ years of innovation.
@@ -189,7 +189,7 @@ function Home() {
                 Explore Products
                 <ArrowRight size={18} />
               </Link>
-              <Link to="/contact" className="btn btn-outline border-[#408986] text-[#408986] hover:bg-[#408986] hover:text-white">
+              <Link to="/contact" className="btn btn-outline border-[#D4A12A] text-[#D4A12A] hover:bg-[#D4A12A] hover:text-white">
                 Get A Quote
               </Link>
             </motion.div>
@@ -203,18 +203,18 @@ function Home() {
           transition={{ delay: 1 }}
           className="absolute bottom-8 right-8 hidden md:block"
         >
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
+          <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center pt-2">
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
-              className="w-1.5 h-1.5 bg-[#db8c0a] rounded-full"
+              className="w-1.5 h-1.5 bg-[#7B1C2B] rounded-full"
             />
           </div>
         </motion.div>
       </section>
 
       {/* ================= PRODUCTS SECTION ================= */}
-      <section className="section bg-[#0d0d0d] relative">
+      <section className="section bg-gray-50 relative border-t border-gray-200">
         <div className="absolute inset-0 bg-pattern opacity-5" />
         
         <div className="relative max-w-7xl mx-auto px-6">
@@ -233,8 +233,8 @@ function Home() {
                     to={product.link as any}
                     className={`flex items-center justify-between p-4 rounded-lg border transition-all duration-300 group ${
                       i === productCurrent
-                        ? "bg-[#db8c0a]/10 border-[#db8c0a] text-[#db8c0a]"
-                        : "border-white/10 text-gray-400 hover:border-[#db8c0a]/50 hover:text-white"
+                        ? "bg-[#7B1C2B]/10 border-[#7B1C2B] text-[#7B1C2B]"
+                        : "bg-white border-gray-200 text-gray-600 hover:border-[#7B1C2B]/50 hover:text-[#7B1C2B]"
                     }`}
                   >
                     <span className="font-display text-lg tracking-wide">{product.title}</span>
@@ -256,7 +256,10 @@ function Home() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative aspect-square bg-gradient-to-br from-[#1a1a2e] to-[#0d0d0d] rounded-2xl overflow-hidden border border-white/5">
+              <div className="relative aspect-square bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-xl">
+                {/* Subtle background pattern for product display */}
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-white to-gray-50" />
+                
                 {/* Product Image */}
                 <div className="absolute inset-0 flex items-center justify-center p-8">
                   {productSlides.map((slide, i) => (
@@ -264,7 +267,7 @@ function Home() {
                       key={slide.link}
                       src={slide.image}
                       alt={slide.title}
-                      className={`absolute max-w-[90%] max-h-[80%] object-contain transition-all duration-700 ${
+                      className={`absolute max-w-[85%] max-h-[75%] object-contain drop-shadow-lg transition-all duration-700 ${
                         i === productCurrent
                           ? "opacity-100 scale-100"
                           : "opacity-0 scale-95"
@@ -274,11 +277,11 @@ function Home() {
                 </div>
 
                 {/* Product Info Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                  <h3 className="font-display text-2xl text-white">
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white via-white/95 to-transparent">
+                  <h3 className="font-display text-2xl text-gray-900">
                     {productSlides[productCurrent].title}
                   </h3>
-                  <p className="text-[#db8c0a] text-sm mt-1">
+                  <p className="text-[#7B1C2B] text-sm mt-1">
                     {productSlides[productCurrent].capacity}
                   </p>
                 </div>
@@ -290,7 +293,7 @@ function Home() {
                       key={i}
                       onClick={() => setProductCurrent(i)}
                       className={`w-2 h-2 rounded-full transition-all ${
-                        i === productCurrent ? "bg-[#db8c0a] w-6" : "bg-white/30"
+                        i === productCurrent ? "bg-[#7B1C2B] w-6" : "bg-gray-300"
                       }`}
                       aria-label={`Go to product ${i + 1}`}
                     />
@@ -299,23 +302,22 @@ function Home() {
               </div>
 
               {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 border border-[#db8c0a]/20 rounded-lg -z-10" />
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#db8c0a]/5 rounded-lg -z-10" />
+              <div className="absolute -top-4 -right-4 w-24 h-24 border-2 border-[#D4A12A]/30 rounded-lg -z-10" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#7B1C2B]/5 rounded-lg -z-10" />
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* ================= STATS SECTION ================= */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-24 overflow-hidden bg-white">
         {/* Background */}
         <div className="absolute inset-0">
           <img
             src="https://ashitech.com/wp-content/uploads/2020/05/home_counter_bg.jpg?id=258"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-5"
             alt="Construction site background"
           />
-          <div className="absolute inset-0 bg-black/80" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -333,10 +335,10 @@ function Home() {
       </section>
 
       {/* ================= FEATURES SECTION ================= */}
-      <section className="section bg-[#0a0a0a]">
+      <section className="section bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
-            title="Why Choose Ashitech"
+            title="Why Choose Kaushik Road Technologies"
             subtitle="Over three decades of engineering excellence, innovation, and customer-first approach."
             centered
           />
@@ -351,12 +353,12 @@ function Home() {
                 transition={{ delay: i * 0.1 }}
                 className="group"
               >
-                <div className="card-industrial hover:border-l-[#db8c0a] transition-colors">
-                  <div className="w-14 h-14 bg-[#db8c0a]/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#db8c0a]/20 transition">
-                    <feature.icon className="w-7 h-7 text-[#db8c0a]" />
+                <div className="card-industrial hover:border-l-[#7B1C2B] transition-colors">
+                  <div className="w-14 h-14 bg-[#7B1C2B]/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#7B1C2B]/20 transition">
+                    <feature.icon className="w-7 h-7 text-[#7B1C2B]" />
                   </div>
-                  <h3 className="font-display text-2xl text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                  <h3 className="font-display text-2xl text-gray-900 mb-4">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -365,7 +367,7 @@ function Home() {
       </section>
 
       {/* ================= CERTIFICATIONS ================= */}
-      <section className="section bg-[#0d0d0d]">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             {certifications.map((cert, i) => (
@@ -375,14 +377,14 @@ function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex items-center gap-6 p-6 bg-gradient-to-r from-white/5 to-transparent rounded-lg border border-white/5"
+                className="flex items-center gap-6 p-6 bg-gradient-to-r from-gray-50 to-transparent rounded-lg border border-gray-200"
               >
-                <div className="w-16 h-16 bg-[#db8c0a]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <cert.icon className="w-8 h-8 text-[#db8c0a]" />
+                <div className="w-16 h-16 bg-[#7B1C2B]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <cert.icon className="w-8 h-8 text-[#7B1C2B]" />
                 </div>
                 <div>
-                  <h4 className="font-display text-xl text-white">{cert.title}</h4>
-                  <p className="text-gray-400 text-sm">{cert.subtitle}</p>
+                  <h4 className="font-display text-xl text-gray-900">{cert.title}</h4>
+                  <p className="text-gray-600 text-sm">{cert.subtitle}</p>
                 </div>
               </motion.div>
             ))}
@@ -391,7 +393,7 @@ function Home() {
       </section>
 
       {/* ================= CTA SECTION ================= */}
-      <section className="section bg-gradient-to-br from-[#1a1a2e] to-[#0d0d0d] relative overflow-hidden">
+      <section className="section bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="absolute inset-0 bg-pattern opacity-5" />
         
         <div className="relative max-w-7xl mx-auto px-6">
@@ -405,36 +407,36 @@ function Home() {
 
               <div className="space-y-6 mt-8">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#db8c0a]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-[#db8c0a]">📞</span>
+                  <div className="w-10 h-10 bg-[#7B1C2B]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#7B1C2B]">📞</span>
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Call Us Directly</p>
-                    <a href="tel:+918154083000" className="text-xl text-white hover:text-[#db8c0a] transition">
+                    <p className="text-gray-600 text-sm">Call Us Directly</p>
+                    <a href="tel:+918154083000" className="text-xl text-gray-900 hover:text-[#7B1C2B] transition">
                       +91 81540 83000
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#db8c0a]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-[#db8c0a]">✉️</span>
+                  <div className="w-10 h-10 bg-[#7B1C2B]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#7B1C2B]">✉️</span>
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Email Us</p>
-                    <a href="mailto:sales@ashitech.com" className="text-xl text-white hover:text-[#db8c0a] transition">
-                      sales@ashitech.com
+                    <p className="text-gray-600 text-sm">Email Us</p>
+                    <a href="mailto:sales@krt.com" className="text-xl text-gray-900 hover:text-[#7B1C2B] transition">
+                      sales@krt.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#db8c0a]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-[#db8c0a]">📍</span>
+                  <div className="w-10 h-10 bg-[#7B1C2B]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#7B1C2B]">📍</span>
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Visit Our Facility</p>
-                    <p className="text-white">
+                    <p className="text-gray-600 text-sm">Visit Our Facility</p>
+                    <p className="text-gray-900">
                       Plot No.14, G.I.D.C.II, Dediyasan,<br />
                       Mehsana - 384002, Gujarat, INDIA
                     </p>

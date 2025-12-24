@@ -56,12 +56,12 @@ function RootComponent() {
   const isProductActive = () => currentPath.startsWith("/product");
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0d0d0d]">
+    <div className="min-h-screen flex flex-col bg-white">
       <ScrollRestoration />
       {/* Skip to content for accessibility */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#db8c0a] focus:text-white focus:rounded"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#7B1C2B] focus:text-white focus:rounded"
       >
         Skip to content
       </a>
@@ -71,22 +71,22 @@ function RootComponent() {
         <nav className="max-w-7xl mx-auto px-4 lg:px-6">
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center justify-between h-20">
-            {/* Logo */}
+            {/* Left Logo - Kaushik */}
             <Link to="/" className="flex items-center gap-3 group">
               <img 
-                src="/assets/logo.svg" 
-                alt="Ashitech Logo" 
-                className="h-10 w-auto"
+                src="/assets/Kaushik-logo.png" 
+                alt="Kaushik Logo" 
+                className="h-12 w-auto"
               />
             </Link>
 
-            {/* Nav Links */}
+            {/* Nav Links - Center */}
             <ul className="flex items-center gap-8">
               {navLinks.slice(0, 2).map((link) => (
                 <li key={link.to}>
                   <Link
                     to={link.to as any}
-                    className={`nav-link ${isActive(link.to) ? "active text-[#db8c0a]" : ""}`}
+                    className={`nav-link ${isActive(link.to) ? "active text-[#7B1C2B]" : ""}`}
                   >
                     {link.label}
                   </Link>
@@ -100,7 +100,7 @@ function RootComponent() {
                 onMouseLeave={() => setOpenProduct(false)}
               >
                 <button
-                  className={`nav-link flex items-center gap-1 ${isProductActive() ? "active text-[#db8c0a]" : ""}`}
+                  className={`nav-link flex items-center gap-1 ${isProductActive() ? "active text-[#7B1C2B]" : ""}`}
                   aria-expanded={openProduct}
                   aria-haspopup="true"
                 >
@@ -117,21 +117,21 @@ function RootComponent() {
                     openProduct ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
                   }`}
                 >
-                  <ul className="w-72 bg-[#141414] border border-white/10 rounded-lg shadow-2xl overflow-hidden">
+                  <ul className="w-72 bg-white border border-gray-200 rounded-lg shadow-xl overflow-hidden">
                     {productLinks.map((product, i) => (
                       <li key={product.to}>
                         <Link
                           to={product.to as any}
                           className={`block px-5 py-3.5 text-sm transition-colors border-l-2 ${
                             isActive(product.to)
-                              ? "bg-[#db8c0a]/10 text-[#db8c0a] border-[#db8c0a]"
-                              : "text-gray-400 border-transparent hover:bg-white/5 hover:text-white hover:border-[#db8c0a]/50"
+                              ? "bg-[#7B1C2B]/10 text-[#7B1C2B] border-[#7B1C2B]"
+                              : "text-gray-600 border-transparent hover:bg-gray-50 hover:text-[#7B1C2B] hover:border-[#7B1C2B]/50"
                           }`}
                         >
                           {product.label}
                         </Link>
                         {i < productLinks.length - 1 && (
-                          <div className="border-b border-white/5" />
+                          <div className="border-b border-gray-100" />
                         )}
                       </li>
                     ))}
@@ -143,7 +143,7 @@ function RootComponent() {
                 <li key={link.to}>
                   <Link
                     to={link.to as any}
-                    className={`nav-link ${isActive(link.to) ? "active text-[#db8c0a]" : ""}`}
+                    className={`nav-link ${isActive(link.to) ? "active text-[#7B1C2B]" : ""}`}
                   >
                     {link.label}
                   </Link>
@@ -151,31 +151,48 @@ function RootComponent() {
               ))}
             </ul>
 
-            {/* CTA Button */}
-            <Link to="/contact" className="btn btn-primary text-sm py-2.5 px-5">
-              Get Quote
-            </Link>
+            {/* Right Logo - KRT */}
+            <div className="flex items-center gap-4">
+              <Link to="/contact" className="btn btn-primary text-sm py-2.5 px-5">
+                Get Quote
+              </Link>
+              <Link to="/" className="flex items-center">
+                <img 
+                  src="/assets/KRT-clean.png" 
+                  alt="KRT Logo" 
+                  className="h-10 w-auto"
+                />
+              </Link>
+            </div>
           </div>
 
           {/* Mobile Navigation */}
           <div className="flex md:hidden items-center justify-between h-16">
-            {/* Logo */}
+            {/* Left Logo - Kaushik */}
             <Link to="/" className="flex items-center gap-2">
               <img 
-                src="/assets/logo.svg" 
-                alt="Ashitech Logo" 
-                className="h-8 w-auto"
+                src="/assets/Kaushik-logo.png" 
+                alt="Kaushik Logo" 
+                className="h-10 w-auto"
               />
             </Link>
 
-            {/* Menu Toggle */}
-            <button
-              onClick={() => setMenuOpen(true)}
-              className="w-10 h-10 flex items-center justify-center text-white"
-              aria-label="Open menu"
-            >
-              <Menu size={24} />
-            </button>
+            {/* Right Logo - KRT */}
+            <div className="flex items-center gap-2">
+              <img 
+                src="/assets/KRT-clean.png" 
+                alt="KRT Logo" 
+                className="h-8 w-auto"
+              />
+              {/* Menu Toggle */}
+              <button
+                onClick={() => setMenuOpen(true)}
+                className="w-10 h-10 flex items-center justify-center text-gray-900"
+                aria-label="Open menu"
+              >
+                <Menu size={24} />
+              </button>
+            </div>
           </div>
         </nav>
 
@@ -183,17 +200,17 @@ function RootComponent() {
 
       {/* Mobile Fullscreen Menu - Completely separate from header for proper layering */}
       {menuOpen && (
-        <div className="fixed inset-0 z-[100] md:hidden bg-[#0a0a0a]">
+        <div className="fixed inset-0 z-[100] md:hidden bg-white">
           {/* Close Button */}
-          <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
+          <div className="flex justify-between items-center px-6 py-4 border-b border-gray-200">
             <img 
-              src="/assets/logo.svg" 
-              alt="Ashitech Logo" 
-              className="h-8 w-auto"
+              src="/assets/Kaushik-logo.png" 
+              alt="Kaushik Logo" 
+              className="h-10 w-auto"
             />
             <button
               onClick={() => setMenuOpen(false)}
-              className="w-10 h-10 flex items-center justify-center text-white"
+              className="w-10 h-10 flex items-center justify-center text-gray-900"
               aria-label="Close menu"
             >
               <X size={24} />
@@ -201,7 +218,7 @@ function RootComponent() {
           </div>
 
           {/* Mobile Links */}
-          <div className="px-6 py-6 overflow-y-auto max-h-[calc(100vh-80px)] bg-[#0a0a0a]">
+          <div className="px-6 py-6 overflow-y-auto max-h-[calc(100vh-80px)] bg-white">
             <nav className="space-y-1">
               {/* Home & About */}
               {navLinks.slice(0, 2).map((link) => (
@@ -209,8 +226,8 @@ function RootComponent() {
                   key={link.to}
                   to={link.to as any}
                   onClick={() => setMenuOpen(false)}
-                  className={`block py-4 border-b border-white/10 font-display text-lg tracking-wide transition ${
-                    isActive(link.to) ? "text-[#db8c0a]" : "text-gray-300 hover:text-white"
+                  className={`block py-4 border-b border-gray-200 font-display text-lg tracking-wide transition ${
+                    isActive(link.to) ? "text-[#7B1C2B]" : "text-gray-700 hover:text-[#7B1C2B]"
                   }`}
                 >
                   {link.label}
@@ -218,11 +235,11 @@ function RootComponent() {
               ))}
 
               {/* Products Accordion */}
-              <div className="border-b border-white/10">
+              <div className="border-b border-gray-200">
                 <button
                   onClick={() => setMobileProductOpen(!mobileProductOpen)}
                   className={`w-full flex justify-between items-center py-4 font-display text-lg tracking-wide ${
-                    isProductActive() ? "text-[#db8c0a]" : "text-gray-300"
+                    isProductActive() ? "text-[#7B1C2B]" : "text-gray-700"
                   }`}
                 >
                   <span>Products</span>
@@ -237,7 +254,7 @@ function RootComponent() {
                         to={product.to as any}
                         onClick={() => setMenuOpen(false)}
                         className={`block py-3 text-sm transition ${
-                          isActive(product.to) ? "text-[#db8c0a]" : "text-gray-400 hover:text-white"
+                          isActive(product.to) ? "text-[#7B1C2B]" : "text-gray-600 hover:text-[#7B1C2B]"
                         }`}
                       >
                         {product.label}
@@ -253,8 +270,8 @@ function RootComponent() {
                   key={link.to}
                   to={link.to as any}
                   onClick={() => setMenuOpen(false)}
-                  className={`block py-4 border-b border-white/10 font-display text-lg tracking-wide transition ${
-                    isActive(link.to) ? "text-[#db8c0a]" : "text-gray-300 hover:text-white"
+                  className={`block py-4 border-b border-gray-200 font-display text-lg tracking-wide transition ${
+                    isActive(link.to) ? "text-[#7B1C2B]" : "text-gray-700 hover:text-[#7B1C2B]"
                   }`}
                 >
                   {link.label}

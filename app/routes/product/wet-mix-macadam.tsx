@@ -9,9 +9,9 @@ function WetMixMacadamPlant() {
   return (
     <ProductLayout
       title="Wet Mix Macadam Plant"
-      description="Ashitech Wet Mix Macadam (WMM) Plants are specifically designed for producing high-quality water-bound macadam for road base and sub-base construction. These plants feature precise aggregate proportioning, efficient water mixing, and consistent output quality essential for durable road foundations."
+      description="Kaushik Road Technologies Wet Mix Macadam (WMM) Plants are specifically designed for producing high-quality water-bound macadam for road base and sub-base construction. These plants feature precise aggregate proportioning, efficient water mixing, and consistent output quality essential for durable road foundations."
       image="https://www.ashitech.com/wp-content/uploads/2021/07/Wet-Mix-Macadam-Plant-1.png"
-      seoDescription="Ashitech Wet Mix Macadam Plant - 120 to 200 TPH capacity. For road base construction. Precise mixing, high output, ISO certified quality."
+      seoDescription="Kaushik Road Technologies Wet Mix Macadam Plant - 120 to 200 TPH capacity. For road base construction. Precise mixing, high output, ISO certified quality."
       seoKeywords="wet mix macadam plant, WMM plant, road base construction, aggregate mixing plant, 120 TPH, 200 TPH"
       specifications={[
         { label: "Plant Capacity", value: "120 – 200 TPH" },

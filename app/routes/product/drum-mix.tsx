@@ -9,9 +9,9 @@ function DrumMixPlant() {
   return (
     <ProductLayout
       title="Drum Mix Plant"
-      description="Ashitech Drum Mix Plants are designed for continuous production of high-quality asphalt mix. These plants are ideal for large-scale road construction projects where uninterrupted production is essential. With advanced mixing technology and robust construction, our drum mix plants ensure optimal mixing, fuel efficiency, and reduced emissions."
+      description="Kaushik Road Technologies Drum Mix Plants are designed for continuous production of high-quality asphalt mix. These plants are ideal for large-scale road construction projects where uninterrupted production is essential. With advanced mixing technology and robust construction, our drum mix plants ensure optimal mixing, fuel efficiency, and reduced emissions."
       image="https://www.ashitech.com/wp-content/uploads/2021/07/Drum-Mix-Plant-1.png"
-      seoDescription="Ashitech Drum Mix Plant - 40 to 120 TPH capacity. Continuous asphalt production for large projects. Energy efficient, ISO certified manufacturer."
+      seoDescription="Kaushik Road Technologies Drum Mix Plant - 40 to 120 TPH capacity. Continuous asphalt production for large projects. Energy efficient, ISO certified manufacturer."
       seoKeywords="drum mix plant, continuous mix plant, asphalt drum mixer, road construction equipment, 40 TPH, 120 TPH"
       specifications={[
         { label: "Plant Capacity", value: "40 – 120 TPH" },

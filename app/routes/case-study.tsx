@@ -19,7 +19,7 @@ const caseStudies = [
       "Zero downtime during project",
       "15% fuel efficiency improvement",
     ],
-    description: "Ashitech supplied a 160 TPH Asphalt Batching Plant for the construction of a national highway connecting major cities in Gujarat. The project was completed ahead of schedule with exceptional quality standards.",
+    description: "Kaushik Road Technologies supplied a 160 TPH Asphalt Batching Plant for the construction of a national highway connecting major cities in Gujarat. The project was completed ahead of schedule with exceptional quality standards.",
   },
   {
     id: 2,
@@ -67,7 +67,7 @@ const caseStudies = [
       "Integrated plant solution",
       "Record production achieved",
     ],
-    description: "A comprehensive machinery package including asphalt and wet mix plants was supplied for a major expressway project, demonstrating Ashitech's capability for large-scale projects.",
+    description: "A comprehensive machinery package including asphalt and wet mix plants was supplied for a major expressway project, demonstrating Kaushik Road Technologies' capability for large-scale projects.",
   },
 ];
 
@@ -80,13 +80,12 @@ function CaseStudy() {
     <>
       <SEO
         title="Case Studies"
-        description="Explore Ashitech success stories - Major road construction projects across India featuring our machinery. NHAI, Airport, Expressway projects."
-        keywords="case study, road construction projects, NHAI projects, highway construction, success stories"
+        description="Explore Kaushik Road Technologies success stories - Major road construction projects across India featuring our machinery. NHAI, Airport, Expressway projects."
+        keywords="case study, road construction projects, NHAI projects, highway construction, success stories, KRT projects"
       />
 
       {/* ================= HERO ================= */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#0d0d0d] to-[#1a1a2e]" />
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white">
         <div className="absolute inset-0 bg-pattern opacity-10" />
 
         <motion.div
@@ -95,21 +94,21 @@ function CaseStudy() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-4">
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-4">
             Case <span className="text-gradient">Studies</span>
           </h1>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto">
             Success stories from our projects across India and beyond
           </p>
         </motion.div>
       </section>
 
       {/* ================= CASE STUDIES ================= */}
-      <section className="section bg-[#0d0d0d]">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             title="Featured Projects"
-            subtitle="Explore how Ashitech machinery has powered major infrastructure projects."
+            subtitle="Explore how Kaushik Road Technologies machinery has powered major infrastructure projects."
             centered
           />
 
@@ -135,10 +134,10 @@ function CaseStudy() {
                     
                     <div className="absolute bottom-6 left-6 right-6">
                       <div className="flex flex-wrap gap-3 mb-4">
-                        <span className="bg-[#db8c0a] text-white text-xs px-3 py-1 rounded-full">
+                        <span className="bg-[#7B1C2B] text-white text-xs px-3 py-1 rounded-full">
                           {study.product}
                         </span>
-                        <span className="bg-white/20 text-white text-xs px-3 py-1 rounded-full">
+                        <span className="bg-white/90 text-gray-900 text-xs px-3 py-1 rounded-full">
                           {study.capacity}
                         </span>
                       </div>
@@ -147,31 +146,31 @@ function CaseStudy() {
                 </div>
 
                 <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
+                  <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
                     <span className="flex items-center gap-1">
-                      <MapPin size={14} className="text-[#db8c0a]" />
+                      <MapPin size={14} className="text-[#7B1C2B]" />
                       {study.location}
                     </span>
                     <span className="flex items-center gap-1">
-                      <Calendar size={14} className="text-[#db8c0a]" />
+                      <Calendar size={14} className="text-[#7B1C2B]" />
                       {study.year}
                     </span>
                   </div>
 
-                  <h2 className="font-display text-3xl md:text-4xl text-white mb-2">
+                  <h2 className="font-display text-3xl md:text-4xl text-gray-900 mb-2">
                     {study.title}
                   </h2>
-                  <p className="text-[#db8c0a] mb-6">{study.client}</p>
+                  <p className="text-[#7B1C2B] mb-6">{study.client}</p>
 
-                  <p className="text-gray-400 leading-relaxed mb-6">
+                  <p className="text-gray-700 leading-relaxed mb-6">
                     {study.description}
                   </p>
 
                   <div className="space-y-3 mb-8">
                     {study.highlights.map((highlight) => (
                       <div key={highlight} className="flex items-center gap-3">
-                        <CheckCircle className="w-5 h-5 text-[#db8c0a] flex-shrink-0" />
-                        <span className="text-gray-300">{highlight}</span>
+                        <CheckCircle className="w-5 h-5 text-[#7B1C2B] flex-shrink-0" />
+                        <span className="text-gray-700">{highlight}</span>
                       </div>
                     ))}
                   </div>
@@ -188,15 +187,15 @@ function CaseStudy() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="py-20 bg-gradient-to-r from-[#c47d09] to-[#db8c0a]">
+      <section className="py-20 bg-gradient-to-r from-[#7B1C2B] to-[#9d2a3f]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
             Ready to Start Your Project?
           </h2>
-          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            Let's discuss how Ashitech machinery can power your next infrastructure project.
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
+            Let's discuss how Kaushik Road Technologies machinery can power your next infrastructure project.
           </p>
-          <Link to="/contact" className="btn bg-white text-[#c47d09] hover:bg-gray-100">
+          <Link to="/contact" className="btn bg-white text-[#7B1C2B] hover:bg-gray-100">
             Get In Touch
             <ArrowRight size={18} />
           </Link>

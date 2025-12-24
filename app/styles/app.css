@@ -5,35 +5,35 @@
    ======================================== */
 
 :root {
-  /* Colors - Inspired by logo: Teal (#408986) + Golden (#db8c0a) */
-  --color-bg-primary: #0a0f0f;
-  --color-bg-secondary: #0f1a1a;
-  --color-bg-surface: #111919;
-  --color-bg-elevated: #1a2424;
+  /* Colors - Inspired by logo: Maroon (#7B1C2B) + Golden Yellow (#D4A12A) */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8f9fa;
+  --color-bg-surface: #fefefe;
+  --color-bg-elevated: #ffffff;
   
-  /* Primary accent: Golden from logo */
-  --color-accent: #db8c0a;
-  --color-accent-hover: #c47d09;
-  --color-accent-light: #e9a832;
-  --color-accent-secondary: #f0b840;
+  /* Primary accent: Maroon/Burgundy from logo */
+  --color-accent: #7B1C2B;
+  --color-accent-hover: #5a141f;
+  --color-accent-light: #9d2a3f;
+  --color-accent-secondary: #a83d52;
   
-  /* Secondary accent: Teal from logo */
-  --color-teal: #408986;
-  --color-teal-hover: #357572;
-  --color-teal-light: #5aa5a2;
+  /* Secondary accent: Golden Yellow from logo */
+  --color-gold: #D4A12A;
+  --color-gold-hover: #b8871f;
+  --color-gold-light: #e6b84d;
   
-  --color-text-primary: #f5f5f5;
-  --color-text-secondary: #a3a3a3;
-  --color-text-muted: #737373;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-text-muted: #9ca3af;
   
-  --color-border: #1f2d2d;
-  --color-border-light: #2a3d3d;
+  --color-border: #e5e7eb;
+  --color-border-light: #f3f4f6;
   
   /* Gradients */
-  --gradient-hero: linear-gradient(135deg, #0a0f0f 0%, #0f1a1a 50%, #0a0f0f 100%);
-  --gradient-accent: linear-gradient(135deg, #db8c0a 0%, #c47d09 100%);
-  --gradient-teal: linear-gradient(135deg, #408986 0%, #357572 100%);
-  --gradient-dark: linear-gradient(180deg, rgba(10,15,15,0) 0%, rgba(10,15,15,0.95) 100%);
+  --gradient-hero: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+  --gradient-accent: linear-gradient(135deg, #7B1C2B 0%, #5a141f 100%);
+  --gradient-gold: linear-gradient(135deg, #D4A12A 0%, #b8871f 100%);
+  --gradient-dark: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 100%);
   
   /* Typography */
   --font-display: 'Bebas Neue', sans-serif;
@@ -74,6 +74,12 @@ body {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
   line-height: 1.6;
+}
+
+/* Light theme specific adjustments */
+body {
+  background-color: #ffffff;
+  color: #1f2937;
 }
 
 ::selection {
@@ -140,12 +146,13 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--gradient-accent);
 }
 
-/* Glassmorphism */
+/* Glassmorphism - Light theme */
 .glass {
-  background: rgba(13, 13, 13, 0.8);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 /* ========================================
@@ -173,12 +180,12 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--gradient-accent);
   color: white;
   border: none;
-  box-shadow: var(--shadow-accent);
+  box-shadow: 0 4px 14px rgba(123, 28, 43, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 40px rgba(219,140,10,0.4);
+  box-shadow: 0 6px 20px rgba(123, 28, 43, 0.4);
 }
 
 .btn-outline {
@@ -213,12 +220,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   transition: all var(--transition-base);
   overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
   border-color: var(--color-accent);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card-industrial {
@@ -226,6 +234,7 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   border-left: 4px solid var(--color-accent);
   padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* ========================================
@@ -247,7 +256,7 @@ h1, h2, h3, h4, h5, h6 {
 .input:focus {
   outline: none;
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(219, 140, 10, 0.15);
+  box-shadow: 0 0 0 3px rgba(123, 28, 43, 0.15);
 }
 
 .input::placeholder {
@@ -278,6 +287,10 @@ textarea.input {
   color: var(--color-accent);
 }
 
+.nav-link.active {
+  color: var(--color-accent);
+}
+
 .nav-link::after {
   content: '';
   position: absolute;
@@ -303,11 +316,11 @@ textarea.input {
 }
 
 .section-dark {
-  background: var(--color-bg-primary);
+  background: var(--color-bg-secondary);
 }
 
 .section-darker {
-  background: var(--color-bg-secondary);
+  background: var(--color-bg-surface);
 }
 
 .section-gradient {
@@ -369,14 +382,21 @@ textarea.input {
   background-clip: text;
 }
 
+.text-gradient-gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .bg-pattern {
   background-image: 
     linear-gradient(30deg, var(--color-border) 12%, transparent 12.5%, transparent 87%, var(--color-border) 87.5%, var(--color-border)),
     linear-gradient(150deg, var(--color-border) 12%, transparent 12.5%, transparent 87%, var(--color-border) 87.5%, var(--color-border)),
     linear-gradient(30deg, var(--color-border) 12%, transparent 12.5%, transparent 87%, var(--color-border) 87.5%, var(--color-border)),
     linear-gradient(150deg, var(--color-border) 12%, transparent 12.5%, transparent 87%, var(--color-border) 87.5%, var(--color-border)),
-    linear-gradient(60deg, rgba(45,45,45,0.5) 25%, transparent 25.5%, transparent 75%, rgba(45,45,45,0.5) 75%, rgba(45,45,45,0.5)),
-    linear-gradient(60deg, rgba(45,45,45,0.5) 25%, transparent 25.5%, transparent 75%, rgba(45,45,45,0.5) 75%, rgba(45,45,45,0.5));
+    linear-gradient(60deg, rgba(229,231,235,0.5) 25%, transparent 25.5%, transparent 75%, rgba(229,231,235,0.5) 75%, rgba(229,231,235,0.5)),
+    linear-gradient(60deg, rgba(229,231,235,0.5) 25%, transparent 25.5%, transparent 75%, rgba(229,231,235,0.5) 75%, rgba(229,231,235,0.5));
   background-size: 80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
@@ -389,7 +409,7 @@ textarea.input {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(13,13,13,0.7) 0%, rgba(13,13,13,0.9) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.9) 100%);
   pointer-events: none;
 }
 

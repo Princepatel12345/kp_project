@@ -51,13 +51,12 @@ function Careers() {
     <>
       <SEO
         title="Careers"
-        description="Join Ashitech Equipment - Build your career with India's leading road construction machinery manufacturer. View current openings and apply today."
-        keywords="careers, jobs, road construction jobs, manufacturing jobs, Gujarat jobs, engineering jobs"
+        description="Join Kaushik Road Technologies - Build your career with India's leading road construction machinery manufacturer. View current openings and apply today."
+        keywords="careers, jobs, road construction jobs, manufacturing jobs, Gujarat jobs, engineering jobs, KRT careers"
       />
 
       {/* ================= HERO ================= */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#0d0d0d] to-[#1a1a2e]" />
+      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white">
         <div className="absolute inset-0 bg-pattern opacity-10" />
 
         <motion.div
@@ -66,20 +65,20 @@ function Careers() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-4">
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-4">
             Join Our <span className="text-gradient">Team</span>
           </h1>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto">
             Build roads, build careers. Be part of India's leading construction machinery manufacturer.
           </p>
         </motion.div>
       </section>
 
       {/* ================= WHY JOIN US ================= */}
-      <section className="section bg-[#0d0d0d]">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
-            title="Why Ashitech?"
+            title="Why Kaushik Road Technologies?"
             subtitle="We offer more than just a job - we offer a career path to success."
             centered
           />
@@ -92,13 +91,13 @@ function Careers() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="text-center p-8 bg-[#141414] rounded-lg border border-white/5 hover:border-[#db8c0a]/30 transition"
+                className="text-center p-8 bg-gray-50 rounded-lg border border-gray-200 hover:border-[#7B1C2B]/30 transition"
               >
-                <div className="w-16 h-16 bg-[#db8c0a]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-8 h-8 text-[#db8c0a]" />
+                <div className="w-16 h-16 bg-[#7B1C2B]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <benefit.icon className="w-8 h-8 text-[#7B1C2B]" />
                 </div>
-                <h3 className="font-display text-xl text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-400 text-sm">{benefit.description}</p>
+                <h3 className="font-display text-xl text-gray-900 mb-3">{benefit.title}</h3>
+                <p className="text-gray-600 text-sm">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -106,7 +105,7 @@ function Careers() {
       </section>
 
       {/* ================= OPEN POSITIONS ================= */}
-      <section className="section bg-[#0a0a0a]">
+      <section className="section bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             title="Open Positions"
@@ -126,25 +125,25 @@ function Careers() {
               >
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <span className="text-[#db8c0a] text-sm font-medium">{job.department}</span>
-                    <h3 className="font-display text-2xl text-white mt-1">{job.title}</h3>
+                    <span className="text-[#7B1C2B] text-sm font-medium">{job.department}</span>
+                    <h3 className="font-display text-2xl text-gray-900 mt-1">{job.title}</h3>
                   </div>
-                  <div className="w-12 h-12 bg-[#db8c0a]/10 rounded-lg flex items-center justify-center group-hover:bg-[#db8c0a] transition">
-                    <Briefcase className="w-5 h-5 text-[#db8c0a] group-hover:text-white transition" />
+                  <div className="w-12 h-12 bg-[#7B1C2B]/10 rounded-lg flex items-center justify-center group-hover:bg-[#7B1C2B] transition">
+                    <Briefcase className="w-5 h-5 text-[#7B1C2B] group-hover:text-white transition" />
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-4 mb-6 text-sm text-gray-400">
+                <div className="flex flex-wrap gap-4 mb-6 text-sm text-gray-600">
                   <div className="flex items-center gap-2">
-                    <MapPin size={14} className="text-[#db8c0a]" />
+                    <MapPin size={14} className="text-[#7B1C2B]" />
                     {job.location}
                   </div>
                   <div className="flex items-center gap-2">
-                    <Clock size={14} className="text-[#db8c0a]" />
+                    <Clock size={14} className="text-[#7B1C2B]" />
                     {job.type}
                   </div>
                   <div className="flex items-center gap-2">
-                    <Users size={14} className="text-[#db8c0a]" />
+                    <Users size={14} className="text-[#7B1C2B]" />
                     {job.experience}
                   </div>
                 </div>
@@ -162,17 +161,17 @@ function Careers() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="py-20 bg-gradient-to-r from-[#c47d09] to-[#db8c0a]">
+      <section className="py-20 bg-gradient-to-r from-[#7B1C2B] to-[#9d2a3f]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
             Don't See a Suitable Opening?
           </h2>
-          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
           </p>
           <a
-            href="mailto:hr@ashitech.com"
-            className="btn bg-white text-[#c47d09] hover:bg-gray-100"
+            href="mailto:hr@krt.com"
+            className="btn bg-white text-[#7B1C2B] hover:bg-gray-100"
           >
             Send Your Resume
           </a>

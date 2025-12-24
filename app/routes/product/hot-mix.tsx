@@ -9,9 +9,9 @@ function AsphaltBatchingPlant() {
   return (
     <ProductLayout
       title="Asphalt Batching Plant"
-      description="Ashitech is one of the leading asphalt batching plant manufacturers in India. Our batch mix plants are designed to deliver superior quality asphalt mixes with high efficiency, reliability, and low maintenance. The plants reduce thermal loss, improve fuel efficiency, and ensure consistent output quality. Each plant is engineered using cutting-edge technology to meet global industry standards."
+      description="Kaushik Road Technologies is one of the leading asphalt batching plant manufacturers in India. Our batch mix plants are designed to deliver superior quality asphalt mixes with high efficiency, reliability, and low maintenance. The plants reduce thermal loss, improve fuel efficiency, and ensure consistent output quality. Each plant is engineered using cutting-edge technology to meet global industry standards."
       image="https://www.ashitech.com/wp-content/uploads/2021/07/Asphalt-Batching-Plant-1.png"
-      seoDescription="Ashitech Asphalt Batching Plant - 80 to 200 TPH capacity. Leading manufacturer in India. High efficiency, low maintenance, ISO certified quality."
+      seoDescription="Kaushik Road Technologies Asphalt Batching Plant - 80 to 200 TPH capacity. Leading manufacturer in India. High efficiency, low maintenance, ISO certified quality."
       seoKeywords="asphalt batching plant, hot mix plant, batch mix plant, asphalt plant manufacturer India, 80 TPH, 200 TPH"
       specifications={[
         { label: "Plant Capacity", value: "80 – 200 TPH" },

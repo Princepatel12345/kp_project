@@ -50,8 +50,7 @@ export function ProductLayout({
       />
 
       {/* ================= HERO ================= */}
-      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#0d0d0d] to-[#1a1a2e]" />
+      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white">
         <div className="absolute inset-0 bg-pattern opacity-10" />
 
         <motion.div
@@ -64,20 +63,20 @@ export function ProductLayout({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 text-[#db8c0a] text-sm uppercase tracking-widest mb-4"
+            className="inline-flex items-center gap-2 text-[#7B1C2B] text-sm uppercase tracking-widest mb-4"
           >
             <Link to="/product/hot-mix" className="hover:underline">Products</Link>
             <span>/</span>
           </motion.div>
 
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-gray-900">
             {title}
           </h1>
         </motion.div>
       </section>
 
       {/* ================= MAIN CONTENT ================= */}
-      <section className="section bg-[#0d0d0d]">
+      <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content */}
@@ -87,7 +86,7 @@ export function ProductLayout({
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-[#1a1a2e] to-[#0d0d0d] rounded-2xl p-8 border border-white/5 mb-12"
+                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-200 shadow-lg mb-12"
               >
                 <img
                   src={image}
@@ -103,9 +102,9 @@ export function ProductLayout({
                 viewport={{ once: true }}
                 className="mb-12"
               >
-                <h2 className="font-display text-3xl text-white mb-4">Overview</h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-[#db8c0a] to-[#408986] mb-6" />
-                <p className="text-gray-400 leading-relaxed text-lg">{description}</p>
+                <h2 className="font-display text-3xl text-gray-900 mb-4">Overview</h2>
+                <div className="w-16 h-1 bg-gradient-to-r from-[#7B1C2B] to-[#D4A12A] mb-6" />
+                <p className="text-gray-700 leading-relaxed text-lg">{description}</p>
               </motion.div>
 
               {/* Specifications Table */}
@@ -115,21 +114,21 @@ export function ProductLayout({
                 viewport={{ once: true }}
                 className="mb-12"
               >
-                <h2 className="font-display text-3xl text-white mb-4">Technical Specifications</h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-[#db8c0a] to-[#408986] mb-6" />
+                <h2 className="font-display text-3xl text-gray-900 mb-4">Technical Specifications</h2>
+                <div className="w-16 h-1 bg-gradient-to-r from-[#7B1C2B] to-[#D4A12A] mb-6" />
 
-                <div className="overflow-hidden rounded-lg border border-white/10">
+                <div className="overflow-hidden rounded-lg border border-gray-200 shadow-sm">
                   <table className="w-full">
                     <tbody>
                       {specifications.map((spec, i) => (
                         <tr
                           key={spec.label}
-                          className={`border-b border-white/5 ${
-                            i % 2 === 0 ? "bg-white/5" : "bg-transparent"
+                          className={`border-b border-gray-200 ${
+                            i % 2 === 0 ? "bg-gray-50" : "bg-white"
                           }`}
                         >
-                          <td className="px-6 py-4 text-gray-400 font-medium">{spec.label}</td>
-                          <td className="px-6 py-4 text-white">{spec.value}</td>
+                          <td className="px-6 py-4 text-gray-600 font-medium">{spec.label}</td>
+                          <td className="px-6 py-4 text-gray-900">{spec.value}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -143,17 +142,17 @@ export function ProductLayout({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="font-display text-3xl text-white mb-4">Key Features</h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-[#db8c0a] to-[#408986] mb-6" />
+                <h2 className="font-display text-3xl text-gray-900 mb-4">Key Features</h2>
+                <div className="w-16 h-1 bg-gradient-to-r from-[#7B1C2B] to-[#D4A12A] mb-6" />
 
                 <div className="grid md:grid-cols-2 gap-4">
                   {features.map((feature) => (
                     <div
                       key={feature.text}
-                      className="flex items-start gap-3 p-4 bg-white/5 rounded-lg border border-white/5"
+                      className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200"
                     >
-                      <div className="w-2 h-2 bg-[#db8c0a] rounded-full mt-2 flex-shrink-0" />
-                      <p className="text-gray-300">{feature.text}</p>
+                      <div className="w-2 h-2 bg-[#7B1C2B] rounded-full mt-2 flex-shrink-0" />
+                      <p className="text-gray-700">{feature.text}</p>
                     </div>
                   ))}
                 </div>
@@ -169,45 +168,45 @@ export function ProductLayout({
                 viewport={{ once: true }}
                 className="sticky top-24"
               >
-                <div className="bg-[#141414] rounded-lg border border-white/10 p-6 mb-8">
-                  <h3 className="font-display text-2xl text-white mb-6">Request A Quote</h3>
+                <div className="bg-white rounded-lg border border-gray-200 shadow-lg p-6 mb-8">
+                  <h3 className="font-display text-2xl text-gray-900 mb-6">Request A Quote</h3>
                   <ContactForm compact />
                 </div>
 
                 {/* Contact Info */}
-                <div className="bg-gradient-to-br from-[#db8c0a]/10 to-transparent rounded-lg border border-[#db8c0a]/20 p-6 mb-8">
-                  <h4 className="font-display text-xl text-white mb-4">Need Help?</h4>
+                <div className="bg-gradient-to-br from-[#7B1C2B]/10 to-transparent rounded-lg border border-[#7B1C2B]/20 p-6 mb-8">
+                  <h4 className="font-display text-xl text-gray-900 mb-4">Need Help?</h4>
                   <div className="space-y-4">
                     <a
                       href="tel:+918154083000"
-                      className="flex items-center gap-3 text-gray-400 hover:text-[#db8c0a] transition"
+                      className="flex items-center gap-3 text-gray-600 hover:text-[#7B1C2B] transition"
                     >
-                      <Phone size={18} className="text-[#db8c0a]" />
+                      <Phone size={18} className="text-[#7B1C2B]" />
                       +91 81540 83000
                     </a>
                     <a
-                      href="mailto:sales@ashitech.com"
-                      className="flex items-center gap-3 text-gray-400 hover:text-[#db8c0a] transition"
+                      href="mailto:sales@krt.com"
+                      className="flex items-center gap-3 text-gray-600 hover:text-[#7B1C2B] transition"
                     >
-                      <Mail size={18} className="text-[#db8c0a]" />
-                      sales@ashitech.com
+                      <Mail size={18} className="text-[#7B1C2B]" />
+                      sales@krt.com
                     </a>
-                    <div className="flex items-start gap-3 text-gray-400">
-                      <MapPin size={18} className="text-[#db8c0a] flex-shrink-0 mt-0.5" />
+                    <div className="flex items-start gap-3 text-gray-600">
+                      <MapPin size={18} className="text-[#7B1C2B] flex-shrink-0 mt-0.5" />
                       <span>Mehsana, Gujarat, India</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Related Products */}
-                <div className="bg-[#141414] rounded-lg border border-white/10 p-6">
-                  <h4 className="font-display text-xl text-white mb-4">Other Products</h4>
+                <div className="bg-white rounded-lg border border-gray-200 shadow-lg p-6">
+                  <h4 className="font-display text-xl text-gray-900 mb-4">Other Products</h4>
                   <ul className="space-y-3">
                     {relatedProducts.map((product) => (
                       <li key={product.to}>
                         <Link
                           to={product.to as any}
-                          className="flex items-center justify-between py-2 text-gray-400 hover:text-[#db8c0a] transition group"
+                          className="flex items-center justify-between py-2 text-gray-600 hover:text-[#7B1C2B] transition group"
                         >
                           <span>{product.title}</span>
                           <ArrowRight size={16} className="opacity-0 group-hover:opacity-100 transition" />
@@ -223,15 +222,15 @@ export function ProductLayout({
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="py-16 bg-gradient-to-r from-[#c47d09] to-[#db8c0a]">
+      <section className="py-16 bg-gradient-to-r from-[#7B1C2B] to-[#9d2a3f]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
             Ready to Order?
           </h2>
-          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             Get in touch with our team for pricing, customization options, and delivery timelines.
           </p>
-          <Link to="/contact" className="btn bg-white text-[#c47d09] hover:bg-gray-100">
+          <Link to="/contact" className="btn bg-white text-[#7B1C2B] hover:bg-gray-100">
             Contact Our Team
             <ArrowRight size={18} />
           </Link>

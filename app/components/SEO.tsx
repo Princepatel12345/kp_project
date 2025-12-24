@@ -19,7 +19,7 @@ export function SEO({
 }: SEOProps) {
   useEffect(() => {
     // Update document title
-    document.title = `${title} | Ashitech Equipment`;
+    document.title = `${title} | Kaushik Road Technologies`;
 
     // Helper to set or create meta tag
     const setMeta = (name: string, content: string, isProperty = false) => {
@@ -51,7 +51,7 @@ export function SEO({
 
     // Cleanup: restore default title on unmount
     return () => {
-      document.title = "Ashitech Equipment - Road Construction Machinery Manufacturer";
+      document.title = "Kaushik Road Technologies - Road Construction Machinery Manufacturer";
     };
   }, [title, description, keywords, image, url, type]);
 

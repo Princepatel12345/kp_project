@@ -10,11 +10,11 @@ export function ContactForm({ compact = false }: ContactFormProps) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className={`space-y-4 ${compact ? "" : "bg-[#141414] p-8 rounded-lg border border-white/10"}`}
+      className={`space-y-4 ${compact ? "" : "bg-white p-8 rounded-lg border border-gray-200 shadow-lg"}`}
       onSubmit={(e) => e.preventDefault()}
     >
       {!compact && (
-        <h3 className="font-display text-2xl text-white mb-6">
+        <h3 className="font-display text-2xl text-gray-900 mb-6">
           Request A Quote
         </h3>
       )}
@@ -63,9 +63,9 @@ export function ContactForm({ compact = false }: ContactFormProps) {
         <input
           type="checkbox"
           id="privacy-consent"
-          className="mt-1 w-4 h-4 accent-[#db8c0a]"
+          className="mt-1 w-4 h-4 accent-[#7B1C2B]"
         />
-        <label htmlFor="privacy-consent" className="text-sm text-gray-400">
+        <label htmlFor="privacy-consent" className="text-sm text-gray-600">
           I agree to the privacy policy and consent to being contacted regarding my inquiry.
         </label>
       </div>

@@ -9,9 +9,9 @@ function MechanicalHydraulicBroomer() {
   return (
     <ProductLayout
       title="Mechanical Hydraulic Broomer"
-      description="Ashitech Mechanical Hydraulic Broomers are designed for efficient cleaning of road surfaces before bitumen application. These tractor-mounted broomers feature heavy-duty brush assemblies, hydraulic controls, and dust suppression systems for thorough surface preparation."
+      description="Kaushik Road Technologies Mechanical Hydraulic Broomers are designed for efficient cleaning of road surfaces before bitumen application. These tractor-mounted broomers feature heavy-duty brush assemblies, hydraulic controls, and dust suppression systems for thorough surface preparation."
       image="https://www.ashitech.com/wp-content/uploads/2021/07/Mechanical-Hydraulic-Broomer-1.png"
-      seoDescription="Ashitech Mechanical Hydraulic Broomer - Tractor mounted road cleaning equipment. Dust-free surface preparation for road construction."
+      seoDescription="Kaushik Road Technologies Mechanical Hydraulic Broomer - Tractor mounted road cleaning equipment. Dust-free surface preparation for road construction."
       seoKeywords="mechanical broomer, hydraulic road broomer, road sweeper, tractor mounted broomer, surface cleaning equipment"
       specifications={[
         { label: "Mounting Type", value: "Tractor Mounted (3 Point)" },
