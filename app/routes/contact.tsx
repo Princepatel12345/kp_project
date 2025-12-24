@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { SEO } from "../components/SEO";
 import { SectionHeading } from "../components/SectionHeading";
 import { ContactForm } from "../components/ContactForm";
+import { GoogleMap } from "../components/GoogleMap";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 
 const contactInfo = [
@@ -22,7 +23,7 @@ const contactInfo = [
     icon: MapPin,
     title: "Visit Us",
     lines: ["Plot No.14, G.I.D.C.II, Dediyasan", "Mehsana - 384002, Gujarat, INDIA"],
-    action: { href: "https://maps.google.com", label: "Get Directions" },
+    action: { href: "https://www.google.com/maps/place/KAUSHIK+ROADTECK/@23.5841706,72.3498413,17z/data=!3m1!4b1!4m6!3m5!1s0x395c41f4ad995bad:0x9e59637dbc47da99!8m2!3d23.5841706!4d72.3524162!16s%2Fg%2F11f15k4d22?entry=ttu", label: "Get Directions" },
   },
   {
     icon: Clock,
@@ -146,24 +147,55 @@ function Contact() {
       </section>
 
       {/* ================= MAP SECTION ================= */}
-      <section className="h-[400px] bg-gray-50 relative">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <MapPin className="w-12 h-12 text-[#7B1C2B] mx-auto mb-4" />
-            <h3 className="font-display text-2xl text-gray-900 mb-2">Our Location</h3>
-            <p className="text-gray-700 mb-4">
-              Plot No.14, G.I.D.C.II, Dediyasan<br />
-              Mehsana - 384002, Gujarat, INDIA
-            </p>
-            <a
-              href="https://maps.google.com/?q=Kaushik+Road+Technologies+Mehsana"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary text-sm"
-            >
-              Open in Google Maps
-            </a>
-          </div>
+      <section className="relative bg-white">
+        {/* Full Width Map */}
+        <div className="w-full">
+          <GoogleMap 
+            address="Plot No.14, G.I.D.C.II, Dediyasan, Mehsana - 384002, Gujarat, INDIA"
+            height="500px"
+            className="w-full"
+          />
+        </div>
+        
+        {/* Location Info Section - Compact */}
+        <div className="max-w-4xl mx-auto px-6 py-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row items-center justify-center gap-6"
+          >
+            {/* Map Pin Icon */}
+            <div className="flex-shrink-0">
+              <div className="w-16 h-16 bg-[#7B1C2B]/10 rounded-full flex items-center justify-center">
+                <MapPin className="w-8 h-8 text-[#7B1C2B]" />
+              </div>
+            </div>
+            
+            {/* Address Text */}
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="font-display text-xl md:text-2xl text-gray-900 mb-2 uppercase tracking-wide">
+                Our Location
+              </h3>
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                Plot No.14, G.I.D.C.II, Dediyasan<br />
+                Mehsana - 384002, Gujarat, INDIA
+              </p>
+            </div>
+            
+            {/* Open in Google Maps Button */}
+            <div className="flex-shrink-0">
+              <a
+                href="https://www.google.com/maps/place/KAUSHIK+ROADTECK/@23.5841706,72.3498413,17z/data=!3m1!4b1!4m6!3m5!1s0x395c41f4ad995bad:0x9e59637dbc47da99!8m2!3d23.5841706!4d72.3524162!16s%2Fg%2F11f15k4d22?entry=ttu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary text-sm px-6 py-3 inline-flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+              >
+                Open in Google Maps
+                <MapPin size={16} />
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
     </>
