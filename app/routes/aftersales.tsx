@@ -65,7 +65,7 @@ function AfterSales() {
       </section>
 
       {/* ================= BENEFITS ================= */}
-      <section className="py-12 bg-white border-b border-gray-200">
+      <section className="py-12 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((benefit, i) => (

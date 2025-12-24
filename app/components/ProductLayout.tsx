@@ -76,7 +76,7 @@ export function ProductLayout({
       </section>
 
       {/* ================= MAIN CONTENT ================= */}
-      <section className="section bg-white">
+      <section className="section bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content */}

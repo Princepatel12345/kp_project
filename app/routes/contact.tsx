@@ -66,7 +66,7 @@ function Contact() {
       </section>
 
       {/* ================= CONTACT INFO ================= */}
-      <section className="section bg-white">
+      <section className="section bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
             {contactInfo.map((info, i) => (

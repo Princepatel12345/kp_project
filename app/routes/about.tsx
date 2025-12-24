@@ -63,7 +63,7 @@ function About() {
       </section>
 
       {/* ================= COMPANY PROFILE ================= */}
-      <section className="section bg-white">
+      <section className="section bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
