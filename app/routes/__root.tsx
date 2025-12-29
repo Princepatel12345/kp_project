@@ -76,7 +76,7 @@ function RootComponent() {
               <img 
                 src="/assets/Kaushik-logo.png" 
                 alt="Kaushik Logo" 
-                className="h-12 w-auto"
+                className="h-18 w-auto"
               />
             </Link>
 
@@ -153,14 +153,11 @@ function RootComponent() {
 
             {/* Right Logo - KRT */}
             <div className="flex items-center gap-4">
-              <Link to="/contact" className="btn btn-primary text-sm py-2.5 px-5">
-                Get Quote
-              </Link>
               <Link to="/" className="flex items-center">
                 <img 
                   src="/assets/KRT-clean.png" 
                   alt="KRT Logo" 
-                  className="h-10 w-auto"
+                  className="h-12 w-auto"
                 />
               </Link>
             </div>
@@ -173,7 +170,7 @@ function RootComponent() {
               <img 
                 src="/assets/Kaushik-logo.png" 
                 alt="Kaushik Logo" 
-                className="h-10 w-auto"
+                className="h-18 w-auto"
               />
             </Link>
 
@@ -182,7 +179,7 @@ function RootComponent() {
               <img 
                 src="/assets/KRT-clean.png" 
                 alt="KRT Logo" 
-                className="h-8 w-auto"
+                className="h-12 w-auto"
               />
               {/* Menu Toggle */}
               <button
@@ -206,7 +203,7 @@ function RootComponent() {
             <img 
               src="/assets/Kaushik-logo.png" 
               alt="Kaushik Logo" 
-              className="h-10 w-auto"
+              className="h-14 w-auto"
             />
             <button
               onClick={() => setMenuOpen(false)}
@@ -278,15 +275,6 @@ function RootComponent() {
                 </Link>
               ))}
             </nav>
-
-            {/* Mobile CTA */}
-            <Link
-              to="/contact"
-              onClick={() => setMenuOpen(false)}
-              className="btn btn-primary w-full mt-8"
-            >
-              Get Quote
-            </Link>
           </div>
         </div>
       )}
