@@ -179,7 +179,7 @@ function RootComponent() {
               <img 
                 src="/assets/KRT-clean.png" 
                 alt="KRT Logo" 
-                className="h-12 w-auto"
+                className="h-14 w-auto"
               />
               {/* Menu Toggle */}
               <button
@@ -203,7 +203,7 @@ function RootComponent() {
             <img 
               src="/assets/Kaushik-logo.png" 
               alt="Kaushik Logo" 
-              className="h-14 w-auto"
+              className="h-18 w-auto"
             />
             <button
               onClick={() => setMenuOpen(false)}

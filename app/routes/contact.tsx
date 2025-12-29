@@ -4,6 +4,7 @@ import { SEO } from "../components/SEO";
 import { SectionHeading } from "../components/SectionHeading";
 import { ContactForm } from "../components/ContactForm";
 import { GoogleMap } from "../components/GoogleMap";
+import { SocialIcons } from "../components/SocialIcons";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 
 const contactInfo = [
@@ -118,20 +119,7 @@ function Contact() {
 
               <div className="mt-8">
                 <h4 className="font-display text-lg text-gray-900 mb-4">Follow Us</h4>
-                <div className="flex gap-3">
-                  {["LinkedIn", "Facebook", "Twitter", "Instagram"].map((social) => (
-                    <a
-                      key={social}
-                      href="#"
-                      className="w-10 h-10 flex items-center justify-center bg-gray-100 border border-gray-200 rounded hover:bg-[#7B1C2B] hover:border-[#7B1C2B] transition"
-                      aria-label={social}
-                    >
-                      <span className="font-display text-xs text-gray-600 hover:text-white">
-                        {social[0]}
-                      </span>
-                    </a>
-                  ))}
-                </div>
+                <SocialIcons variant="light" />
               </div>
             </div>
 
