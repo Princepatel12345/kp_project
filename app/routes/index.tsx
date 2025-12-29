@@ -125,15 +125,15 @@ function Home() {
 
       {/* ================= HERO ================= */}
       <section className="relative min-h-screen flex items-end pb-24 overflow-hidden bg-white">
-        {/* Background Image */}
+        {/* Background Image - Beautiful Highway */}
         <div className="absolute inset-0">
           <img
-            src="https://www.ashitech.com/wp-content/uploads/2020/06/slider-1.jpg"
-            className="w-full h-full object-cover object-center opacity-15"
-            alt="Road construction machinery in action"
+            src="https://images.unsplash.com/photo-1584527810790-01a904be796b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            className="w-full h-full object-cover object-center"
+            alt="Long straight highway road"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/98 via-white/90 to-white/70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-100 via-transparent to-white/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/60 to-white/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-white/40 to-transparent" />
         </div>
 
         {/* Content */}

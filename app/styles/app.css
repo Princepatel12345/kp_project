@@ -71,15 +71,14 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-bg-primary);
-  color: var(--color-text-primary);
-  line-height: 1.6;
-}
-
-/* Light theme specific adjustments */
-body {
   background-color: #ffffff;
   color: #1f2937;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 ::selection {
