@@ -104,7 +104,7 @@ function About() {
               <div className="relative rounded-2xl overflow-hidden">
                 <img
                   src="https://www.ashitech.com/wp-content/uploads/2020/05/about_right.jpg"
-                  alt="Ashitech manufacturing facility"
+                  alt="Kaushik Road Technologies manufacturing facility"
                   className="w-full h-auto"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -210,7 +210,7 @@ function About() {
             >
               <img
                 src="https://www.ashitech.com/wp-content/uploads/2020/05/about2.jpg"
-                alt="Ashitech infrastructure and manufacturing"
+                alt="Kaushik Road Technologies infrastructure and manufacturing"
                 className="rounded-2xl w-full"
               />
             </motion.div>
