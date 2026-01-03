@@ -10,12 +10,6 @@ import { ArrowRight, Award, Globe, Shield, Wrench, Factory, HeadphonesIcon } fro
 /* ================= PRODUCT SLIDES ================= */
 const productSlides = [
   {
-    image: "https://www.ashitech.com/wp-content/uploads/2021/07/Asphalt-Batching-Plant-1.png",
-    link: "/product/hot-mix",
-    title: "Asphalt Batching Plant",
-    capacity: "80 - 200 TPH",
-  },
-  {
     image: "https://www.ashitech.com/wp-content/uploads/2021/07/Drum-Mix-Plant-1.png",
     link: "/product/drum-mix",
     title: "Drum Mix Plant",
@@ -39,12 +33,24 @@ const productSlides = [
     title: "Mechanical Hydraulic Broomer",
     capacity: "Tractor Mounted",
   },
+  {
+    image: "https://images.pexels.com/photos/5924641/pexels-photo-5924641.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/product/asphalt-paver-machine",
+    title: "Asphalt Paver Machine",
+    capacity: "2.5m - 8.0m Width",
+  },
+  {
+    image: "https://images.pexels.com/photos/33531833/pexels-photo-33531833.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/product/pollution-control-unit",
+    title: "Pollution Control Unit",
+    capacity: "15,000 - 50,000 CFM",
+  },
 ];
 
 /* ================= STATS ================= */
 const stats = [
   { value: 35, label: "Years Experience", suffix: "+" },
-  { value: 15, label: "Countries Served", suffix: "+" },
+  { value: 12, label: "Countries Served", suffix: "+" },
   { value: 888, label: "Installations", suffix: "+" },
   { value: 100, label: "Client Satisfaction", suffix: "%" },
 ];
@@ -64,14 +70,14 @@ const features = [
   {
     icon: HeadphonesIcon,
     title: "After Sales Service",
-    description: "Superior service reflected by satisfied clients in over 15 countries. A brand our clients trust completely.",
+    description: "Superior service reflected by satisfied clients in over 12 countries. A brand our clients trust completely.",
   },
 ];
 
 /* ================= CERTIFICATIONS ================= */
 const certifications = [
   { icon: Award, title: "ISO 9001:2015", subtitle: "Certified Excellence" },
-  { icon: Globe, title: "Global Presence", subtitle: "15+ Countries" },
+  { icon: Globe, title: "Global Presence", subtitle: "12+ Countries" },
   { icon: Shield, title: "Quality Assured", subtitle: "International Standards" },
 ];
 
@@ -119,7 +125,7 @@ function Home() {
     <>
       <SEO
         title="Road Construction Machinery Manufacturer"
-        description="Kaushik Road Technologies - Leading manufacturer of road construction machinery including asphalt plants, drum mix plants, wet mix macadam plants. 35+ years of excellence in over 15 countries."
+        description="Kaushik Road Technologies - Leading manufacturer of road construction machinery including asphalt plants, drum mix plants, wet mix macadam plants. 29+ years of excellence in over 12 countries."
         keywords="asphalt plant, drum mix plant, wet mix macadam, road construction machinery, bitumen distributor, India, KRT, Kaushik Road Technologies"
       />
 
@@ -132,8 +138,8 @@ function Home() {
             className="w-full h-full object-cover object-center"
             alt="Long straight highway road"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/60 to-white/50" />
-          <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-white/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-white/20 to-white/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-white/20 to-transparent" />
         </div>
 
         {/* Content */}
@@ -152,7 +158,7 @@ function Home() {
             >
               <div className="w-16 h-[2px] bg-[#D4A12A]" />
               <span className="text-[#7B1C2B] text-sm uppercase tracking-[0.3em] font-semibold">
-                Since 1989
+                Since 1997
               </span>
             </motion.div>
 
@@ -162,11 +168,11 @@ function Home() {
               transition={{ delay: 0.3 }}
               className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-gray-900 leading-[0.9] mb-8"
             >
-              Building Roads,
+              Your Trusted
               <br />
-              <span className="text-[#7B1C2B]">Connecting</span>
+              <span className="text-[#7B1C2B]">Road Machinery</span>
               <br />
-              <span className="text-[#D4A12A]">Futures</span>
+              <span className="text-[#D4A12A]">Partner</span>
             </motion.h1>
 
             <motion.p
@@ -176,7 +182,7 @@ function Home() {
               className="text-gray-700 text-lg md:text-xl max-w-xl mb-10 leading-relaxed"
             >
               India's premier manufacturer of road construction machinery.
-              Engineering excellence with 35+ years of innovation.
+              Engineering excellence with 29+ years of innovation.
             </motion.p>
 
             <motion.div
@@ -185,7 +191,7 @@ function Home() {
               transition={{ delay: 0.5 }}
               className="flex flex-wrap gap-4"
             >
-              <Link to="/product/hot-mix" className="btn btn-primary">
+              <Link to="/product/" className="btn btn-primary">
                 Explore Products
                 <ArrowRight size={18} />
               </Link>
@@ -243,7 +249,7 @@ function Home() {
                 ))}
               </div>
 
-              <Link to="/product/hot-mix" className="btn btn-primary mt-8">
+              <Link to="/product/" className="btn btn-primary mt-8">
                 View All Products
                 <ArrowRight size={18} />
               </Link>
@@ -412,9 +418,14 @@ function Home() {
                   </div>
                   <div>
                     <p className="text-gray-600 text-sm">Call Us Directly</p>
-                    <a href="tel:+918154083000" className="text-xl text-gray-900 hover:text-[#7B1C2B] transition">
-                      +91 81540 83000
-                    </a>
+                    <div className="space-y-1">
+                      <a href="tel:+918155060305" className="text-xl text-gray-900 hover:text-[#7B1C2B] transition block">
+                        +91 81550 60305
+                      </a>
+                      <a href="tel:+918156027702" className="text-xl text-gray-900 hover:text-[#7B1C2B] transition block">
+                        +91 81560 27702
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -424,8 +435,8 @@ function Home() {
                   </div>
                   <div>
                     <p className="text-gray-600 text-sm">Email Us</p>
-                    <a href="mailto:sales@krt.com" className="text-xl text-gray-900 hover:text-[#7B1C2B] transition">
-                      sales@krt.com
+                    <a href="mailto:kaushikroadtechindia@gmail.com" className="text-xl text-gray-900 hover:text-[#7B1C2B] transition">
+                      kaushikroadtechindia@gmail.com
                     </a>
                   </div>
                 </div>
@@ -437,7 +448,7 @@ function Home() {
                   <div>
                     <p className="text-gray-600 text-sm">Visit Our Facility</p>
                     <p className="text-gray-900">
-                      Plot No.14, G.I.D.C.II, Dediyasan,<br />
+                      Plot No.345, G.I.D.C.II, Dediyasan,<br />
                       Mehsana - 384002, Gujarat, INDIA
                     </p>
                   </div>

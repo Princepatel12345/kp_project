@@ -26,17 +26,19 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
   { to: "/aftersales", label: "Services" },
+  { to: "/gallery", label: "Gallery" },
   { to: "/careers", label: "Careers" },
   { to: "/case-study", label: "Case Study" },
   { to: "/contact", label: "Contact" },
 ];
 
 const productLinks = [
-  { to: "/product/hot-mix", label: "Asphalt Batching Plant" },
   { to: "/product/drum-mix", label: "Drum Mix Plant" },
   { to: "/product/wet-mix-macadam", label: "Wet Mix Macadam Plant" },
   { to: "/product/bitumen-pressure-distributor", label: "Bitumen Pressure Distributor" },
   { to: "/product/mechanical-hydraulic-broomer", label: "Mechanical Hydraulic Broomer" },
+  { to: "/product/asphalt-paver-machine", label: "Asphalt Paver Machine" },
+  { to: "/product/pollution-control-unit", label: "Pollution Control Unit" },
 ];
 
 function RootComponent() {
@@ -150,17 +152,6 @@ function RootComponent() {
                 </li>
               ))}
             </ul>
-
-            {/* Right Logo - KRT */}
-            <div className="flex items-center gap-4">
-              <Link to="/" className="flex items-center">
-                <img 
-                  src="/assets/KRT-clean.png" 
-                  alt="KRT Logo" 
-                  className="h-12 w-auto"
-                />
-              </Link>
-            </div>
           </div>
 
           {/* Mobile Navigation */}
@@ -174,22 +165,14 @@ function RootComponent() {
               />
             </Link>
 
-            {/* Right Logo - KRT */}
-            <div className="flex items-center gap-2">
-              <img 
-                src="/assets/KRT-clean.png" 
-                alt="KRT Logo" 
-                className="h-14 w-auto"
-              />
-              {/* Menu Toggle */}
-              <button
-                onClick={() => setMenuOpen(true)}
-                className="w-10 h-10 flex items-center justify-center text-gray-900"
-                aria-label="Open menu"
-              >
-                <Menu size={24} />
-              </button>
-            </div>
+            {/* Menu Toggle */}
+            <button
+              onClick={() => setMenuOpen(true)}
+              className="w-10 h-10 flex items-center justify-center text-gray-900"
+              aria-label="Open menu"
+            >
+              <Menu size={24} />
+            </button>
           </div>
         </nav>
 

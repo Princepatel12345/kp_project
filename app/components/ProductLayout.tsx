@@ -24,11 +24,12 @@ interface ProductLayoutProps {
 }
 
 const relatedProducts = [
-  { to: "/product/hot-mix", title: "Asphalt Batching Plant" },
   { to: "/product/drum-mix", title: "Drum Mix Plant" },
   { to: "/product/wet-mix-macadam", title: "Wet Mix Macadam Plant" },
   { to: "/product/bitumen-pressure-distributor", title: "Bitumen Distributor" },
   { to: "/product/mechanical-hydraulic-broomer", title: "Mechanical Broomer" },
+  { to: "/product/asphalt-paver-machine", title: "Asphalt Paver Machine" },
+  { to: "/product/pollution-control-unit", title: "Pollution Control Unit" },
 ];
 
 export function ProductLayout({
@@ -65,7 +66,7 @@ export function ProductLayout({
             transition={{ delay: 0.2 }}
             className="inline-flex items-center gap-2 text-[#7B1C2B] text-sm uppercase tracking-widest mb-4"
           >
-            <Link to="/product/hot-mix" className="hover:underline">Products</Link>
+            <Link to="/product/" className="hover:underline">Products</Link>
             <span>/</span>
           </motion.div>
 
@@ -178,18 +179,25 @@ export function ProductLayout({
                   <h4 className="font-display text-xl text-gray-900 mb-4">Need Help?</h4>
                   <div className="space-y-4">
                     <a
-                      href="tel:+918154083000"
+                      href="tel:+918155060305"
                       className="flex items-center gap-3 text-gray-600 hover:text-[#7B1C2B] transition"
                     >
                       <Phone size={18} className="text-[#7B1C2B]" />
-                      +91 81540 83000
+                      +91 81550 60305
                     </a>
                     <a
-                      href="mailto:sales@krt.com"
+                      href="tel:+918156027702"
+                      className="flex items-center gap-3 text-gray-600 hover:text-[#7B1C2B] transition"
+                    >
+                      <Phone size={18} className="text-[#7B1C2B]" />
+                      +91 81560 27702
+                    </a>
+                    <a
+                      href="mailto:kaushikroadtechindia@gmail.com"
                       className="flex items-center gap-3 text-gray-600 hover:text-[#7B1C2B] transition"
                     >
                       <Mail size={18} className="text-[#7B1C2B]" />
-                      sales@krt.com
+                      kaushikroadtechindia@gmail.com
                     </a>
                     <div className="flex items-start gap-3 text-gray-600">
                       <MapPin size={18} className="text-[#7B1C2B] flex-shrink-0 mt-0.5" />

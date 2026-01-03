@@ -170,7 +170,7 @@ function Careers() {
             We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
           </p>
           <a
-            href="mailto:hr@krt.com"
+            href="mailto:kaushikroadtechindia@gmail.com"
             className="btn bg-white text-[#7B1C2B] hover:bg-gray-100"
           >
             Send Your Resume

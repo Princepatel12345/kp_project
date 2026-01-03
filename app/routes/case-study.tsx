@@ -6,22 +6,6 @@ import { ArrowRight, MapPin, Calendar, CheckCircle } from "lucide-react";
 
 const caseStudies = [
   {
-    id: 1,
-    title: "National Highway Construction - Gujarat",
-    client: "NHAI (National Highways Authority of India)",
-    location: "Gujarat, India",
-    year: "2023",
-    product: "Asphalt Batching Plant",
-    capacity: "160 TPH",
-    image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800",
-    highlights: [
-      "Completed 120km highway stretch",
-      "Zero downtime during project",
-      "15% fuel efficiency improvement",
-    ],
-    description: "Kaushik Road Technologies supplied a 160 TPH Asphalt Batching Plant for the construction of a national highway connecting major cities in Gujarat. The project was completed ahead of schedule with exceptional quality standards.",
-  },
-  {
     id: 2,
     title: "Airport Runway Upgrade - Karnataka",
     client: "Airports Authority of India",

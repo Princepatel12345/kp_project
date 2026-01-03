@@ -1,22 +1,25 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { SocialIcons } from "./SocialIcons";
+import { Phone, Mail } from "lucide-react";
 
 const quickLinks = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
-  { label: "Products", to: "/product/hot-mix" },
+  { label: "Products", to: "/product/" },
+  { label: "Gallery", to: "/gallery" },
   { label: "After Sales", to: "/aftersales" },
   { label: "Careers", to: "/careers" },
   { label: "Contact", to: "/contact" },
 ];
 
 const products = [
-  { label: "Asphalt Batching Plant", to: "/product/hot-mix" },
   { label: "Drum Mix Plant", to: "/product/drum-mix" },
   { label: "Wet Mix Macadam Plant", to: "/product/wet-mix-macadam" },
   { label: "Bitumen Pressure Distributor", to: "/product/bitumen-pressure-distributor" },
   { label: "Mechanical Broomer", to: "/product/mechanical-hydraulic-broomer" },
+  { label: "Asphalt Paver Machine", to: "/product/asphalt-paver-machine" },
+  { label: "Pollution Control Unit", to: "/product/pollution-control-unit" },
 ];
 
 export function Footer() {
@@ -46,28 +49,33 @@ export function Footer() {
               />
             </div>
             <p className="text-gray-600 text-sm leading-relaxed mb-6">
-              Leading manufacturer of road construction machinery with 35+ years of excellence. 
-              Trusted by clients in over 15 countries worldwide.
+              Leading manufacturer of road construction machinery with 29+ years of excellence. 
+              Trusted by clients in over 12 countries worldwide.
             </p>
 
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-3">
                 <span className="text-[#7B1C2B] mt-0.5">📍</span>
                 <p className="text-gray-600">
-                  Plot No.14, G.I.D.C.II, Dediyasan,<br />
+                  Plot No.345, G.I.D.C.II, Dediyasan,<br />
                   Mehsana - 384002, Gujarat, INDIA
                 </p>
               </div>
-              <div className="flex items-center gap-3">
-                <span className="text-[#7B1C2B]">📞</span>
-                <a href="tel:+918154083000" className="text-gray-600 hover:text-[#7B1C2B] transition">
-                  +91 81540 83000
-                </a>
+              <div className="flex items-start gap-3">
+                <span className="text-[#7B1C2B] mt-0.5">📞</span>
+                <div className="space-y-1">
+                  <a href="tel:+918155060305" className="text-gray-600 hover:text-[#7B1C2B] transition block">
+                    +91 81550 60305
+                  </a>
+                  <a href="tel:+918156027702" className="text-gray-600 hover:text-[#7B1C2B] transition block">
+                    +91 81560 27702
+                  </a>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-[#7B1C2B]">✉️</span>
-                <a href="mailto:info@krt.com" className="text-gray-600 hover:text-[#7B1C2B] transition">
-                  info@krt.com
+                <a href="mailto:kaushikroadtechindia@gmail.com" className="text-gray-600 hover:text-[#7B1C2B] transition">
+                  kaushikroadtechindia@gmail.com
                 </a>
               </div>
             </div>
@@ -144,7 +152,33 @@ export function Footer() {
               Request Quote
             </Link>
 
-            <SocialIcons />
+            <div className="mb-6">
+              <h4 className="font-display text-lg text-gray-900 mb-4">Follow Us</h4>
+              <div className="flex flex-wrap items-center gap-3">
+                {/* Social Icons */}
+                <SocialIcons />
+                
+                {/* Phone Icon */}
+                <a
+                  href="tel:+918155060305"
+                  className="w-10 h-10 flex items-center justify-center bg-white border border-gray-300 rounded hover:bg-[#7B1C2B] hover:border-[#7B1C2B] transition group"
+                  aria-label="Call +91 81550 60305"
+                  title="Call +91 81550 60305"
+                >
+                  <Phone className="w-5 h-5 text-gray-600 group-hover:text-white transition" />
+                </a>
+                
+                {/* Email Icon */}
+                <a
+                  href="mailto:kaushikroadtechindia@gmail.com"
+                  className="w-10 h-10 flex items-center justify-center bg-white border border-gray-300 rounded hover:bg-[#7B1C2B] hover:border-[#7B1C2B] transition group"
+                  aria-label="Email kaushikroadtechindia@gmail.com"
+                  title="Email kaushikroadtechindia@gmail.com"
+                >
+                  <Mail className="w-5 h-5 text-gray-600 group-hover:text-white transition" />
+                </a>
+              </div>
+            </div>
           </motion.div>
         </div>
 

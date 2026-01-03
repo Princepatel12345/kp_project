@@ -8,7 +8,7 @@ import { Award, Users, Target, CheckCircle } from "lucide-react";
 const milestones = [
   { year: "1989", title: "Foundation", description: "Kaushik Road Technologies was founded, beginning our journey in road construction machinery." },
   { year: "2000", title: "Expansion", description: "Expanded manufacturing capacity and product line." },
-  { year: "2010", title: "Global Reach", description: "Started exporting to international markets across 15+ countries." },
+  { year: "2010", title: "Global Reach", description: "Started exporting to international markets across 12+ countries." },
   { year: "2020", title: "ISO Certified", description: "Achieved ISO 9001:2015 certification for quality management." },
 ];
 
@@ -28,7 +28,7 @@ function About() {
     <>
       <SEO
         title="About Us"
-        description="Learn about Kaushik Road Technologies - 35+ years of excellence in manufacturing road construction machinery. ISO certified, trusted by clients in 15+ countries."
+        description="Learn about Kaushik Road Technologies - 29+ years of excellence in manufacturing road construction machinery. ISO certified, trusted by clients in 12+ countries."
         keywords="about KRT, Kaushik Road Technologies, road construction company, manufacturing history, ISO certified manufacturer"
       />
 
@@ -49,7 +49,7 @@ function About() {
             className="inline-flex items-center gap-2 bg-[#7B1C2B]/10 border border-[#7B1C2B]/20 rounded-full px-4 py-2 mb-6"
           >
             <span className="w-2 h-2 bg-[#7B1C2B] rounded-full animate-pulse" />
-            <span className="text-[#7B1C2B] text-sm uppercase tracking-widest">Since 1989</span>
+            <span className="text-[#7B1C2B] text-sm uppercase tracking-widest">Since 1997</span>
           </motion.div>
 
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-4">
@@ -78,14 +78,14 @@ function About() {
 
               <div className="space-y-6 mt-8">
                 <p className="text-gray-700 leading-relaxed">
-                  Founded more than 35 years ago, the company has grown to unparalleled heights. 
+                  Founded more than 29 years ago, the company has grown to unparalleled heights. 
                   Today, Kaushik Road Technologies stands as a leading manufacturer and exporter of 
                   road construction machinery.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed">
                   Our commitment to quality, innovation, and customer satisfaction has 
-                  earned us the trust of clients in over 15 countries worldwide. Every 
+                  earned us the trust of clients in over 12 countries worldwide. Every 
                   machine we produce reflects our dedication to engineering excellence.
                 </p>
               </div>
@@ -113,11 +113,11 @@ function About() {
               {/* Stats Overlay */}
               <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-4">
                 <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 border border-gray-200 shadow-lg">
-                  <div className="font-display text-3xl text-[#7B1C2B]">35+</div>
+                  <div className="font-display text-3xl text-[#7B1C2B]">29+</div>
                   <div className="text-gray-600 text-sm">Years of Excellence</div>
                 </div>
                 <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 border border-gray-200 shadow-lg">
-                  <div className="font-display text-3xl text-[#7B1C2B]">15+</div>
+                  <div className="font-display text-3xl text-[#7B1C2B]">12+</div>
                   <div className="text-gray-600 text-sm">Countries Served</div>
                 </div>
               </div>
@@ -318,7 +318,7 @@ function About() {
             <Link to="/contact" className="btn btn-primary">
               Contact Us
             </Link>
-            <Link to="/product/hot-mix" className="btn btn-outline">
+            <Link to="/product/" className="btn btn-outline">
               View Products
             </Link>
           </div>

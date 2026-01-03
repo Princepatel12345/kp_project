@@ -6,13 +6,6 @@ import { ArrowRight } from "lucide-react";
 
 const products = [
   {
-    to: "/product/hot-mix",
-    title: "Asphalt Batching Plant",
-    capacity: "80 - 200 TPH",
-    description: "High-efficiency batch mix plants for superior quality asphalt production.",
-    image: "https://www.ashitech.com/wp-content/uploads/2021/07/Asphalt-Batching-Plant-1.png",
-  },
-  {
     to: "/product/drum-mix",
     title: "Drum Mix Plant",
     capacity: "40 - 120 TPH",
@@ -39,6 +32,20 @@ const products = [
     capacity: "Tractor Mounted",
     description: "Efficient road cleaning equipment for dust-free surface preparation.",
     image: "https://www.ashitech.com/wp-content/uploads/2021/07/Mechanical-Hydraulic-Broomer-1.png",
+  },
+  {
+    to: "/product/asphalt-paver-machine",
+    title: "Asphalt Paver Machine",
+    capacity: "2.5m - 8.0m Width",
+    description: "Precision paving equipment for uniform asphalt laying with smooth finish.",
+    image: "https://images.pexels.com/photos/5924641/pexels-photo-5924641.jpeg?auto=compress&cs=tinysrgb&w=800",
+  },
+  {
+    to: "/product/pollution-control-unit",
+    title: "Pollution Control Unit",
+    capacity: "15,000 - 50,000 CFM",
+    description: "Advanced dust collection and emission control systems for environmental compliance.",
+    image: "https://images.pexels.com/photos/33531833/pexels-photo-33531833.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
 ];
 

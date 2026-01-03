@@ -153,15 +153,20 @@ function AfterSales() {
               />
 
               <div className="space-y-6 mt-8">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-[#7B1C2B]/10 rounded-lg flex items-center justify-center">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-[#7B1C2B]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <HeadphonesIcon className="w-6 h-6 text-[#7B1C2B]" />
                   </div>
                   <div>
                     <p className="text-gray-600 text-sm">Call Our Service Hotline</p>
-                    <a href="tel:+918154083000" className="text-xl text-gray-900 hover:text-[#7B1C2B] transition">
-                      +91 81540 83000
-                    </a>
+                    <div className="space-y-1">
+                      <a href="tel:+918155060305" className="text-xl text-gray-900 hover:text-[#7B1C2B] transition block">
+                        +91 81550 60305
+                      </a>
+                      <a href="tel:+918156027702" className="text-xl text-gray-900 hover:text-[#7B1C2B] transition block">
+                        +91 81560 27702
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

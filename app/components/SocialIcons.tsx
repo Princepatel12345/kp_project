@@ -23,7 +23,7 @@ export const socialLinks = [
   { 
     icon: "whatsapp", 
     label: "WhatsApp", 
-    href: "https://wa.me/918154083000",
+    href: "https://wa.me/918156027702",
     IconComponent: WhatsAppIcon
   },
   { 

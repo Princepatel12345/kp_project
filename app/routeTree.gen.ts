@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CaseStudyRouteImport } from './routes/case-study'
 import { Route as CareersRouteImport } from './routes/careers'
@@ -17,11 +18,17 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProductIndexRouteImport } from './routes/product/index'
 import { Route as ProductWetMixMacadamRouteImport } from './routes/product/wet-mix-macadam'
+import { Route as ProductPollutionControlUnitRouteImport } from './routes/product/pollution-control-unit'
 import { Route as ProductMechanicalHydraulicBroomerRouteImport } from './routes/product/mechanical-hydraulic-broomer'
-import { Route as ProductHotMixRouteImport } from './routes/product/hot-mix'
 import { Route as ProductDrumMixRouteImport } from './routes/product/drum-mix'
 import { Route as ProductBitumenPressureDistributorRouteImport } from './routes/product/bitumen-pressure-distributor'
+import { Route as ProductAsphaltPaverMachineRouteImport } from './routes/product/asphalt-paver-machine'
 
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -62,17 +69,18 @@ const ProductWetMixMacadamRoute = ProductWetMixMacadamRouteImport.update({
   path: '/product/wet-mix-macadam',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProductPollutionControlUnitRoute =
+  ProductPollutionControlUnitRouteImport.update({
+    id: '/product/pollution-control-unit',
+    path: '/product/pollution-control-unit',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProductMechanicalHydraulicBroomerRoute =
   ProductMechanicalHydraulicBroomerRouteImport.update({
     id: '/product/mechanical-hydraulic-broomer',
     path: '/product/mechanical-hydraulic-broomer',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ProductHotMixRoute = ProductHotMixRouteImport.update({
-  id: '/product/hot-mix',
-  path: '/product/hot-mix',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ProductDrumMixRoute = ProductDrumMixRouteImport.update({
   id: '/product/drum-mix',
   path: '/product/drum-mix',
@@ -84,6 +92,12 @@ const ProductBitumenPressureDistributorRoute =
     path: '/product/bitumen-pressure-distributor',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ProductAsphaltPaverMachineRoute =
+  ProductAsphaltPaverMachineRouteImport.update({
+    id: '/product/asphalt-paver-machine',
+    path: '/product/asphalt-paver-machine',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -92,10 +106,12 @@ export interface FileRoutesByFullPath {
   '/careers': typeof CareersRoute
   '/case-study': typeof CaseStudyRoute
   '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/product/asphalt-paver-machine': typeof ProductAsphaltPaverMachineRoute
   '/product/bitumen-pressure-distributor': typeof ProductBitumenPressureDistributorRoute
   '/product/drum-mix': typeof ProductDrumMixRoute
-  '/product/hot-mix': typeof ProductHotMixRoute
   '/product/mechanical-hydraulic-broomer': typeof ProductMechanicalHydraulicBroomerRoute
+  '/product/pollution-control-unit': typeof ProductPollutionControlUnitRoute
   '/product/wet-mix-macadam': typeof ProductWetMixMacadamRoute
   '/product': typeof ProductIndexRoute
 }
@@ -106,10 +122,12 @@ export interface FileRoutesByTo {
   '/careers': typeof CareersRoute
   '/case-study': typeof CaseStudyRoute
   '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/product/asphalt-paver-machine': typeof ProductAsphaltPaverMachineRoute
   '/product/bitumen-pressure-distributor': typeof ProductBitumenPressureDistributorRoute
   '/product/drum-mix': typeof ProductDrumMixRoute
-  '/product/hot-mix': typeof ProductHotMixRoute
   '/product/mechanical-hydraulic-broomer': typeof ProductMechanicalHydraulicBroomerRoute
+  '/product/pollution-control-unit': typeof ProductPollutionControlUnitRoute
   '/product/wet-mix-macadam': typeof ProductWetMixMacadamRoute
   '/product': typeof ProductIndexRoute
 }
@@ -121,10 +139,12 @@ export interface FileRoutesById {
   '/careers': typeof CareersRoute
   '/case-study': typeof CaseStudyRoute
   '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/product/asphalt-paver-machine': typeof ProductAsphaltPaverMachineRoute
   '/product/bitumen-pressure-distributor': typeof ProductBitumenPressureDistributorRoute
   '/product/drum-mix': typeof ProductDrumMixRoute
-  '/product/hot-mix': typeof ProductHotMixRoute
   '/product/mechanical-hydraulic-broomer': typeof ProductMechanicalHydraulicBroomerRoute
+  '/product/pollution-control-unit': typeof ProductPollutionControlUnitRoute
   '/product/wet-mix-macadam': typeof ProductWetMixMacadamRoute
   '/product/': typeof ProductIndexRoute
 }
@@ -137,10 +157,12 @@ export interface FileRouteTypes {
     | '/careers'
     | '/case-study'
     | '/contact'
+    | '/gallery'
+    | '/product/asphalt-paver-machine'
     | '/product/bitumen-pressure-distributor'
     | '/product/drum-mix'
-    | '/product/hot-mix'
     | '/product/mechanical-hydraulic-broomer'
+    | '/product/pollution-control-unit'
     | '/product/wet-mix-macadam'
     | '/product'
   fileRoutesByTo: FileRoutesByTo
@@ -151,10 +173,12 @@ export interface FileRouteTypes {
     | '/careers'
     | '/case-study'
     | '/contact'
+    | '/gallery'
+    | '/product/asphalt-paver-machine'
     | '/product/bitumen-pressure-distributor'
     | '/product/drum-mix'
-    | '/product/hot-mix'
     | '/product/mechanical-hydraulic-broomer'
+    | '/product/pollution-control-unit'
     | '/product/wet-mix-macadam'
     | '/product'
   id:
@@ -165,10 +189,12 @@ export interface FileRouteTypes {
     | '/careers'
     | '/case-study'
     | '/contact'
+    | '/gallery'
+    | '/product/asphalt-paver-machine'
     | '/product/bitumen-pressure-distributor'
     | '/product/drum-mix'
-    | '/product/hot-mix'
     | '/product/mechanical-hydraulic-broomer'
+    | '/product/pollution-control-unit'
     | '/product/wet-mix-macadam'
     | '/product/'
   fileRoutesById: FileRoutesById
@@ -180,16 +206,25 @@ export interface RootRouteChildren {
   CareersRoute: typeof CareersRoute
   CaseStudyRoute: typeof CaseStudyRoute
   ContactRoute: typeof ContactRoute
+  GalleryRoute: typeof GalleryRoute
+  ProductAsphaltPaverMachineRoute: typeof ProductAsphaltPaverMachineRoute
   ProductBitumenPressureDistributorRoute: typeof ProductBitumenPressureDistributorRoute
   ProductDrumMixRoute: typeof ProductDrumMixRoute
-  ProductHotMixRoute: typeof ProductHotMixRoute
   ProductMechanicalHydraulicBroomerRoute: typeof ProductMechanicalHydraulicBroomerRoute
+  ProductPollutionControlUnitRoute: typeof ProductPollutionControlUnitRoute
   ProductWetMixMacadamRoute: typeof ProductWetMixMacadamRoute
   ProductIndexRoute: typeof ProductIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -246,18 +281,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductWetMixMacadamRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/product/pollution-control-unit': {
+      id: '/product/pollution-control-unit'
+      path: '/product/pollution-control-unit'
+      fullPath: '/product/pollution-control-unit'
+      preLoaderRoute: typeof ProductPollutionControlUnitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/product/mechanical-hydraulic-broomer': {
       id: '/product/mechanical-hydraulic-broomer'
       path: '/product/mechanical-hydraulic-broomer'
       fullPath: '/product/mechanical-hydraulic-broomer'
       preLoaderRoute: typeof ProductMechanicalHydraulicBroomerRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/product/hot-mix': {
-      id: '/product/hot-mix'
-      path: '/product/hot-mix'
-      fullPath: '/product/hot-mix'
-      preLoaderRoute: typeof ProductHotMixRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/product/drum-mix': {
@@ -274,6 +309,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductBitumenPressureDistributorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/product/asphalt-paver-machine': {
+      id: '/product/asphalt-paver-machine'
+      path: '/product/asphalt-paver-machine'
+      fullPath: '/product/asphalt-paver-machine'
+      preLoaderRoute: typeof ProductAsphaltPaverMachineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -284,12 +326,14 @@ const rootRouteChildren: RootRouteChildren = {
   CareersRoute: CareersRoute,
   CaseStudyRoute: CaseStudyRoute,
   ContactRoute: ContactRoute,
+  GalleryRoute: GalleryRoute,
+  ProductAsphaltPaverMachineRoute: ProductAsphaltPaverMachineRoute,
   ProductBitumenPressureDistributorRoute:
     ProductBitumenPressureDistributorRoute,
   ProductDrumMixRoute: ProductDrumMixRoute,
-  ProductHotMixRoute: ProductHotMixRoute,
   ProductMechanicalHydraulicBroomerRoute:
     ProductMechanicalHydraulicBroomerRoute,
+  ProductPollutionControlUnitRoute: ProductPollutionControlUnitRoute,
   ProductWetMixMacadamRoute: ProductWetMixMacadamRoute,
   ProductIndexRoute: ProductIndexRoute,
 }
