@@ -7,6 +7,13 @@ import { GoogleMap } from "../components/GoogleMap";
 import { SocialIcons } from "../components/SocialIcons";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 
+// Address and coordinates for Google Maps
+const facilityAddress = "Plot No.345, G.I.D.C.II, Dediyasan, Mehsana - 384002, Gujarat, INDIA";
+const facilityLatitude = 23.5841706;
+const facilityLongitude = 72.3524162;
+// Using coordinates for more reliable directions
+const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${facilityLatitude},${facilityLongitude}`;
+
 const contactInfo = [
   {
     icon: Phone,
@@ -24,7 +31,7 @@ const contactInfo = [
     icon: MapPin,
     title: "Visit Us",
     lines: ["Plot No.345, G.I.D.C.II, Dediyasan", "Mehsana - 384002, Gujarat, INDIA"],
-    action: { href: "https://www.google.com/maps/search/?api=1&query=Plot+No.345,+G.I.D.C.II,+Dediyasan,+Mehsana+-+384002,+Gujarat,+INDIA", label: "Get Directions" },
+    action: { href: directionsUrl, label: "Get Directions" },
   },
   {
     icon: Clock,
@@ -162,7 +169,7 @@ function Contact() {
         {/* Full Width Map */}
         <div className="w-full">
           <GoogleMap 
-            address="Plot No.345, G.I.D.C.II, Dediyasan, Mehsana - 384002, Gujarat, INDIA"
+            address={facilityAddress}
             height="500px"
             className="w-full"
           />
@@ -197,12 +204,12 @@ function Contact() {
             {/* Open in Google Maps Button */}
             <div className="flex-shrink-0">
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Plot+No.345,+G.I.D.C.II,+Dediyasan,+Mehsana+-+384002,+Gujarat,+INDIA"
+                href={directionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary text-sm px-6 py-3 inline-flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
               >
-                Open in Google Maps
+                Get Directions
                 <MapPin size={16} />
               </a>
             </div>
