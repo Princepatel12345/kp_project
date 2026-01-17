@@ -8,30 +8,31 @@ export const Route = createFileRoute("/product/bitumen-pressure-distributor")({
 function BitumenPressureDistributor() {
   return (
     <ProductLayout
-      title="Bitumen Pressure Distributor"
-      description="Kaushik Road Technologies Bitumen Pressure Distributors are designed for uniform application of bitumen on road surfaces. Available in various tank capacities, these distributors ensure precise spray rate control, even coverage, and efficient heating system for optimal bitumen viscosity during application."
+      title="MINI BITUMEN SPRAYER"
+      description="Kaushik Road Technologies MINI BITUMEN SPRAYER is a tractor attachment designed for manual hand spraying with consistent flow and dependable heating. Available in KRT 2.5 & 4 Ton (KRT-2500 / KRT-4000) capacities, it features an insulated U-shape tank, gear pump, diesel engine with air compressor, and heating options (wood fire or burner) to maintain workable bitumen viscosity during application."
       image="https://www.ashitech.com/wp-content/uploads/2021/07/Bitumen-Pressure-Distributor-1.png"
-      seoDescription="Kaushik Road Technologies Bitumen Pressure Distributor - 4000 to 10000 Ltr capacity. Uniform bitumen spraying for road construction. ISO certified manufacturer."
-      seoKeywords="bitumen pressure distributor, bitumen sprayer, road surfacing equipment, bitumen tanker, 4000 Ltr, 10000 Ltr"
+      seoDescription="Kaushik Road Technologies MINI BITUMEN SPRAYER - KRT 2.5 & 4 Ton (KRT-2500 / KRT-4000). Tractor attachment with manual hand spraying and wood fire/burner heating."
+      seoKeywords="mini bitumen sprayer, tractor mounted bitumen sprayer, bitumen hand sprayer, KRT 2500, KRT 4000"
       specifications={[
-        { label: "Tank Capacity", value: "4000 – 10000 Litres" },
-        { label: "Spray Width", value: "2m – 4m Adjustable" },
-        { label: "Spray Rate", value: "0.4 – 2.0 Kg/sqm" },
-        { label: "Heating System", value: "Oil Jacketed / Direct" },
-        { label: "Burner Type", value: "Diesel Fired" },
-        { label: "Pump Type", value: "Gear Pump / Screw Pump" },
-        { label: "Spray Bar", value: "Full Circulating Type" },
-        { label: "Mounting", value: "Truck Mounted" },
+        { label: "Model", value: "KRT-2500 / KRT-4000" },
+        { label: "Shape", value: "U Shape" },
+        { label: "Tank Capacity", value: "2.5 & 4 Ton (2500 / 4000 Ltr)" },
+        { label: "Insulation", value: "40 mm Glass Wool" },
+        { label: "Hose Pipe", value: "S.S. Corrugated Flexible, 3 m" },
+        { label: "Bitumen Pump", value: '1.5" x 1.5" Gear Pump' },
+        { label: "Engine", value: "6 HP Kirloskar Air Cooled Diesel Engine" },
+        { label: "Air Compressor", value: "STD Make Dual Piston Type" },
+        { label: "Burner Fuel Tank", value: "25 Ltr" },
+        { label: "Fuel Consumption", value: "6–8 Ltr/Hour" },
+        { label: "Axle & Wheels", value: "M.S. Heavy Axle with Wheel Plate" },
+        { label: "Tyres", value: "4 Nos. (Size: 9.00-20)" },
       ]}
       features={[
-        { text: "Uniform spray distribution across road width" },
-        { text: "Adjustable spray bar for varying widths" },
-        { text: "Efficient heating system maintains bitumen temperature" },
-        { text: "Precise spray rate control through pump speed" },
-        { text: "Insulated tank to minimize heat loss" },
-        { text: "Easy operation from driver cabin" },
-        { text: "Suitable for various bitumen grades" },
-        { text: "Durable construction for long service life" },
+        { text: "An attachment only for tractor" },
+        { text: "Both heating system options: wood fire and burner system" },
+        { text: "M.S. heavy duty steel structure and chassis" },
+        { text: "Easy operating system and safety" },
+        { text: "Manual hand spraying system" },
       ]}
     />
   );

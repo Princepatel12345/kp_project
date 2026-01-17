@@ -6,7 +6,7 @@ import { Phone, Mail } from "lucide-react";
 const quickLinks = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
-  { label: "Products", to: "/product/" },
+  { label: "Products", to: "/product" },
   { label: "Gallery", to: "/gallery" },
   { label: "After Sales", to: "/aftersales" },
   { label: "Careers", to: "/careers" },
@@ -16,10 +16,10 @@ const quickLinks = [
 const products = [
   { label: "Drum Mix Plant", to: "/product/drum-mix" },
   { label: "Wet Mix Macadam Plant", to: "/product/wet-mix-macadam" },
-  { label: "Bitumen Pressure Distributor", to: "/product/bitumen-pressure-distributor" },
+  { label: "MINI BITUMEN SPRAYER", to: "/product/bitumen-pressure-distributor" },
   { label: "Mechanical Broomer", to: "/product/mechanical-hydraulic-broomer" },
   { label: "Asphalt Paver Machine", to: "/product/asphalt-paver-machine" },
-  { label: "Pollution Control Unit", to: "/product/pollution-control-unit" },
+  { label: "CONTROL CABIN & PANEL", to: "/product/pollution-control-unit" },
 ];
 
 export function Footer() {
@@ -200,4 +200,3 @@ export function Footer() {
     </footer>
   );
 }
-

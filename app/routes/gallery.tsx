@@ -33,16 +33,16 @@ const galleryImages = [
   {
     id: 3,
     src: "https://www.ashitech.com/wp-content/uploads/2021/07/Bitumen-Pressure-Distributor-1.png",
-    title: "Bitumen Pressure Distributor",
+    title: "MINI BITUMEN SPRAYER",
     category: "products",
-    description: "4000-10000 Ltr capacity bitumen distributor",
+    description: "2500/4000 Ltr capacity tractor mounted mini bitumen sprayer",
   },
   {
     id: 4,
     src: "https://www.ashitech.com/wp-content/uploads/2021/07/Mechanical-Hydraulic-Broomer-1.png",
     title: "Mechanical Hydraulic Broomer",
     category: "products",
-    description: "Tractor mounted mechanical broomer",
+    description: "Tractor-towed road broom with 2.4m clear sweeping width",
   },
   // Projects
   {

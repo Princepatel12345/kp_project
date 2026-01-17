@@ -26,10 +26,10 @@ interface ProductLayoutProps {
 const relatedProducts = [
   { to: "/product/drum-mix", title: "Drum Mix Plant" },
   { to: "/product/wet-mix-macadam", title: "Wet Mix Macadam Plant" },
-  { to: "/product/bitumen-pressure-distributor", title: "Bitumen Distributor" },
+  { to: "/product/bitumen-pressure-distributor", title: "MINI BITUMEN SPRAYER" },
   { to: "/product/mechanical-hydraulic-broomer", title: "Mechanical Broomer" },
   { to: "/product/asphalt-paver-machine", title: "Asphalt Paver Machine" },
-  { to: "/product/pollution-control-unit", title: "Pollution Control Unit" },
+  { to: "/product/pollution-control-unit", title: "CONTROL CABIN & PANEL" },
 ];
 
 export function ProductLayout({
@@ -66,7 +66,7 @@ export function ProductLayout({
             transition={{ delay: 0.2 }}
             className="inline-flex items-center gap-2 text-[#7B1C2B] text-sm uppercase tracking-widest mb-4"
           >
-            <Link to="/product/" className="hover:underline">Products</Link>
+            <Link to="/product" className="hover:underline">Products</Link>
             <span>/</span>
           </motion.div>
 
@@ -247,4 +247,3 @@ export function ProductLayout({
     </>
   );
 }
-

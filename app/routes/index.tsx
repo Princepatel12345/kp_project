@@ -24,8 +24,8 @@ const productSlides = [
   {
     image: "https://www.ashitech.com/wp-content/uploads/2021/07/Bitumen-Pressure-Distributor-1.png",
     link: "/product/bitumen-pressure-distributor",
-    title: "Bitumen Pressure Distributor",
-    capacity: "4000 - 10000 Ltr",
+    title: "MINI BITUMEN SPRAYER",
+    capacity: "2500 / 4000 Ltr",
   },
   {
     image: "https://www.ashitech.com/wp-content/uploads/2021/07/Mechanical-Hydraulic-Broomer-1.png",
@@ -42,7 +42,7 @@ const productSlides = [
   {
     image: "https://images.pexels.com/photos/33531833/pexels-photo-33531833.jpeg?auto=compress&cs=tinysrgb&w=800",
     link: "/product/pollution-control-unit",
-    title: "Pollution Control Unit",
+    title: "CONTROL CABIN & PANEL",
     capacity: "15,000 - 50,000 CFM",
   },
 ];
@@ -191,7 +191,7 @@ function Home() {
               transition={{ delay: 0.5 }}
               className="flex flex-wrap gap-4"
             >
-              <Link to="/product/" className="btn btn-primary">
+              <Link to="/product" className="btn btn-primary">
                 Explore Products
                 <ArrowRight size={18} />
               </Link>
@@ -249,7 +249,7 @@ function Home() {
                 ))}
               </div>
 
-              <Link to="/product/" className="btn btn-primary mt-8">
+              <Link to="/product" className="btn btn-primary mt-8">
                 View All Products
                 <ArrowRight size={18} />
               </Link>

@@ -3,8 +3,8 @@ import { useState } from "react";
 import { CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
 // Replace this with your deployed Google Apps Script Web App URL
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxxo6mnIX-X8RAoYvI8i7QmYrOhJudsvki-wBpyw6l4TvRCtpYK8P9coJimyZB7Siqr/exec";
-
+// const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxxo6mnIX-X8RAoYvI8i7QmYrOhJudsvki-wBpyw6l4TvRCtpYK8P9coJimyZB7Siqr/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxY_rJLDtefuuGl-Qz6UA8q2t2Vy6GPBcEyvh7l8o8Eyyu4Wh2KrHutCgasBDMC9z0s/exec";
 interface ContactFormProps {
   compact?: boolean;
 }

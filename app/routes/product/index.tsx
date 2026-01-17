@@ -21,16 +21,16 @@ const products = [
   },
   {
     to: "/product/bitumen-pressure-distributor",
-    title: "Bitumen Pressure Distributor",
-    capacity: "4000 - 10000 Ltr",
-    description: "Precision bitumen spraying for uniform surface treatment.",
+    title: "MINI BITUMEN SPRAYER",
+    capacity: "2500 / 4000 Ltr",
+    description: "Tractor attachment with manual hand spraying and heating options.",
     image: "https://www.ashitech.com/wp-content/uploads/2021/07/Bitumen-Pressure-Distributor-1.png",
   },
   {
     to: "/product/mechanical-hydraulic-broomer",
     title: "Mechanical Hydraulic Broomer",
     capacity: "Tractor Mounted",
-    description: "Efficient road cleaning equipment for dust-free surface preparation.",
+    description: "Tractor-towed road broom with 2.4m clear sweeping width and left-side dust collection.",
     image: "https://www.ashitech.com/wp-content/uploads/2021/07/Mechanical-Hydraulic-Broomer-1.png",
   },
   {
@@ -42,9 +42,9 @@ const products = [
   },
   {
     to: "/product/pollution-control-unit",
-    title: "Pollution Control Unit",
+    title: "CONTROL CABIN & PANEL",
     capacity: "15,000 - 50,000 CFM",
-    description: "Advanced dust collection and emission control systems for environmental compliance.",
+    description: "Fully insulated control cabin with computerized control panel for plant operation.",
     image: "https://images.pexels.com/photos/33531833/pexels-photo-33531833.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
 ];
@@ -59,7 +59,7 @@ function ProductIndex() {
       <SEO
         title="Products"
         description="Explore our complete range of road construction machinery including asphalt plants, drum mix plants, wet mix macadam plants, and more."
-        keywords="road construction machinery, asphalt plant, drum mix plant, wet mix macadam, bitumen distributor"
+        keywords="road construction machinery, asphalt plant, drum mix plant, wet mix macadam, mini bitumen sprayer, control cabin and panel"
       />
 
       {/* ================= HERO ================= */}

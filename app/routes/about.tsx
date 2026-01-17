@@ -318,7 +318,7 @@ function About() {
             <Link to="/contact" className="btn btn-primary">
               Contact Us
             </Link>
-            <Link to="/product/" className="btn btn-outline">
+            <Link to="/product" className="btn btn-outline">
               View Products
             </Link>
           </div>

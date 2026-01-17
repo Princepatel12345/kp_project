@@ -9,29 +9,35 @@ function MechanicalHydraulicBroomer() {
   return (
     <ProductLayout
       title="Mechanical Hydraulic Broomer"
-      description="Kaushik Road Technologies Mechanical Hydraulic Broomers are designed for efficient cleaning of road surfaces before bitumen application. These tractor-mounted broomers feature heavy-duty brush assemblies, hydraulic controls, and dust suppression systems for thorough surface preparation."
+      description="Mechanical Hydraulic Broomer can be conveniently operated by towing with a tractor. It provides 2.4 meter clear sweeping with screw-based pressure adjustment and brush adjustment up to 150 mm. The unit includes left-hand-side dust collection, nylon bristle brush (diameter 460 mm) set at 45° angle, and two heavy-duty wheels (6 x 12 nylon, 8 ply). Suitable for metalling, wet mix macadam surface, and asphalted road surface with sweeping speed of 7–15 km/hr."
       image="https://www.ashitech.com/wp-content/uploads/2021/07/Mechanical-Hydraulic-Broomer-1.png"
-      seoDescription="Kaushik Road Technologies Mechanical Hydraulic Broomer - Tractor mounted road cleaning equipment. Dust-free surface preparation for road construction."
-      seoKeywords="mechanical broomer, hydraulic road broomer, road sweeper, tractor mounted broomer, surface cleaning equipment"
+      seoDescription="Mechanical Hydraulic Broomer - tractor-towed road sweeping equipment with 2.4m clear sweeping width and left-side dust collection."
+      seoKeywords="mechanical hydraulic broomer, tractor broom, road sweeper, road broom, surface cleaning equipment, 2.4m sweeping width"
       specifications={[
-        { label: "Mounting Type", value: "Tractor Mounted (3 Point)" },
-        { label: "Sweeping Width", value: "2.1m – 2.5m" },
-        { label: "Brush Type", value: "Nylon / Wire Bristles" },
-        { label: "Brush Diameter", value: "450mm – 600mm" },
-        { label: "Height Adjustment", value: "Hydraulic Controlled" },
-        { label: "Angle Adjustment", value: "Left / Right Tilting" },
-        { label: "Tractor Requirement", value: "45 – 75 HP" },
-        { label: "Operating Speed", value: "5 – 15 km/hr" },
+        { label: "Mode of Operation", value: "Towing with a tractor" },
+        { label: "Sweeping Width", value: "2400 mm" },
+        { label: "Brush Pressure Adjustment", value: "Screw adjustment" },
+        { label: "Brush Adjustment", value: "Up to 150 mm" },
+        { label: "Dust Collection", value: "Left hand side" },
+        { label: "Wheels", value: "Two heavy duty wheels (6 x 12 nylon, 8 ply)" },
+        { label: "Brush Material", value: "Nylon bristles" },
+        { label: "Suitable For", value: "Metalling, wet mix macadam, asphalted road surface" },
+        { label: "Angle of Brush", value: "45°" },
+        { label: "Diameter of Brush", value: "460 mm" },
+        { label: "Total Length", value: "3600 mm" },
+        { label: "Width", value: "2800 mm" },
+        { label: "Total Width of Brush", value: "2700 mm" },
+        { label: "Sweeping Speed", value: "7 – 15 km/hr" },
       ]}
       features={[
-        { text: "Effective dust and debris removal from road surface" },
-        { text: "Hydraulic height and angle adjustment" },
-        { text: "Heavy-duty brush assembly for long life" },
-        { text: "Easy attachment to standard tractors" },
-        { text: "Optional water spray for dust suppression" },
-        { text: "Suitable for various road widths" },
-        { text: "Low maintenance and operating costs" },
-        { text: "Improves bitumen adhesion to road surface" },
+        { text: "Convenient tractor towing operation" },
+        { text: "2.4 meter clear sweeping width" },
+        { text: "Screw-based pressure adjustment to the brush" },
+        { text: "Brush adjustment up to 150 mm" },
+        { text: "Left-hand-side dust collection" },
+        { text: "Nylon bristle brush with 45° angle and 460 mm diameter" },
+        { text: "Heavy-duty wheels (6 x 12 nylon, 8 ply)" },
+        { text: "Suitable for metalling, WMM, and asphalted road surfaces" },
       ]}
     />
   );
