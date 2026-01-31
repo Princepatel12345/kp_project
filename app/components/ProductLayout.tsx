@@ -1,8 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { SEO } from "./SEO";
-import { ContactForm } from "./ContactForm";
-import { ArrowRight, Phone, Mail, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface Specification {
   label: string;
@@ -21,16 +20,10 @@ interface ProductLayoutProps {
   features: Feature[];
   seoDescription: string;
   seoKeywords: string;
+  showOverview?: boolean;
+  showSpecifications?: boolean;
+  showFeatures?: boolean;
 }
-
-const relatedProducts = [
-  { to: "/product/drum-mix", title: "Drum Mix Plant" },
-  { to: "/product/wet-mix-macadam", title: "Wet Mix Macadam Plant" },
-  { to: "/product/bitumen-pressure-distributor", title: "MINI BITUMEN SPRAYER" },
-  { to: "/product/mechanical-hydraulic-broomer", title: "Mechanical Broomer" },
-  { to: "/product/asphalt-paver-machine", title: "Asphalt Paver Machine" },
-  { to: "/product/pollution-control-unit", title: "CONTROL CABIN & PANEL" },
-];
 
 export function ProductLayout({
   title,
@@ -40,6 +33,9 @@ export function ProductLayout({
   features,
   seoDescription,
   seoKeywords,
+  showOverview = true,
+  showSpecifications = true,
+  showFeatures = true,
 }: ProductLayoutProps) {
   return (
     <>
@@ -79,9 +75,9 @@ export function ProductLayout({
       {/* ================= MAIN CONTENT ================= */}
       <section className="section bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid gap-12">
             {/* Main Content */}
-            <div className="lg:col-span-2">
+            <div>
               {/* Product Image */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -97,133 +93,73 @@ export function ProductLayout({
               </motion.div>
 
               {/* Description */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="mb-12"
-              >
-                <h2 className="font-display text-3xl text-gray-900 mb-4">Overview</h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-[#7B1C2B] to-[#D4A12A] mb-6" />
-                <p className="text-gray-700 leading-relaxed text-lg">{description}</p>
-              </motion.div>
+              {showOverview ? (
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="mb-12"
+                >
+                  <h2 className="font-display text-3xl text-gray-900 mb-4">Overview</h2>
+                  <div className="w-16 h-1 bg-gradient-to-r from-[#7B1C2B] to-[#D4A12A] mb-6" />
+                  <p className="text-gray-700 leading-relaxed text-lg">{description}</p>
+                </motion.div>
+              ) : null}
 
               {/* Specifications Table */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="mb-12"
-              >
-                <h2 className="font-display text-3xl text-gray-900 mb-4">Technical Specifications</h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-[#7B1C2B] to-[#D4A12A] mb-6" />
+              {showSpecifications ? (
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="mb-12"
+                >
+                  <h2 className="font-display text-3xl text-gray-900 mb-4">Technical Specifications</h2>
+                  <div className="w-16 h-1 bg-gradient-to-r from-[#7B1C2B] to-[#D4A12A] mb-6" />
 
-                <div className="overflow-hidden rounded-lg border border-gray-200 shadow-sm">
-                  <table className="w-full">
-                    <tbody>
-                      {specifications.map((spec, i) => (
-                        <tr
-                          key={spec.label}
-                          className={`border-b border-gray-200 ${
-                            i % 2 === 0 ? "bg-gray-50" : "bg-white"
-                          }`}
-                        >
-                          <td className="px-6 py-4 text-gray-600 font-medium">{spec.label}</td>
-                          <td className="px-6 py-4 text-gray-900">{spec.value}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </motion.div>
+                  <div className="overflow-hidden rounded-lg border border-gray-200 shadow-sm">
+                    <table className="w-full">
+                      <tbody>
+                        {specifications.map((spec, i) => (
+                          <tr
+                            key={spec.label}
+                            className={`border-b border-gray-200 ${
+                              i % 2 === 0 ? "bg-gray-50" : "bg-white"
+                            }`}
+                          >
+                            <td className="px-6 py-4 text-gray-600 font-medium">{spec.label}</td>
+                            <td className="px-6 py-4 text-gray-900">{spec.value}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </motion.div>
+              ) : null}
 
               {/* Features */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="font-display text-3xl text-gray-900 mb-4">Key Features</h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-[#7B1C2B] to-[#D4A12A] mb-6" />
+              {showFeatures ? (
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="font-display text-3xl text-gray-900 mb-4">Key Features</h2>
+                  <div className="w-16 h-1 bg-gradient-to-r from-[#7B1C2B] to-[#D4A12A] mb-6" />
 
-                <div className="grid md:grid-cols-2 gap-4">
-                  {features.map((feature) => (
-                    <div
-                      key={feature.text}
-                      className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200"
-                    >
-                      <div className="w-2 h-2 bg-[#7B1C2B] rounded-full mt-2 flex-shrink-0" />
-                      <p className="text-gray-700">{feature.text}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="space-y-8">
-              {/* Quote Form */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="sticky top-24"
-              >
-                <div className="bg-white rounded-lg border border-gray-200 shadow-lg p-6 mb-8">
-                  <h3 className="font-display text-2xl text-gray-900 mb-6">Request A Quote</h3>
-                  <ContactForm compact />
-                </div>
-
-                {/* Contact Info */}
-                <div className="bg-gradient-to-br from-[#7B1C2B]/10 to-transparent rounded-lg border border-[#7B1C2B]/20 p-6 mb-8">
-                  <h4 className="font-display text-xl text-gray-900 mb-4">Need Help?</h4>
-                  <div className="space-y-4">
-                    <a
-                      href="tel:+918155060305"
-                      className="flex items-center gap-3 text-gray-600 hover:text-[#7B1C2B] transition"
-                    >
-                      <Phone size={18} className="text-[#7B1C2B]" />
-                      +91 81550 60305
-                    </a>
-                    <a
-                      href="tel:+918156027702"
-                      className="flex items-center gap-3 text-gray-600 hover:text-[#7B1C2B] transition"
-                    >
-                      <Phone size={18} className="text-[#7B1C2B]" />
-                      +91 81560 27702
-                    </a>
-                    <a
-                      href="mailto:kaushikroadtechindia@gmail.com"
-                      className="flex items-center gap-3 text-gray-600 hover:text-[#7B1C2B] transition"
-                    >
-                      <Mail size={18} className="text-[#7B1C2B]" />
-                      kaushikroadtechindia@gmail.com
-                    </a>
-                    <div className="flex items-start gap-3 text-gray-600">
-                      <MapPin size={18} className="text-[#7B1C2B] flex-shrink-0 mt-0.5" />
-                      <span>Mehsana, Gujarat, India</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Related Products */}
-                <div className="bg-white rounded-lg border border-gray-200 shadow-lg p-6">
-                  <h4 className="font-display text-xl text-gray-900 mb-4">Other Products</h4>
-                  <ul className="space-y-3">
-                    {relatedProducts.map((product) => (
-                      <li key={product.to}>
-                        <Link
-                          to={product.to as any}
-                          className="flex items-center justify-between py-2 text-gray-600 hover:text-[#7B1C2B] transition group"
-                        >
-                          <span>{product.title}</span>
-                          <ArrowRight size={16} className="opacity-0 group-hover:opacity-100 transition" />
-                        </Link>
-                      </li>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {features.map((feature) => (
+                      <div
+                        key={feature.text}
+                        className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg border border-gray-200"
+                      >
+                        <div className="w-2 h-2 bg-[#7B1C2B] rounded-full mt-2 flex-shrink-0" />
+                        <p className="text-gray-700">{feature.text}</p>
+                      </div>
                     ))}
-                  </ul>
-                </div>
-              </motion.div>
+                  </div>
+                </motion.div>
+              ) : null}
             </div>
           </div>
         </div>

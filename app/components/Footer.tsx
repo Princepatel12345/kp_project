@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { SocialIcons } from "./SocialIcons";
 import { Phone, Mail } from "lucide-react";
+import { getCompanyYears } from "../lib/company";
 
 const quickLinks = [
   { label: "Home", to: "/" },
@@ -9,7 +10,6 @@ const quickLinks = [
   { label: "Products", to: "/product" },
   { label: "Gallery", to: "/gallery" },
   { label: "After Sales", to: "/aftersales" },
-  { label: "Careers", to: "/careers" },
   { label: "Contact", to: "/contact" },
 ];
 
@@ -23,6 +23,8 @@ const products = [
 ];
 
 export function Footer() {
+  const companyYears = getCompanyYears();
+
   return (
     <footer className="relative bg-gray-100 border-t border-gray-200 overflow-hidden">
       {/* Top accent line - using both brand colors */}
@@ -49,7 +51,7 @@ export function Footer() {
               />
             </div>
             <p className="text-gray-600 text-sm leading-relaxed mb-6">
-              Leading manufacturer of road construction machinery with 29+ years of excellence. 
+              Leading manufacturer of road construction machinery with {companyYears}+ years of excellence. 
               Trusted by clients in over 12 countries worldwide.
             </p>
 

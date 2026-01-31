@@ -9,29 +9,34 @@ function WetMixMacadamPlant() {
   return (
     <ProductLayout
       title="Wet Mix Macadam Plant"
-      description="Kaushik Road Technologies Wet Mix Macadam (WMM) Plants are specifically designed for producing high-quality water-bound macadam for road base and sub-base construction. These plants feature precise aggregate proportioning, efficient water mixing, and consistent output quality essential for durable road foundations."
+      description="A central mixing plant used for producing wet mix macadam. It provides controlled feeding of aggregates of different sizes in the required proportion, addition of specified quantity of water, addition of other ingredients such as cement or lime, and forced/positive mixing of all ingredients to produce a consistent homogeneous mix."
       image="https://www.ashitech.com/wp-content/uploads/2021/07/Wet-Mix-Macadam-Plant-1.png"
-      seoDescription="Kaushik Road Technologies Wet Mix Macadam Plant - 120 to 200 TPH capacity. For road base construction. Precise mixing, high output, ISO certified quality."
-      seoKeywords="wet mix macadam plant, WMM plant, road base construction, aggregate mixing plant, 120 TPH, 200 TPH"
+      seoDescription="Wet Mix Macadam (WMM) Plant with controlled aggregate feeding, specified water and cement/lime addition, and forced/positive mixing to produce a consistent homogeneous mix."
+      seoKeywords="wet mix macadam plant, WMM plant, wet mix plant, central mixing plant, twin-shaft pug mill, load cell weighing, gob hopper, load-out conveyor, soil stabilization, GSB, cold bituminous mix, emulsion"
       specifications={[
-        { label: "Plant Capacity", value: "120 – 200 TPH" },
-        { label: "Aggregate Bins", value: "4 Bin Configuration" },
-        { label: "Mixer Type", value: "Twin Shaft Pugmill Mixer" },
-        { label: "Weighing System", value: "Electronic Load Cell Based" },
-        { label: "Water System", value: "Automatic Proportioning" },
-        { label: "Control Panel", value: "PLC Based Automation" },
-        { label: "Conveyor System", value: "Heavy Duty Belt Conveyor" },
-        { label: "Power Requirement", value: "125 – 200 HP" },
+        { label: "Plant Output Capacity", value: "60 – 300 TPH" },
+        { label: "Minimum Paddle Tips (100 TPH)", value: "22" },
+        { label: "Minimum Paddle Tips (200 TPH)", value: "44" },
+        { label: "Minimum Paddle Tips (300 TPH)", value: "66" },
+        { label: "Matching Genset Capacity", value: "37.5 – 150 kVA" },
+        { label: "Mixer Type", value: "Twin Shaft Pug Mill" },
+        { label: "Aggregate Feeding", value: "Cold aggregate feeder (one or more bins) with even, accurately metered flow" },
+        { label: "Weighing System", value: "Continuous electronic weighing with load cell" },
+        { label: "Water System", value: "Precise water measurement from water system" },
+        { label: "Additives", value: "Addition of cement or lime (and other filler additives where provided)" },
+        { label: "Discharge", value: "Gob hopper / load-out conveyor arrangement for discharge into tipper truck without segregation" },
       ]}
       features={[
-        { text: "Accurate aggregate proportioning with load cells" },
-        { text: "Twin shaft pugmill for homogeneous mixing" },
-        { text: "Automatic water dosing system" },
-        { text: "Modular design for easy transportation" },
-        { text: "Low power consumption with efficient operation" },
-        { text: "PLC-based control for precise operation" },
-        { text: "Minimal maintenance requirements" },
-        { text: "Suitable for road base and sub-base work" },
+        { text: "Controlled feeding of aggregates of different sizes in required proportion" },
+        { text: "Addition of specified quantity of water" },
+        { text: "Addition of specified quantity of other ingredients such as cement or lime" },
+        { text: "Forced/positive mixing to produce a consistent homogeneous mix" },
+        { text: "Continuous electronic weighing arrangement with load cell for aggregate monitoring" },
+        { text: "Water and filler additives synchronized with the aggregate feed and mixed in pug mill" },
+        { text: "Gob hopper arrangement allows discharge into tipper truck without segregation" },
+        { text: "Can be used (with modification) for cold bituminous mix production with emulsion" },
+        { text: "Can be used (with modification) for soil stabilisation by adding cement or lime" },
+        { text: "Can be used for blending of material for Granular Sub-Base (GSB)" },
       ]}
     />
   );

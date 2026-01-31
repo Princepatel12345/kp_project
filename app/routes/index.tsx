@@ -6,6 +6,7 @@ import { SEO } from "../components/SEO";
 import { SectionHeading } from "../components/SectionHeading";
 import { ContactForm } from "../components/ContactForm";
 import { ArrowRight, Award, Globe, Shield, Wrench, Factory, HeadphonesIcon } from "lucide-react";
+import { COMPANY_START_YEAR, getCompanyYears } from "../lib/company";
 
 /* ================= PRODUCT SLIDES ================= */
 const productSlides = [
@@ -45,14 +46,6 @@ const productSlides = [
     title: "CONTROL CABIN & PANEL",
     capacity: "15,000 - 50,000 CFM",
   },
-];
-
-/* ================= STATS ================= */
-const stats = [
-  { value: 35, label: "Years Experience", suffix: "+" },
-  { value: 12, label: "Countries Served", suffix: "+" },
-  { value: 888, label: "Installations", suffix: "+" },
-  { value: 100, label: "Client Satisfaction", suffix: "%" },
 ];
 
 /* ================= FEATURES ================= */
@@ -113,6 +106,14 @@ function Counter({ value, suffix, label }: { value: number; suffix: string; labe
 
 function Home() {
   const [productCurrent, setProductCurrent] = useState(0);
+  const companyYears = getCompanyYears();
+
+  const stats = [
+    { value: companyYears, label: "Years Experience", suffix: "+" },
+    { value: 12, label: "Countries Served", suffix: "+" },
+    { value: 888, label: "Installations", suffix: "+" },
+    { value: 100, label: "Client Satisfaction", suffix: "%" },
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -125,7 +126,7 @@ function Home() {
     <>
       <SEO
         title="Road Construction Machinery Manufacturer"
-        description="Kaushik Road Technologies - Leading manufacturer of road construction machinery including asphalt plants, drum mix plants, wet mix macadam plants. 29+ years of excellence in over 12 countries."
+        description={`Kaushik Road Technologies - Leading manufacturer of road construction machinery including asphalt plants, drum mix plants, wet mix macadam plants. ${companyYears}+ years of excellence in over 12 countries.`}
         keywords="asphalt plant, drum mix plant, wet mix macadam, road construction machinery, bitumen distributor, India, KRT, Kaushik Road Technologies"
       />
 
@@ -158,7 +159,7 @@ function Home() {
             >
               <div className="w-16 h-[2px] bg-[#D4A12A]" />
               <span className="text-[#7B1C2B] text-sm uppercase tracking-[0.3em] font-semibold">
-                Since 1997
+                Since {COMPANY_START_YEAR}
               </span>
             </motion.div>
 
@@ -182,7 +183,7 @@ function Home() {
               className="text-gray-700 text-lg md:text-xl max-w-xl mb-10 leading-relaxed"
             >
               India's premier manufacturer of road construction machinery.
-              Engineering excellence with 29+ years of innovation.
+              Engineering excellence with {companyYears}+ years of innovation.
             </motion.p>
 
             <motion.div
@@ -345,7 +346,7 @@ function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             title="Why Choose Kaushik Road Technologies"
-            subtitle="Over three decades of engineering excellence, innovation, and customer-first approach."
+            subtitle={`Over ${companyYears}+ years of engineering excellence, innovation, and customer-first approach.`}
             centered
           />
 

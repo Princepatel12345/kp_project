@@ -11,8 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as CaseStudyRouteImport } from './routes/case-study'
-import { Route as CareersRouteImport } from './routes/careers'
 import { Route as AftersalesRouteImport } from './routes/aftersales'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -32,16 +30,6 @@ const GalleryRoute = GalleryRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CaseStudyRoute = CaseStudyRouteImport.update({
-  id: '/case-study',
-  path: '/case-study',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CareersRoute = CareersRouteImport.update({
-  id: '/careers',
-  path: '/careers',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AftersalesRoute = AftersalesRouteImport.update({
@@ -103,8 +91,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/aftersales': typeof AftersalesRoute
-  '/careers': typeof CareersRoute
-  '/case-study': typeof CaseStudyRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/product/asphalt-paver-machine': typeof ProductAsphaltPaverMachineRoute
@@ -119,8 +105,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/aftersales': typeof AftersalesRoute
-  '/careers': typeof CareersRoute
-  '/case-study': typeof CaseStudyRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/product/asphalt-paver-machine': typeof ProductAsphaltPaverMachineRoute
@@ -136,8 +120,6 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/aftersales': typeof AftersalesRoute
-  '/careers': typeof CareersRoute
-  '/case-study': typeof CaseStudyRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/product/asphalt-paver-machine': typeof ProductAsphaltPaverMachineRoute
@@ -154,8 +136,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/aftersales'
-    | '/careers'
-    | '/case-study'
     | '/contact'
     | '/gallery'
     | '/product/asphalt-paver-machine'
@@ -170,8 +150,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/aftersales'
-    | '/careers'
-    | '/case-study'
     | '/contact'
     | '/gallery'
     | '/product/asphalt-paver-machine'
@@ -186,8 +164,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/aftersales'
-    | '/careers'
-    | '/case-study'
     | '/contact'
     | '/gallery'
     | '/product/asphalt-paver-machine'
@@ -203,8 +179,6 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AftersalesRoute: typeof AftersalesRoute
-  CareersRoute: typeof CareersRoute
-  CaseStudyRoute: typeof CaseStudyRoute
   ContactRoute: typeof ContactRoute
   GalleryRoute: typeof GalleryRoute
   ProductAsphaltPaverMachineRoute: typeof ProductAsphaltPaverMachineRoute
@@ -230,20 +204,6 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/case-study': {
-      id: '/case-study'
-      path: '/case-study'
-      fullPath: '/case-study'
-      preLoaderRoute: typeof CaseStudyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/careers': {
-      id: '/careers'
-      path: '/careers'
-      fullPath: '/careers'
-      preLoaderRoute: typeof CareersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/aftersales': {
@@ -323,8 +283,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AftersalesRoute: AftersalesRoute,
-  CareersRoute: CareersRoute,
-  CaseStudyRoute: CaseStudyRoute,
   ContactRoute: ContactRoute,
   GalleryRoute: GalleryRoute,
   ProductAsphaltPaverMachineRoute: ProductAsphaltPaverMachineRoute,

@@ -27,8 +27,6 @@ const navLinks = [
   { to: "/about", label: "About Us" },
   { to: "/aftersales", label: "Services" },
   { to: "/gallery", label: "Gallery" },
-  { to: "/careers", label: "Careers" },
-  { to: "/case-study", label: "Case Study" },
   { to: "/contact", label: "Contact" },
 ];
 

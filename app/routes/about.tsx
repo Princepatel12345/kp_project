@@ -4,6 +4,7 @@ import { SEO } from "../components/SEO";
 import { SectionHeading } from "../components/SectionHeading";
 import { ContactForm } from "../components/ContactForm";
 import { Award, Users, Target, CheckCircle } from "lucide-react";
+import { COMPANY_START_YEAR, getCompanyYears } from "../lib/company";
 
 const milestones = [
   { year: "1989", title: "Foundation", description: "Kaushik Road Technologies was founded, beginning our journey in road construction machinery." },
@@ -24,11 +25,13 @@ export const Route = createFileRoute("/about")({
 });
 
 function About() {
+  const companyYears = getCompanyYears();
+
   return (
     <>
       <SEO
         title="About Us"
-        description="Learn about Kaushik Road Technologies - 29+ years of excellence in manufacturing road construction machinery. ISO certified, trusted by clients in 12+ countries."
+        description={`Learn about Kaushik Road Technologies - ${companyYears}+ years of excellence in manufacturing road construction machinery. ISO certified, trusted by clients in 12+ countries.`}
         keywords="about KRT, Kaushik Road Technologies, road construction company, manufacturing history, ISO certified manufacturer"
       />
 
@@ -49,7 +52,7 @@ function About() {
             className="inline-flex items-center gap-2 bg-[#7B1C2B]/10 border border-[#7B1C2B]/20 rounded-full px-4 py-2 mb-6"
           >
             <span className="w-2 h-2 bg-[#7B1C2B] rounded-full animate-pulse" />
-            <span className="text-[#7B1C2B] text-sm uppercase tracking-widest">Since 1997</span>
+            <span className="text-[#7B1C2B] text-sm uppercase tracking-widest">Since {COMPANY_START_YEAR}</span>
           </motion.div>
 
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-4">
@@ -57,7 +60,7 @@ function About() {
           </h1>
           
           <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-            Three decades of engineering excellence in road construction machinery
+            {companyYears}+ years of engineering excellence in road construction machinery
           </p>
         </motion.div>
       </section>
@@ -73,14 +76,12 @@ function About() {
             >
               <SectionHeading
                 title="Company Profile"
-                subtitle="With over three decades of experience and expertise in manufacturing road construction equipment, Kaushik Road Technologies has established itself as a trusted name synonymous with quality and reliability."
+                subtitle={`With over ${companyYears}+ years of experience and expertise in manufacturing road construction equipment, Kaushik Road Technologies has established itself as a trusted name synonymous with quality and reliability.`}
               />
 
               <div className="space-y-6 mt-8">
                 <p className="text-gray-700 leading-relaxed">
-                  Founded more than 29 years ago, the company has grown to unparalleled heights. 
-                  Today, Kaushik Road Technologies stands as a leading manufacturer and exporter of 
-                  road construction machinery.
+                  Founded in {COMPANY_START_YEAR}, the company has grown to unparalleled heights. Today, Kaushik Road Technologies stands as a leading manufacturer and exporter of road construction machinery.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed">
@@ -113,7 +114,7 @@ function About() {
               {/* Stats Overlay */}
               <div className="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-4">
                 <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 border border-gray-200 shadow-lg">
-                  <div className="font-display text-3xl text-[#7B1C2B]">29+</div>
+                  <div className="font-display text-3xl text-[#7B1C2B]">{companyYears}+</div>
                   <div className="text-gray-600 text-sm">Years of Excellence</div>
                 </div>
                 <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 border border-gray-200 shadow-lg">

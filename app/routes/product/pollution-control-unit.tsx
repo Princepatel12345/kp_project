@@ -1,20 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
-import { ContactForm } from "../../components/ContactForm";
+import { ArrowRight } from "lucide-react";
 import { SEO } from "../../components/SEO";
 
 export const Route = createFileRoute("/product/pollution-control-unit")({
   component: PollutionControlUnit,
 });
-
-const otherProducts = [
-  { to: "/product/drum-mix", title: "Drum Mix Plant" },
-  { to: "/product/wet-mix-macadam", title: "Wet Mix Macadam Plant" },
-  { to: "/product/bitumen-pressure-distributor", title: "MINI BITUMEN SPRAYER" },
-  { to: "/product/mechanical-hydraulic-broomer", title: "Mechanical Broomer" },
-  { to: "/product/asphalt-paver-machine", title: "Asphalt Paver Machine" },
-];
 
 function PollutionControlUnit() {
   return (
@@ -56,8 +47,8 @@ function PollutionControlUnit() {
 
       <section className="section bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2">
+          <div className="grid gap-12">
+            <div>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -144,80 +135,6 @@ function PollutionControlUnit() {
                       </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            </div>
-
-            <div className="space-y-8">
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="sticky top-24"
-              >
-                <div className="bg-white rounded-lg border border-gray-200 shadow-lg p-6 mb-8">
-                  <h3 className="font-display text-2xl text-gray-900 mb-6">
-                    Request A Quote
-                  </h3>
-                  <ContactForm compact />
-                </div>
-
-                <div className="bg-gradient-to-br from-[#7B1C2B]/10 to-transparent rounded-lg border border-[#7B1C2B]/20 p-6 mb-8">
-                  <h4 className="font-display text-xl text-gray-900 mb-4">
-                    Need Help?
-                  </h4>
-                  <div className="space-y-4">
-                    <a
-                      href="tel:+918155060305"
-                      className="flex items-center gap-3 text-gray-600 hover:text-[#7B1C2B] transition"
-                    >
-                      <Phone size={18} className="text-[#7B1C2B]" />
-                      +91 81550 60305
-                    </a>
-                    <a
-                      href="tel:+918156027702"
-                      className="flex items-center gap-3 text-gray-600 hover:text-[#7B1C2B] transition"
-                    >
-                      <Phone size={18} className="text-[#7B1C2B]" />
-                      +91 81560 27702
-                    </a>
-                    <a
-                      href="mailto:kaushikroadtechindia@gmail.com"
-                      className="flex items-center gap-3 text-gray-600 hover:text-[#7B1C2B] transition"
-                    >
-                      <Mail size={18} className="text-[#7B1C2B]" />
-                      kaushikroadtechindia@gmail.com
-                    </a>
-                    <div className="flex items-start gap-3 text-gray-600">
-                      <MapPin
-                        size={18}
-                        className="text-[#7B1C2B] flex-shrink-0 mt-0.5"
-                      />
-                      <span>Mehsana, Gujarat, India</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-lg border border-gray-200 shadow-lg p-6">
-                  <h4 className="font-display text-xl text-gray-900 mb-4">
-                    Other Products
-                  </h4>
-                  <ul className="space-y-3">
-                    {otherProducts.map((product) => (
-                      <li key={product.to}>
-                        <Link
-                          to={product.to as any}
-                          className="flex items-center justify-between py-2 text-gray-600 hover:text-[#7B1C2B] transition group"
-                        >
-                          <span>{product.title}</span>
-                          <ArrowRight
-                            size={16}
-                            className="opacity-0 group-hover:opacity-100 transition"
-                          />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </motion.div>
             </div>
