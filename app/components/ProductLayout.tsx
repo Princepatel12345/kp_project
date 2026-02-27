@@ -117,7 +117,7 @@ export function ProductLayout({
                   <h2 className="font-display text-3xl text-gray-900 mb-4">Technical Specifications</h2>
                   <div className="w-16 h-1 bg-gradient-to-r from-[#7B1C2B] to-[#D4A12A] mb-6" />
 
-                  <div className="overflow-hidden rounded-lg border border-gray-200 shadow-sm">
+                  <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
                     <table className="w-full">
                       <tbody>
                         {specifications.map((spec, i) => (

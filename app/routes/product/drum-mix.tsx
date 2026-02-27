@@ -56,7 +56,7 @@ function BrochureHeading({ children }: { children: React.ReactNode }) {
 
 function BrochureTable({ data }: { data: TableData }) {
   return (
-    <div className="overflow-hidden rounded-lg border border-gray-200 shadow-sm bg-white">
+    <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm bg-white">
       <table className="w-full text-left">
         <thead>
           <tr className="bg-gray-50">
@@ -190,13 +190,13 @@ function DrumMixPlant() {
       <section className="section bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
-            <div className="p-6 md:p-10">
-              <div className="grid gap-10">
+            <div className="p-6 md:p-10 min-w-0">
+              <div className="grid gap-10 min-w-0">
                 <motion.div
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="grid gap-8"
+                  className="grid gap-8 min-w-0"
                 >
                   <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
                     <div className="aspect-[21/9] bg-gradient-to-br from-gray-50 to-white p-6 md:p-10 flex items-center justify-center">
@@ -220,7 +220,7 @@ function DrumMixPlant() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="grid md:grid-cols-2 gap-8 items-start"
+                  className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
                   <PdfImagePlaceholder
                     label="Dryer Drum"
@@ -251,7 +251,7 @@ function DrumMixPlant() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="grid md:grid-cols-2 gap-8 items-start"
+                  className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
                   <div className="md:order-1">
                     <BrochureHeading>LOAD OUT CONVEYOR WITH GOB HOPPER...</BrochureHeading>
@@ -276,7 +276,7 @@ function DrumMixPlant() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="grid md:grid-cols-2 gap-8 items-start"
+                  className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
                   <PdfImagePlaceholder
                     label="Burner"
@@ -298,7 +298,7 @@ function DrumMixPlant() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="grid md:grid-cols-2 gap-8 items-start"
+                  className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
                   <div className="md:order-1">
                     <BrochureHeading>Mineral ( Lime ) Feeler Unit....</BrochureHeading>
@@ -326,7 +326,7 @@ function DrumMixPlant() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="grid md:grid-cols-2 gap-8 items-start"
+                  className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
                   <PdfImagePlaceholder
                     label="Bitumen Tank"
@@ -359,7 +359,7 @@ function DrumMixPlant() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="grid md:grid-cols-2 gap-8 items-start"
+                  className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
                   <div className="md:order-1">
                     <BrochureHeading>LDO Tank....</BrochureHeading>
@@ -380,7 +380,7 @@ function DrumMixPlant() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="grid md:grid-cols-2 gap-8 items-start"
+                  className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
                   <PdfImagePlaceholder
                     label="Pug Mill"
@@ -420,7 +420,7 @@ function DrumMixPlant() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="grid md:grid-cols-2 gap-8 items-start"
+                  className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
                   <div className="md:order-1">
                     <BrochureHeading>Four Bin Feeder.....</BrochureHeading>
@@ -446,7 +446,7 @@ function DrumMixPlant() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="grid md:grid-cols-2 gap-8 items-start"
+                  className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
                   <PdfImagePlaceholder
                     label="Vibrating Screen"
@@ -466,7 +466,7 @@ function DrumMixPlant() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="grid md:grid-cols-2 gap-8 items-start"
+                  className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
                   <div className="md:order-1">
                     <BrochureHeading>SLINGER CONVEYOR ...</BrochureHeading>
@@ -492,7 +492,7 @@ function DrumMixPlant() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="grid md:grid-cols-2 gap-8 items-start"
+                  className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
                   <PdfImagePlaceholder
                     label="Pollution Control"

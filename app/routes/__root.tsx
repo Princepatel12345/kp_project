@@ -56,7 +56,7 @@ function RootComponent() {
   const isProductActive = () => currentPath.startsWith("/product");
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-white overflow-x-hidden">
       <ScrollRestoration />
       {/* Skip to content for accessibility */}
       <a
