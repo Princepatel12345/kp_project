@@ -207,15 +207,6 @@ function Gallery() {
                 alt={galleryImages[currentImageIndex].title}
                 className="max-w-full max-h-[75vh] object-contain rounded-lg"
               />
-
-              <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/90 to-transparent p-6 rounded-b-lg">
-                <h3 className="font-display text-2xl text-white mb-1">
-                  {galleryImages[currentImageIndex].title}
-                </h3>
-                <span className="text-white/50 text-sm">
-                  {currentImageIndex + 1} / {galleryImages.length}
-                </span>
-              </div>
             </motion.div>
 
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 overflow-x-auto max-w-[90vw] p-2 bg-black/50 backdrop-blur-sm rounded-lg">
