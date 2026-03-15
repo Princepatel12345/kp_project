@@ -10,7 +10,6 @@ const milestones = [
   { year: "1989", title: "Foundation", description: "Kaushik Road Technologies was founded, beginning our journey in road construction machinery." },
   { year: "2000", title: "Expansion", description: "Expanded manufacturing capacity and product line." },
   { year: "2010", title: "Global Reach", description: "Started exporting to international markets across 12+ countries." },
-  { year: "2020", title: "ISO Certified", description: "Achieved ISO 9001:2015 certification for quality management." },
 ];
 
 const values = [
@@ -31,8 +30,8 @@ function About() {
     <>
       <SEO
         title="About Us"
-        description={`Learn about Kaushik Road Technologies - ${companyYears}+ years of excellence in manufacturing road construction machinery. ISO certified, trusted by clients in 12+ countries.`}
-        keywords="about KRT, Kaushik Road Technologies, road construction company, manufacturing history, ISO certified manufacturer"
+        description={`Learn about Kaushik Road Technologies - ${companyYears}+ years of excellence in manufacturing road construction machinery. Trusted by clients in 12+ countries.`}
+        keywords="about KRT, Kaushik Road Technologies, road construction company, manufacturing history, quality manufacturer"
       />
 
       {/* ================= HERO ================= */}
@@ -280,12 +279,12 @@ function About() {
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 bg-[#7B1C2B]/10 rounded-lg border border-[#7B1C2B]/20">
-                    <div className="font-display text-2xl text-[#7B1C2B]">ISO</div>
-                    <div className="text-gray-600 text-sm">9001:2015 Certified</div>
-                  </div>
-                  <div className="p-4 bg-[#7B1C2B]/10 rounded-lg border border-[#7B1C2B]/20">
                     <div className="font-display text-2xl text-[#7B1C2B]">100%</div>
                     <div className="text-gray-600 text-sm">Quality Tested</div>
+                  </div>
+                  <div className="p-4 bg-[#7B1C2B]/10 rounded-lg border border-[#7B1C2B]/20">
+                    <div className="font-display text-2xl text-[#7B1C2B]">12+</div>
+                    <div className="text-gray-600 text-sm">Countries Served</div>
                   </div>
                 </div>
               </div>

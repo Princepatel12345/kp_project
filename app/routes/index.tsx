@@ -69,7 +69,6 @@ const features = [
 
 /* ================= CERTIFICATIONS ================= */
 const certifications = [
-  { icon: Award, title: "ISO 9001:2015", subtitle: "Certified Excellence" },
   { icon: Globe, title: "Global Presence", subtitle: "12+ Countries" },
   { icon: Shield, title: "Quality Assured", subtitle: "International Standards" },
 ];
