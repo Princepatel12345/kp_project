@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { SocialIcons } from "./SocialIcons";
 import { Phone, Mail } from "lucide-react";
 import { getCompanyYears } from "../lib/company";
+import { directionsUrl } from "../lib/facilityLocation";
 
 const quickLinks = [
   { label: "Home", to: "/" },
@@ -58,10 +59,15 @@ export function Footer() {
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-3">
                 <span className="text-[#7B1C2B] mt-0.5">📍</span>
-                <p className="text-gray-600">
+                <a
+                  href={directionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-[#7B1C2B] hover:underline transition"
+                >
                   Plot No.345, G.I.D.C.II, Dediyasan,<br />
                   Mehsana - 384002, Gujarat, India
-                </p>
+                </a>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-[#7B1C2B] mt-0.5">📞</span>

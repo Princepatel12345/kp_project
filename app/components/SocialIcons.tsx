@@ -29,13 +29,13 @@ export const socialLinks = [
   { 
     icon: "facebook", 
     label: "Facebook", 
-    href: "https://www.facebook.com/kaushikroadtech",
+    href: "https://www.facebook.com/share/18KFF4LDvZ/",
     IconComponent: FacebookIcon
   },
   { 
     icon: "instagram", 
     label: "Instagram", 
-    href: "https://www.instagram.com/kaushikroadtech/",
+    href: "https://www.instagram.com/kaushik_roadtech_10?igsh=MWp6a3l4djlqc25q",
     IconComponent: InstagramIcon
   },
 ];

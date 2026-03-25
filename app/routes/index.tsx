@@ -7,6 +7,7 @@ import { SectionHeading } from "../components/SectionHeading";
 import { ContactForm } from "../components/ContactForm";
 import { ArrowRight, Award, Globe, Shield, Wrench, Factory, HeadphonesIcon } from "lucide-react";
 import { COMPANY_START_YEAR, getCompanyYears } from "../lib/company";
+import { directionsUrl } from "../lib/facilityLocation";
 
 /* ================= PRODUCT SLIDES ================= */
 const productSlides = [
@@ -375,7 +376,7 @@ function Home() {
       {/* ================= CERTIFICATIONS ================= */}
       <section className="section bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 w-full max-w-3xl mx-auto">
             {certifications.map((cert, i) => (
               <motion.div
                 key={cert.title}
@@ -383,7 +384,7 @@ function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex items-center gap-6 p-6 bg-gradient-to-r from-gray-50 to-transparent rounded-lg border border-gray-200"
+                className="flex items-center gap-6 p-6 bg-gradient-to-r from-gray-50 to-transparent rounded-lg border border-gray-200 w-full min-w-0"
               >
                 <div className="w-16 h-16 bg-[#7B1C2B]/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <cert.icon className="w-8 h-8 text-[#7B1C2B]" />
@@ -447,10 +448,15 @@ function Home() {
                   </div>
                   <div>
                     <p className="text-gray-600 text-sm">Visit Our Facility</p>
-                    <p className="text-gray-900">
+                    <a
+                      href={directionsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-xl text-gray-900 hover:text-[#7B1C2B] transition mt-1"
+                    >
                       Plot No.345, G.I.D.C.II, Dediyasan,<br />
                       Mehsana - 384002, Gujarat, INDIA
-                    </p>
+                    </a>
                   </div>
                 </div>
               </div>

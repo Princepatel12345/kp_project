@@ -5,33 +5,42 @@ import { SectionHeading } from "../components/SectionHeading";
 import { ContactForm } from "../components/ContactForm";
 import { GoogleMap } from "../components/GoogleMap";
 import { SocialIcons } from "../components/SocialIcons";
+import type { LucideIcon } from "lucide-react";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import {
+  directionsLinkText,
+  directionsUrl,
+  facilityAddress,
+} from "../lib/facilityLocation";
 
-// Address and coordinates for Google Maps
-const facilityAddress = "Plot No.345, G.I.D.C.II, Dediyasan, Mehsana - 384002, Gujarat, INDIA";
-const facilityLatitude = 23.5841706;
-const facilityLongitude = 72.3524162;
-// Using coordinates for more reliable directions
-const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${facilityLatitude},${facilityLongitude}`;
+type ContactInfoItem = {
+  icon: LucideIcon;
+  title: string;
+  lines: string[];
+  action: { href: string; label: string } | null;
+  /** When true, address lines are one link to Google Maps directions */
+  linkAddressToDirections?: boolean;
+};
 
-const contactInfo = [
+const contactInfo: ContactInfoItem[] = [
   {
     icon: Phone,
     title: "Call Us",
     lines: ["+91 81550 60305", "+91 81560 27702"],
-    action: { href: "tel:+918155060305", label: "Call Now" },
+    action: { href: "tel:+918155060305", label: "Call Now →" },
   },
   {
     icon: Mail,
     title: "Email Us",
     lines: ["kaushikroadtechindia@gmail.com"],
-    action: { href: "mailto:kaushikroadtechindia@gmail.com", label: "Send Email" },
+    action: { href: "mailto:kaushikroadtechindia@gmail.com", label: "Send Email →" },
   },
   {
     icon: MapPin,
     title: "Visit Us",
     lines: ["Plot No.345, G.I.D.C.II, Dediyasan", "Mehsana - 384002, Gujarat, INDIA"],
-    action: { href: directionsUrl, label: "Get Directions" },
+    action: { href: directionsUrl, label: directionsLinkText },
+    linkAddressToDirections: true,
   },
   {
     icon: Clock,
@@ -90,16 +99,45 @@ function Contact() {
                   <info.icon className="w-6 h-6 text-[#7B1C2B]" />
                 </div>
                 <h3 className="font-display text-xl text-gray-900 mb-3">{info.title}</h3>
-                {info.lines.map((line) => (
-                  <p key={line} className="text-gray-600 text-sm">{line}</p>
-                ))}
-                {info.action && (
-                  <a
-                    href={info.action.href}
-                    className="inline-block mt-4 text-[#7B1C2B] text-sm hover:underline"
-                  >
-                    {info.action.label} →
-                  </a>
+                {info.linkAddressToDirections ? (
+                  <>
+                    <a
+                      href={directionsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 text-sm hover:text-[#7B1C2B] hover:underline block"
+                    >
+                      {info.lines[0]}
+                      <br />
+                      {info.lines[1]}
+                    </a>
+                    {info.action && (
+                      <a
+                        href={info.action.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-4 text-[#7B1C2B] text-sm hover:underline"
+                      >
+                        {info.action.label}
+                      </a>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    {info.lines.map((line) => (
+                      <p key={line} className="text-gray-600 text-sm">
+                        {line}
+                      </p>
+                    ))}
+                    {info.action && (
+                      <a
+                        href={info.action.href}
+                        className="inline-block mt-4 text-[#7B1C2B] text-sm hover:underline"
+                      >
+                        {info.action.label}
+                      </a>
+                    )}
+                  </>
                 )}
               </motion.div>
             ))}
@@ -190,27 +228,19 @@ function Contact() {
               </div>
             </div>
             
-            {/* Address Text */}
+            {/* Address — full text links to directions */}
             <div className="flex-1 text-center md:text-left">
               <h3 className="font-display text-xl md:text-2xl text-gray-900 mb-2 uppercase tracking-wide">
                 Our Location
               </h3>
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                Plot No.345, G.I.D.C.II, Dediyasan<br />
-                Mehsana - 384002, Gujarat, INDIA
-              </p>
-            </div>
-            
-            {/* Open in Google Maps Button */}
-            <div className="flex-shrink-0">
               <a
                 href={directionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-primary text-sm px-6 py-3 inline-flex items-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                className="text-gray-700 text-sm md:text-base leading-relaxed hover:text-[#7B1C2B] hover:underline inline-block"
               >
-                Get Directions
-                <MapPin size={16} />
+                Plot No.345, G.I.D.C.II, Dediyasan<br />
+                Mehsana - 384002, Gujarat, INDIA
               </a>
             </div>
           </motion.div>
