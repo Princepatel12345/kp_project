@@ -7,9 +7,9 @@ import { Award, Users, Target, CheckCircle } from "lucide-react";
 import { COMPANY_START_YEAR, getCompanyYears } from "../lib/company";
 
 const milestones = [
-  { year: "1989", title: "Foundation", description: "Kaushik Road Technologies was founded, beginning our journey in road construction machinery." },
-  { year: "2000", title: "Expansion", description: "Expanded manufacturing capacity and product line." },
-  { year: "2010", title: "Global Reach", description: "Started exporting to international markets across 12+ countries." },
+  { year: "2008", title: "Foundation", description: "Kaushik Road Technologies was founded, beginning our journey in road construction machinery." },
+  { year: "2010", title: "Expansion", description: "Expanded manufacturing capacity and product line." },
+  { year: "2015", title: "Global Reach", description: "Started exporting to international markets across 12+ countries." },
 ];
 
 const values = [
