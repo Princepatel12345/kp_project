@@ -16,10 +16,10 @@ const quickLinks = [
 const products = [
   { label: "Drum Mix Plant", to: "/product/drum-mix" },
   { label: "Wet Mix Macadam Plant", to: "/product/wet-mix-macadam" },
-  { label: "MINI BITUMEN SPRAYER", to: "/product/bitumen-pressure-distributor" },
+  { label: "Mini Bitumen Sprayer", to: "/product/bitumen-pressure-distributor" },
   { label: "Mechanical Broomer", to: "/product/mechanical-hydraulic-broomer" },
   { label: "Asphalt Paver Machine", to: "/product/asphalt-paver-machine" },
-  { label: "CONTROL CABIN & PANEL", to: "/product/pollution-control-unit" },
+  { label: "Control Cabin & Panel", to: "/product/pollution-control-unit" },
 ];
 
 export function Footer() {
@@ -60,7 +60,7 @@ export function Footer() {
                 <span className="text-[#7B1C2B] mt-0.5">📍</span>
                 <p className="text-gray-600">
                   Plot No.345, G.I.D.C.II, Dediyasan,<br />
-                  Mehsana - 384002, Gujarat, INDIA
+                  Mehsana - 384002, Gujarat, India
                 </p>
               </div>
               <div className="flex items-start gap-3">

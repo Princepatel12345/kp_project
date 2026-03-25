@@ -33,10 +33,10 @@ const navLinks = [
 const productLinks = [
   { to: "/product/drum-mix", label: "Drum Mix Plant" },
   { to: "/product/wet-mix-macadam", label: "Wet Mix Macadam Plant" },
-  { to: "/product/bitumen-pressure-distributor", label: "MINI BITUMEN SPRAYER" },
+  { to: "/product/bitumen-pressure-distributor", label: "Mini Bitumen Sprayer" },
   { to: "/product/mechanical-hydraulic-broomer", label: "Mechanical Hydraulic Broomer" },
   { to: "/product/asphalt-paver-machine", label: "Asphalt Paver Machine" },
-  { to: "/product/pollution-control-unit", label: "CONTROL CABIN & PANEL" },
+  { to: "/product/pollution-control-unit", label: "Control Cabin & Panel" },
 ];
 
 function RootComponent() {
