@@ -10,7 +10,7 @@ function MechanicalHydraulicBroomer() {
     <ProductLayout
       title="Mechanical Hydraulic Broomer"
       description="Mechanical Hydraulic Broomer can be conveniently operated by towing with a tractor. It provides 2.4 meter clear sweeping with screw-based pressure adjustment and brush adjustment up to 150 mm. The unit includes left-hand-side dust collection, nylon bristle brush (diameter 460 mm) set at 45° angle, and two heavy-duty wheels (6 x 12 nylon, 8 ply). Suitable for metalling, wet mix macadam surface, and asphalted road surface with sweeping speed of 7–15 km/hr."
-      image="https://www.ashitech.com/wp-content/uploads/2021/07/Mechanical-Hydraulic-Broomer-1.png"
+      image="/assets/gallery-images/4-Mechanical Hydraulic Broomer.jpeg"
       seoDescription="Mechanical Hydraulic Broomer - tractor-towed road sweeping equipment with 2.4m clear sweeping width and left-side dust collection."
       seoKeywords="mechanical hydraulic broomer, tractor broom, road sweeper, road broom, surface cleaning equipment, 2.4m sweeping width"
       specifications={[

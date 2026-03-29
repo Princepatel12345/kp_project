@@ -124,7 +124,7 @@ function Gallery() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer aspect-square"
+                  className="group relative overflow-hidden rounded-xl bg-white border border-gray-200 transition-all duration-500 cursor-pointer aspect-square"
                   onClick={() => openLightbox(index)}
                 >
                   <div className="relative w-full h-full overflow-hidden">
@@ -137,7 +137,7 @@ function Gallery() {
 
                     <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                    <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                    <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                       <ZoomIn className="w-5 h-5 text-[#7B1C2B]" />
                     </div>
                   </div>

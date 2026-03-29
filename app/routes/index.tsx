@@ -12,37 +12,37 @@ import { directionsUrl } from "../lib/facilityLocation";
 /* ================= PRODUCT SLIDES ================= */
 const productSlides = [
   {
-    image: "https://www.ashitech.com/wp-content/uploads/2021/07/Drum-Mix-Plant-1.png",
+    image: "/assets/gallery-images/1-DrumMixPlant/Drum Mix Plant.jpeg",
     link: "/product/drum-mix",
     title: "Drum Mix Plant",
     capacity: "40 - 120 TPH",
   },
   {
-    image: "https://www.ashitech.com/wp-content/uploads/2021/07/Wet-Mix-Macadam-Plant-1.png",
+    image: "/assets/gallery-images/2-Wet Mix Macadam Plant.jpeg",
     link: "/product/wet-mix-macadam",
     title: "Wet Mix Macadam Plant",
     capacity: "120 - 200 TPH",
   },
   {
-    image: "https://www.ashitech.com/wp-content/uploads/2021/07/Bitumen-Pressure-Distributor-1.png",
+    image: "/assets/gallery-images/3-MINI BITUMEN SPRAYER.jpeg",
     link: "/product/bitumen-pressure-distributor",
     title: "MINI BITUMEN SPRAYER",
     capacity: "2500 / 4000 Ltr",
   },
   {
-    image: "https://www.ashitech.com/wp-content/uploads/2021/07/Mechanical-Hydraulic-Broomer-1.png",
+    image: "/assets/gallery-images/4-Mechanical Hydraulic Broomer.jpeg",
     link: "/product/mechanical-hydraulic-broomer",
     title: "Mechanical Hydraulic Broomer",
     capacity: "Tractor Mounted",
   },
   {
-    image: "https://images.pexels.com/photos/5924641/pexels-photo-5924641.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/assets/gallery-images/5-Asphalt Paver Machine.jpeg",
     link: "/product/asphalt-paver-machine",
     title: "Asphalt Paver Machine",
     capacity: "2.5m - 8.0m Width",
   },
   {
-    image: "https://images.pexels.com/photos/33531833/pexels-photo-33531833.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "/assets/gallery-images/6.2-Control Cabin.jpeg",
     link: "/product/pollution-control-unit",
     title: "CONTROL CABIN & PANEL",
     capacity: "15,000 - 50,000 CFM",
@@ -263,7 +263,7 @@ function Home() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative aspect-square bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-xl">
+              <div className="relative aspect-square bg-white rounded-2xl overflow-hidden border border-gray-200">
                 {/* Subtle background pattern for product display */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-white to-gray-50" />
                 
@@ -274,7 +274,7 @@ function Home() {
                       key={slide.link}
                       src={slide.image}
                       alt={slide.title}
-                      className={`absolute max-w-[85%] max-h-[75%] object-contain drop-shadow-lg transition-all duration-700 ${
+                      className={`absolute max-w-[85%] max-h-[75%] object-contain transition-all duration-700 ${
                         i === productCurrent
                           ? "opacity-100 scale-100"
                           : "opacity-0 scale-95"

@@ -14,30 +14,29 @@ type TableData = {
   }>;
 };
 
-function PdfImagePlaceholder({
-  label,
-  aspectClassName,
-  className,
-}: {
+interface ActualImageProps {
+  src: string;
   label: string;
   aspectClassName: string;
   className?: string;
-}) {
+}
+
+function ActualImage({
+  src,
+  label,
+  aspectClassName,
+  className,
+}: ActualImageProps) {
   return (
     <div
-      className={`overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm ${className ?? ""}`}
+      className={`overflow-hidden rounded-xl border border-gray-200 bg-white ${className ?? ""}`}
     >
       <div className={`${aspectClassName} relative`}>
         <img
-          src={`https://placehold.co/1200x900/png?text=${encodeURIComponent(label)}`}
+          src={src}
           alt={label}
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent p-3">
-          <div className="inline-flex rounded bg-black/45 px-2 py-1 text-xs font-medium tracking-wide text-white">
-            {label}
-          </div>
-        </div>
       </div>
     </div>
   );
@@ -93,7 +92,7 @@ function BrochureTable({ data }: { data: TableData }) {
 }
 
 function DrumMixPlant() {
-  const mainImage = "https://www.ashitech.com/wp-content/uploads/2021/07/Drum-Mix-Plant-1.png";
+  const mainImage = "/assets/gallery-images/1-DrumMixPlant/Drum Mix Plant.jpeg";
   const mainDescription =
     "Kaushik Road Technologies Drum Mix Plants are designed for continuous production of high-quality asphalt mix. These plants are ideal for large-scale road construction projects where uninterrupted production is essential. With advanced mixing technology and robust construction, our drum mix plants ensure optimal mixing, fuel efficiency, and reduced emissions.";
 
@@ -157,7 +156,7 @@ function DrumMixPlant() {
         description="Kaushik Road Technologies Drum Mix Plant product details, including key assemblies, layout, and model-wise specifications."
         keywords="drum mix plant, asphalt drum mix plant, dryer drum, slinger conveyor, pollution control device, bitumen tank, control cabin, control panel"
         type="product"
-        image="https://placehold.co/1200x630/png?text=DRUM+MIX+PLANT"
+        image="/assets/gallery-images/1-DrumMixPlant/Drum Mix Plant.jpeg"
       />
 
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white">
@@ -198,7 +197,7 @@ function DrumMixPlant() {
                   viewport={{ once: true }}
                   className="grid gap-8 min-w-0"
                 >
-                  <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+                  <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
                     <div className="aspect-[21/9] bg-gradient-to-br from-gray-50 to-white p-6 md:p-10 flex items-center justify-center">
                       <img
                         src={mainImage}
@@ -222,7 +221,8 @@ function DrumMixPlant() {
                   viewport={{ once: true }}
                   className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
-                  <PdfImagePlaceholder
+                  <ActualImage
+                    src="/assets/gallery-images/1-DrumMixPlant/DRYER DRUM.jpeg"
                     label="Dryer Drum"
                     aspectClassName="aspect-[16/9]"
                     className="md:order-1"
@@ -265,7 +265,8 @@ function DrumMixPlant() {
                     </div>
                   </div>
 
-                  <PdfImagePlaceholder
+                  <ActualImage
+                    src="/assets/gallery-images/1-DrumMixPlant/LOAD OUT CONVEYOR WITH GOB HOPPER.jpeg"
                     label="Loadout Conveyor with Hopper"
                     aspectClassName="aspect-[16/9]"
                     className="md:order-2"
@@ -278,7 +279,8 @@ function DrumMixPlant() {
                   viewport={{ once: true }}
                   className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
-                  <PdfImagePlaceholder
+                  <ActualImage
+                    src="/assets/gallery-images/1-DrumMixPlant/BURNER.jpeg"
                     label="Burner"
                     aspectClassName="aspect-[16/9]"
                     className="md:order-1"
@@ -315,7 +317,8 @@ function DrumMixPlant() {
                     </div>
                   </div>
 
-                  <PdfImagePlaceholder
+                  <ActualImage
+                    src="/assets/gallery-images/1-DrumMixPlant/Mineral ( Lime ) Feeler Unit.jpeg"
                     label="Mineral Filler"
                     aspectClassName="aspect-[16/9]"
                     className="md:order-2"
@@ -328,7 +331,8 @@ function DrumMixPlant() {
                   viewport={{ once: true }}
                   className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
-                  <PdfImagePlaceholder
+                  <ActualImage
+                    src="/assets/gallery-images/1-DrumMixPlant/Bitumen Tank.jpeg"
                     label="Bitumen Tank"
                     aspectClassName="aspect-[16/9]"
                     className="md:order-1"
@@ -369,7 +373,8 @@ function DrumMixPlant() {
                     </p>
                   </div>
 
-                  <PdfImagePlaceholder
+                  <ActualImage
+                    src="/assets/gallery-images/1-DrumMixPlant/LDO Tank.jpeg"
                     label="LDO Tank"
                     aspectClassName="aspect-[16/9]"
                     className="md:order-2"
@@ -382,7 +387,8 @@ function DrumMixPlant() {
                   viewport={{ once: true }}
                   className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
-                  <PdfImagePlaceholder
+                  <ActualImage
+                    src="/assets/gallery-images/1-DrumMixPlant/Wet Mix Macdam Plant.jpeg"
                     label="Pug Mill"
                     aspectClassName="aspect-[16/9]"
                     className="md:order-1"
@@ -435,7 +441,8 @@ function DrumMixPlant() {
                     </div>
                   </div>
 
-                  <PdfImagePlaceholder
+                  <ActualImage
+                    src="/assets/gallery-images/1-DrumMixPlant/Four Bin Feeder.jpeg"
                     label="Four Bin Feeder"
                     aspectClassName="aspect-[16/9]"
                     className="md:order-2"
@@ -448,7 +455,8 @@ function DrumMixPlant() {
                   viewport={{ once: true }}
                   className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
-                  <PdfImagePlaceholder
+                  <ActualImage
+                    src="/assets/gallery-images/1-DrumMixPlant/SINGLE DESK VIBRATING.jpeg"
                     label="Vibrating Screen"
                     aspectClassName="aspect-[16/9]"
                     className="md:order-1"
@@ -481,7 +489,8 @@ function DrumMixPlant() {
                     </div>
                   </div>
 
-                  <PdfImagePlaceholder
+                  <ActualImage
+                    src="/assets/gallery-images/1-DrumMixPlant/SLINGER CONVEYOR.jpeg"
                     label="Slinger Conveyor Belt"
                     aspectClassName="aspect-[16/9]"
                     className="md:order-2"
@@ -494,7 +503,8 @@ function DrumMixPlant() {
                   viewport={{ once: true }}
                   className="grid md:grid-cols-2 gap-8 items-start min-w-0"
                 >
-                  <PdfImagePlaceholder
+                  <ActualImage
+                    src="/assets/gallery-images/1-DrumMixPlant/AIR POLLUTION CONTROL DEVICE.jpeg"
                     label="Pollution Control"
                     aspectClassName="aspect-[16/9]"
                     className="md:order-1"

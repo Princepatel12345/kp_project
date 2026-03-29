@@ -15,7 +15,7 @@ function PollutionControlUnit() {
         description="Kaushik Road Technologies CONTROL CABIN & PANEL provides a fully insulated control cabin with a computerized control panel for safe, reliable, and efficient asphalt plant operation."
         keywords="control cabin, control panel, computerized control panel, asphalt plant control cabin, plant control room"
         type="product"
-        image="https://placehold.co/1200x630/png?text=CONTROL+CABIN+%26+PANEL"
+        image="/assets/gallery-images/6.1-Computerized Control Panel.jpeg"
       />
 
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white">
@@ -53,7 +53,7 @@ function PollutionControlUnit() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-lg"
+                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 md:p-8 border border-gray-200"
               >
                 <div className="mb-10">
                   <h2 className="font-display text-3xl text-gray-900 mb-4">
@@ -74,7 +74,7 @@ function PollutionControlUnit() {
                     <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
                       <div className="aspect-[4/3]">
                         <img
-                          src="https://placehold.co/900x675/png?text=CONTROL+PANEL"
+                          src="/assets/gallery-images/6.1-Computerized Control Panel.jpeg"
                           alt="Control Panel"
                           className="w-full h-full object-cover"
                         />
@@ -107,7 +107,7 @@ function PollutionControlUnit() {
                     <div className="md:order-2 overflow-hidden rounded-xl border border-gray-200 bg-white">
                       <div className="aspect-[4/3]">
                         <img
-                          src="https://placehold.co/900x675/png?text=CONTROL+CABIN"
+                          src="/assets/gallery-images/6.2-Control Cabin.jpeg"
                           alt="Control Cabin"
                           className="w-full h-full object-cover"
                         />

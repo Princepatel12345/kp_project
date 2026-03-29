@@ -83,7 +83,7 @@ export function ProductLayout({
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-200 shadow-lg mb-12"
+                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-200 mb-12"
               >
                 <img
                   src={image}

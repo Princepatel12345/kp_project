@@ -10,7 +10,7 @@ function WetMixMacadamPlant() {
     <ProductLayout
       title="Wet Mix Macadam Plant"
       description="A central mixing plant used for producing wet mix macadam. It provides controlled feeding of aggregates of different sizes in the required proportion, addition of specified quantity of water, addition of other ingredients such as cement or lime, and forced/positive mixing of all ingredients to produce a consistent homogeneous mix."
-      image="https://www.ashitech.com/wp-content/uploads/2021/07/Wet-Mix-Macadam-Plant-1.png"
+      image="/assets/gallery-images/2-Wet Mix Macadam Plant.jpeg"
       seoDescription="Wet Mix Macadam (WMM) Plant with controlled aggregate feeding, specified water and cement/lime addition, and forced/positive mixing to produce a consistent homogeneous mix."
       seoKeywords="wet mix macadam plant, WMM plant, wet mix plant, central mixing plant, twin-shaft pug mill, load cell weighing, gob hopper, load-out conveyor, soil stabilization, GSB, cold bituminous mix, emulsion"
       specifications={[
