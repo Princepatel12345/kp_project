@@ -1,11 +1,23 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useEffect, useState, useRef, useCallback } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import CountUp from "react-countup";
 import { SEO } from "../components/SEO";
 import { SectionHeading } from "../components/SectionHeading";
 import { ContactForm } from "../components/ContactForm";
-import { ArrowRight, Award, Globe, Shield, Wrench, Factory, HeadphonesIcon } from "lucide-react";
+import {
+  ArrowRight,
+  Award,
+  Globe,
+  Shield,
+  Wrench,
+  Factory,
+  HeadphonesIcon,
+  X,
+  ChevronLeft,
+  ChevronRight,
+  ZoomIn,
+} from "lucide-react";
 import { COMPANY_START_YEAR, getCompanyYears } from "../lib/company";
 import { directionsUrl } from "../lib/facilityLocation";
 
@@ -106,7 +118,41 @@ function Counter({ value, suffix, label }: { value: number; suffix: string; labe
 
 function Home() {
   const [productCurrent, setProductCurrent] = useState(0);
+  const [productLightboxOpen, setProductLightboxOpen] = useState(false);
+  const [productLightboxIndex, setProductLightboxIndex] = useState(0);
   const companyYears = getCompanyYears();
+
+  const openProductLightbox = useCallback((index: number) => {
+    setProductLightboxIndex(index);
+    setProductLightboxOpen(true);
+    document.body.style.overflow = "hidden";
+  }, []);
+
+  const closeProductLightbox = useCallback(() => {
+    setProductLightboxOpen(false);
+    document.body.style.overflow = "";
+  }, []);
+
+  const productLightboxPrev = useCallback(() => {
+    setProductLightboxIndex((prev) =>
+      prev === 0 ? productSlides.length - 1 : prev - 1
+    );
+  }, []);
+
+  const productLightboxNext = useCallback(() => {
+    setProductLightboxIndex((prev) =>
+      prev === productSlides.length - 1 ? 0 : prev + 1
+    );
+  }, []);
+
+  const handleProductLightboxKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key === "Escape") closeProductLightbox();
+      if (e.key === "ArrowLeft") productLightboxPrev();
+      if (e.key === "ArrowRight") productLightboxNext();
+    },
+    [closeProductLightbox, productLightboxPrev, productLightboxNext]
+  );
 
   const stats = [
     { value: companyYears, label: "Years Experience", suffix: "+" },
@@ -116,11 +162,17 @@ function Home() {
   ];
 
   useEffect(() => {
+    if (productLightboxOpen) return;
     const timer = setInterval(() => {
       setProductCurrent((p) => (p + 1) % productSlides.length);
     }, 4000);
     return () => clearInterval(timer);
-  }, []);
+  }, [productLightboxOpen]);
+
+  useEffect(() => {
+    if (!productLightboxOpen) return;
+    setProductCurrent(productLightboxIndex);
+  }, [productLightboxOpen, productLightboxIndex]);
 
   return (
     <>
@@ -264,27 +316,45 @@ function Home() {
               className="relative"
             >
               <div className="relative aspect-square bg-white rounded-2xl overflow-hidden border border-gray-200">
-                {/* Subtle background pattern for product display */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-white to-gray-50" />
-                
-                {/* Product Image */}
-                <div className="absolute inset-0 flex items-center justify-center p-8">
-                  {productSlides.map((slide, i) => (
-                    <motion.img
-                      key={slide.link}
-                      src={slide.image}
-                      alt={slide.title}
-                      className={`absolute max-w-[85%] max-h-[75%] object-contain transition-all duration-700 ${
-                        i === productCurrent
-                          ? "opacity-100 scale-100"
-                          : "opacity-0 scale-95"
-                      }`}
-                    />
-                  ))}
+
+                <div
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => openProductLightbox(productCurrent)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      openProductLightbox(productCurrent);
+                    }
+                  }}
+                  aria-label="View product image larger"
+                  className="absolute inset-0 z-[1] group cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#7B1C2B] focus-visible:ring-inset"
+                >
+                  <div className="absolute inset-0">
+                    {productSlides.map((slide, i) => (
+                      <motion.img
+                        key={slide.link}
+                        src={slide.image}
+                        alt={slide.title}
+                        draggable={false}
+                        className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 pointer-events-none ${
+                          i === productCurrent
+                            ? "opacity-100 scale-100"
+                            : "opacity-0 scale-95"
+                        }`}
+                      />
+                    ))}
+                  </div>
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                  <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 pointer-events-none">
+                    <ZoomIn className="w-5 h-5 text-[#7B1C2B]" />
+                  </div>
                 </div>
 
-                {/* Product Info Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white via-white/95 to-transparent">
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white via-white/95 to-transparent z-[2] pointer-events-none">
                   <h3 className="font-display text-2xl text-gray-900">
                     {productSlides[productCurrent].title}
                   </h3>
@@ -293,12 +363,15 @@ function Home() {
                   </p>
                 </div>
 
-                {/* Navigation Dots */}
-                <div className="absolute bottom-6 right-6 flex gap-2">
+                <div className="absolute bottom-6 right-6 flex gap-2 z-[3]">
                   {productSlides.map((_, i) => (
                     <button
                       key={i}
-                      onClick={() => setProductCurrent(i)}
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setProductCurrent(i);
+                      }}
                       className={`w-2 h-2 rounded-full transition-all ${
                         i === productCurrent ? "bg-[#7B1C2B] w-6" : "bg-gray-300"
                       }`}
@@ -467,6 +540,96 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <AnimatePresence>
+        {productLightboxOpen && productSlides[productLightboxIndex] && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+            onClick={closeProductLightbox}
+            onKeyDown={handleProductLightboxKeyDown}
+            tabIndex={0}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Product image lightbox"
+          >
+            <button
+              type="button"
+              onClick={closeProductLightbox}
+              className="absolute top-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-colors z-10"
+              aria-label="Close lightbox"
+            >
+              <X size={24} />
+            </button>
+
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                productLightboxPrev();
+              }}
+              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-colors z-10"
+              aria-label="Previous image"
+            >
+              <ChevronLeft size={24} />
+            </button>
+
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                productLightboxNext();
+              }}
+              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-colors z-10"
+              aria-label="Next image"
+            >
+              <ChevronRight size={24} />
+            </button>
+
+            <motion.div
+              key={productLightboxIndex}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              className="relative max-w-5xl max-h-[85vh] mx-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={encodeURI(productSlides[productLightboxIndex].image)}
+                alt={productSlides[productLightboxIndex].title}
+                className="max-w-full max-h-[75vh] object-contain rounded-lg"
+              />
+            </motion.div>
+
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 overflow-x-auto max-w-[90vw] p-2 bg-black/50 backdrop-blur-sm rounded-lg">
+              {productSlides.map((slide, i) => (
+                <button
+                  key={slide.link}
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setProductLightboxIndex(i);
+                  }}
+                  className={`shrink-0 w-16 h-16 rounded-md overflow-hidden transition-all ${
+                    i === productLightboxIndex
+                      ? "ring-2 ring-[#D4A12A] ring-offset-2 ring-offset-black opacity-100"
+                      : "opacity-50 hover:opacity-75"
+                  }`}
+                >
+                  <img
+                    src={encodeURI(slide.image)}
+                    alt={slide.title}
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
