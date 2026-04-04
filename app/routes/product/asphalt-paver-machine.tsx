@@ -10,7 +10,7 @@ function AsphaltPaverMachine() {
     <ProductLayout
       title="Asphalt Paver Machine"
       description="Kaushik Road Technologies Asphalt Paver Machines (Mechanical Road Paver Finisher) are built for accurate, consistent paving on city streets, parking lots, rural roads, and highways. With a hydraulically extendable screed, they deliver uniform thickness and smooth finish across common asphalt layers (BM, DBM, BC, AC) and are also suitable for Wet Mix Macadam (WMM). Designed for productivity and ease of operation, the machine combines robust rear-wheel drive components, efficient screed heating, and operator-friendly controls for reliable performance on demanding sites."
-      image="/assets/gallery-images/5-Asphalt Paver Machine.jpeg"
+      image="/assets/product-images/5-Asphalt Paver Machine.jpeg"
       seoDescription="Kaushik Road Technologies Asphalt Paver Machine (Mechanical Road Paver Finisher) with hydraulically extendable screed. Uniform paving, smooth finish, and reliable 150–200 T/hr output for highways and urban roads."
       seoKeywords="asphalt paver machine, mechanical road paver finisher, road paver, asphalt paving equipment, screed paver, hydraulic screed, wet mix macadam paver, road construction machinery, India manufacturer"
       specifications={[

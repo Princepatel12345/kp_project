@@ -83,12 +83,12 @@ export function ProductLayout({
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-200 mb-12"
+                className="overflow-hidden bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-200 mb-12"
               >
                 <img
                   src={image}
                   alt={title}
-                  className="w-full max-h-[400px] object-contain mx-auto"
+                  className="w-full h-[min(28rem,70vw)] sm:h-[400px] object-cover"
                 />
               </motion.div>
 

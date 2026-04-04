@@ -12,37 +12,37 @@ import { directionsUrl } from "../lib/facilityLocation";
 /* ================= PRODUCT SLIDES ================= */
 const productSlides = [
   {
-    image: "/assets/gallery-images/1-DrumMixPlant/Drum Mix Plant.jpeg",
+    image: "/assets/product-images/1-DrumMixPlant/Drum Mix Plant.jpeg",
     link: "/product/drum-mix",
     title: "Drum Mix Plant",
     capacity: "40 - 120 TPH",
   },
   {
-    image: "/assets/gallery-images/2-Wet Mix Macadam Plant.jpeg",
+    image: "/assets/product-images/2-Wet Mix Macadam Plant.jpeg",
     link: "/product/wet-mix-macadam",
     title: "Wet Mix Macadam Plant",
     capacity: "120 - 200 TPH",
   },
   {
-    image: "/assets/gallery-images/3-MINI BITUMEN SPRAYER.jpeg",
+    image: "/assets/product-images/3-MINI BITUMEN SPRAYER.jpeg",
     link: "/product/bitumen-pressure-distributor",
     title: "MINI BITUMEN SPRAYER",
     capacity: "2500 / 4000 Ltr",
   },
   {
-    image: "/assets/gallery-images/4-Mechanical Hydraulic Broomer.jpeg",
+    image: "/assets/product-images/4-Mechanical Hydraulic Broomer.jpeg",
     link: "/product/mechanical-hydraulic-broomer",
     title: "Mechanical Hydraulic Broomer",
     capacity: "Tractor Mounted",
   },
   {
-    image: "/assets/gallery-images/5-Asphalt Paver Machine.jpeg",
+    image: "/assets/product-images/5-Asphalt Paver Machine.jpeg",
     link: "/product/asphalt-paver-machine",
     title: "Asphalt Paver Machine",
     capacity: "2.5m - 8.0m Width",
   },
   {
-    image: "/assets/gallery-images/6.2-Control Cabin.jpeg",
+    image: "/assets/product-images/6.2-Control Cabin.jpeg",
     link: "/product/pollution-control-unit",
     title: "CONTROL CABIN & PANEL",
     capacity: "15,000 - 50,000 CFM",

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SEO } from "../components/SEO";
 import { X, ChevronLeft, ChevronRight, ZoomIn, Camera } from "lucide-react";
 
-/* ================= GALLERY IMAGES ================= */
+/* Gallery: public/assets/gallery-images/img-1 through img-17. Products: /assets/product-images/. */
 const galleryImages = Array.from({ length: 17 }, (_, i) => ({
   id: i + 1,
   src: `/assets/gallery-images/img-${i + 1}.jpeg`,

@@ -10,42 +10,42 @@ const products = [
     title: "Drum Mix Plant",
     capacity: "40 - 120 TPH",
     description: "Continuous production plants ideal for large-scale road projects.",
-    image: "/assets/gallery-images/1-DrumMixPlant/Drum Mix Plant.jpeg",
+    image: "/assets/product-images/1-DrumMixPlant/Drum Mix Plant.jpeg",
   },
   {
     to: "/product/wet-mix-macadam",
     title: "Wet Mix Macadam Plant",
     capacity: "120 - 200 TPH",
     description: "Designed for producing wet mix macadam for road base construction.",
-    image: "/assets/gallery-images/2-Wet Mix Macadam Plant.jpeg",
+    image: "/assets/product-images/2-Wet Mix Macadam Plant.jpeg",
   },
   {
     to: "/product/bitumen-pressure-distributor",
     title: "MINI BITUMEN SPRAYER",
     capacity: "2500 / 4000 Ltr",
     description: "Tractor attachment with manual hand spraying and heating options.",
-    image: "/assets/gallery-images/3-MINI BITUMEN SPRAYER.jpeg",
+    image: "/assets/product-images/3-MINI BITUMEN SPRAYER.jpeg",
   },
   {
     to: "/product/mechanical-hydraulic-broomer",
     title: "Mechanical Hydraulic Broomer",
     capacity: "Tractor Mounted",
     description: "Tractor-towed road broom with 2.4m clear sweeping width and left-side dust collection.",
-    image: "/assets/gallery-images/4-Mechanical Hydraulic Broomer.jpeg",
+    image: "/assets/product-images/4-Mechanical Hydraulic Broomer.jpeg",
   },
   {
     to: "/product/asphalt-paver-machine",
     title: "Asphalt Paver Machine",
     capacity: "2.5m - 8.0m Width",
     description: "Precision paving equipment for uniform asphalt laying with smooth finish.",
-    image: "/assets/gallery-images/5-Asphalt Paver Machine.jpeg",
+    image: "/assets/product-images/5-Asphalt Paver Machine.jpeg",
   },
   {
     to: "/product/pollution-control-unit",
     title: "CONTROL CABIN & PANEL",
     capacity: "15,000 - 50,000 CFM",
     description: "Fully insulated control cabin with computerized control panel for plant operation.",
-    image: "/assets/gallery-images/6.1-Computerized Control Panel.jpeg",
+    image: "/assets/product-images/6.1-Computerized Control Panel.jpeg",
   },
 ];
 
@@ -99,11 +99,11 @@ function ProductIndex() {
                 >
                   <div className="card overflow-hidden">
                     {/* Image */}
-                    <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-white p-6 flex items-center justify-center border-b border-gray-200">
+                    <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-gray-50 to-white border-b border-gray-200">
                       <img
                         src={product.image}
                         alt={product.title}
-                        className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
+                        className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
 

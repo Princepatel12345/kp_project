@@ -10,7 +10,7 @@ function BitumenPressureDistributor() {
     <ProductLayout
       title="MINI BITUMEN SPRAYER"
       description="Kaushik Road Technologies MINI BITUMEN SPRAYER is a tractor attachment designed for manual hand spraying with consistent flow and dependable heating. Available in KRT 2.5 & 4 Ton (KRT-2500 / KRT-4000) capacities, it features an insulated U-shape tank, gear pump, diesel engine with air compressor, and heating options (wood fire or burner) to maintain workable bitumen viscosity during application."
-      image="/assets/gallery-images/3-MINI BITUMEN SPRAYER.jpeg"
+      image="/assets/product-images/3-MINI BITUMEN SPRAYER.jpeg"
       seoDescription="Kaushik Road Technologies MINI BITUMEN SPRAYER - KRT 2.5 & 4 Ton (KRT-2500 / KRT-4000). Tractor attachment with manual hand spraying and wood fire/burner heating."
       seoKeywords="mini bitumen sprayer, tractor mounted bitumen sprayer, bitumen hand sprayer, KRT 2500, KRT 4000"
       specifications={[
