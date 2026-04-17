@@ -85,11 +85,13 @@ export function ProductLayout({
                 viewport={{ once: true }}
                 className="overflow-hidden bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-200 mb-12"
               >
-                <img
-                  src={image}
-                  alt={title}
-                  className="w-full h-[min(28rem,70vw)] sm:h-[400px] object-cover"
-                />
+                <div className="relative aspect-square overflow-hidden">
+                  <img
+                    src={image}
+                    alt={title}
+                    className="absolute inset-0 h-full w-full object-contain"
+                  />
+                </div>
               </motion.div>
 
               {/* Description */}
