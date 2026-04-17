@@ -72,11 +72,11 @@ function PollutionControlUnit() {
                 <div className="space-y-10">
                   <div className="grid gap-8 md:grid-cols-2 items-center">
                     <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
-                      <div className="aspect-[4/3]">
+                      <div className="aspect-square">
                         <img
                           src="/assets/product-images/6.1-Computerized Control Panel.jpeg"
                           alt="Control Panel"
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain"
                         />
                       </div>
                     </div>
@@ -105,11 +105,11 @@ function PollutionControlUnit() {
 
                   <div className="grid gap-8 md:grid-cols-2 items-center">
                     <div className="md:order-2 overflow-hidden rounded-xl border border-gray-200 bg-white">
-                      <div className="aspect-[4/3]">
+                      <div className="aspect-square">
                         <img
                           src="/assets/product-images/6.2-Control Cabin.jpeg"
                           alt="Control Cabin"
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain"
                         />
                       </div>
                     </div>

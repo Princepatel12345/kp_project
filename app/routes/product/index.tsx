@@ -99,11 +99,11 @@ function ProductIndex() {
                 >
                   <div className="card overflow-hidden">
                     {/* Image */}
-                    <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-gray-50 to-white border-b border-gray-200">
+                    <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-white border-b border-gray-200">
                       <img
                         src={product.image}
                         alt={product.title}
-                        className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="absolute inset-0 h-full w-full object-contain group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
 

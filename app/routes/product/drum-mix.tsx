@@ -35,7 +35,7 @@ function ActualImage({
         <img
           src={src}
           alt={label}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-contain"
         />
       </div>
     </div>
@@ -198,11 +198,11 @@ function DrumMixPlant() {
                   className="grid gap-8 min-w-0"
                 >
                   <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
-                    <div className="relative aspect-[21/9] overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+                    <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-white">
                       <img
                         src={mainImage}
                         alt="Drum Mix Plant"
-                        className="absolute inset-0 h-full w-full object-cover"
+                        className="absolute inset-0 h-full w-full object-contain"
                       />
                     </div>
                   </div>
@@ -224,7 +224,7 @@ function DrumMixPlant() {
                   <ActualImage
                     src="/assets/product-images/1-DrumMixPlant/DRYER DRUM.jpeg"
                     label="Dryer Drum"
-                    aspectClassName="aspect-[16/9]"
+                    aspectClassName="aspect-square"
                     className="md:order-1"
                   />
 
@@ -268,7 +268,7 @@ function DrumMixPlant() {
                   <ActualImage
                     src="/assets/product-images/1-DrumMixPlant/LOAD OUT CONVEYOR WITH GOB HOPPER.jpeg"
                     label="Loadout Conveyor with Hopper"
-                    aspectClassName="aspect-[16/9]"
+                    aspectClassName="aspect-square"
                     className="md:order-2"
                   />
                 </motion.div>
@@ -282,7 +282,7 @@ function DrumMixPlant() {
                   <ActualImage
                     src="/assets/product-images/1-DrumMixPlant/BURNER.jpeg"
                     label="Burner"
-                    aspectClassName="aspect-[16/9]"
+                    aspectClassName="aspect-square"
                     className="md:order-1"
                   />
                   <div className="md:order-2">
@@ -320,7 +320,7 @@ function DrumMixPlant() {
                   <ActualImage
                     src="/assets/product-images/1-DrumMixPlant/Mineral ( Lime ) Feeler Unit.jpeg"
                     label="Mineral Filler"
-                    aspectClassName="aspect-[16/9]"
+                    aspectClassName="aspect-square"
                     className="md:order-2"
                   />
                 </motion.div>
@@ -334,7 +334,7 @@ function DrumMixPlant() {
                   <ActualImage
                     src="/assets/product-images/1-DrumMixPlant/Bitumen Tank.jpeg"
                     label="Bitumen Tank"
-                    aspectClassName="aspect-[16/9]"
+                    aspectClassName="aspect-square"
                     className="md:order-1"
                   />
 
@@ -376,7 +376,7 @@ function DrumMixPlant() {
                   <ActualImage
                     src="/assets/product-images/1-DrumMixPlant/LDO Tank.jpeg"
                     label="LDO Tank"
-                    aspectClassName="aspect-[16/9]"
+                    aspectClassName="aspect-square"
                     className="md:order-2"
                   />
                 </motion.div>
@@ -390,7 +390,7 @@ function DrumMixPlant() {
                   <ActualImage
                     src="/assets/product-images/1-DrumMixPlant/Wet Mix Macdam Plant.jpeg"
                     label="Pug Mill"
-                    aspectClassName="aspect-[16/9]"
+                    aspectClassName="aspect-square"
                     className="md:order-1"
                   />
 
@@ -444,7 +444,7 @@ function DrumMixPlant() {
                   <ActualImage
                     src="/assets/product-images/1-DrumMixPlant/Four Bin Feeder.jpeg"
                     label="Four Bin Feeder"
-                    aspectClassName="aspect-[16/9]"
+                    aspectClassName="aspect-square"
                     className="md:order-2"
                   />
                 </motion.div>
@@ -458,7 +458,7 @@ function DrumMixPlant() {
                   <ActualImage
                     src="/assets/product-images/1-DrumMixPlant/SINGLE DESK VIBRATING.jpeg"
                     label="Vibrating Screen"
-                    aspectClassName="aspect-[16/9]"
+                    aspectClassName="aspect-square"
                     className="md:order-1"
                   />
                   <div className="md:order-2">
@@ -492,7 +492,7 @@ function DrumMixPlant() {
                   <ActualImage
                     src="/assets/product-images/1-DrumMixPlant/SLINGER CONVEYOR.jpeg"
                     label="Slinger Conveyor Belt"
-                    aspectClassName="aspect-[16/9]"
+                    aspectClassName="aspect-square"
                     className="md:order-2"
                   />
                 </motion.div>
@@ -506,7 +506,7 @@ function DrumMixPlant() {
                   <ActualImage
                     src="/assets/product-images/1-DrumMixPlant/AIR POLLUTION CONTROL DEVICE.jpeg"
                     label="Pollution Control"
-                    aspectClassName="aspect-[16/9]"
+                    aspectClassName="aspect-square"
                     className="md:order-1"
                   />
                   <div className="md:order-2">
